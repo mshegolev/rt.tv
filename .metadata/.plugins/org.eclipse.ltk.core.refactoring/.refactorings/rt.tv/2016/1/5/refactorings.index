@@ -1,0 +1,13 @@
+1454020770687	Rename package 'com.example.tests'
+1454021609182	Extract method 'openMainPage'
+1454021644639	Extract method 'setLogin'
+1454021679297	Extract method 'setPassword'
+1454021710057	Extract method 'clickAuthorization'
+1454022190448	Introduce parameter for 'setPassword'
+1454022220632	Introduce parameter for 'setLogin'
+1454022494075	Extract method 'authorization'
+1454022698359	Rename local variable 'login'
+1454022713674	Rename method 'setLogin'
+1454023052832	Introduce Parameter Object
+1454023119397	Extract local variable 'account'
+1454029049851	Convert local variable 'gg' to field
