@@ -86,7 +86,7 @@ private void openMainPage() {
 	  driver.get(baseUrl + "/");
 }
 
-  @AfterClass
+  @After
   public void tearDown() throws Exception {
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
