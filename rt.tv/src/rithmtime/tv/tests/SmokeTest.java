@@ -25,8 +25,8 @@ public class SmokeTest
   private WebDriver driver;
   private String baseUrl;
   private StringBuffer verificationErrors = new StringBuffer();
-  final private String trueuser = "mshegolev@gmail.com";
-  final private String truepassword = "Passw0rd";
+  final private String trueuser = "666";
+  final private String truepassword = "555";
 
  
 
