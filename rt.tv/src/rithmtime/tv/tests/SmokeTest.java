@@ -1,25 +1,34 @@
 package rithmtime.tv.tests;
 
-import org.testng.annotations.Test;
-import org.testng.Assert;
+import static org.testng.AssertJUnit.*;
+
+import org.testng.AssertJUnit;
+import org.testng.annotations.*;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class SmokeTest
+import com.thoughtworks.selenium.webdriven.commands.WaitForPageToLoad;
+
+
+public class SmokeTest 
 {
   private WebDriver driver;
   private String baseUrl;
-  private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-private String gg;
+  final private String trueuser = "mshegolev@gmail.com";
+  final private String truepassword = "Passw0rd";
+
+ 
 
 @BeforeClass
   public void setUp() throws Exception {
@@ -27,58 +36,89 @@ private String gg;
     baseUrl = "http://rithm-time.tv/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
-
-@Test
-  public void testAuthorizationTrue() throws Exception {
+    
+@Test(testName = "testAuthorizationSuccess", 
+	  description = "Login with correct account")
+  public void testAuthorizationSuccess() throws Exception {
 	  openMainPage();
 	  AccountData account = new AccountData();
-	  account.username = "666";
-	  account.password = "555";
+	  account.username = trueuser;
+	  account.password = truepassword;
 		authorization(account);
 		clickAuthorization();
-		Assert.assertTrue(buttonExitEnabled(),"Somthing wrong!");
+		assertTrue(getUsername().contains(account.username));
+		assertTrue("Button EXIT doesn't exist", buttonExitEnabled());
 		clickExit();
-		
   }
-  @Test
+  @Test(testName = "testAuthorizationWronglogin", 
+		  description = "Try login with incorrect username")
   public void testAuthorizationWronglogin() throws Exception {
 		  openMainPage();
 		  AccountData account = new AccountData();
-		  account.username = "wrongLogin";
-		  account.password = "Passw0rd";
+		  account.username = "wrongUsername";
+		  account.password = truepassword;
 			authorization(account);
-			clickAuthorization();
-			System.out.println("!!!!!");
-			System.out.print(authMessage().toString());
-			
+     		clickAuthorization();
+     		assertTrue("Don't has warning about wrong authentication", authMessage().contains("Неверный"));
+     		assertFalse("Button EXIT doesn't exist", buttonExit().isDisplayed());
+				
   }
-  @Test
+  @Test(testName = "testAuthorizationWrongPassword", 
+		  description = "Login with incorrect password")
   public void testAuthorizationWrongPassword() throws Exception {
-	  }
-  @Test
+	  openMainPage();
+	  AccountData account = new AccountData();
+	  account.username = trueuser;
+	  account.password = "Passw0rd";
+		authorization(account);
+ 		clickAuthorization();
+ 		assertTrue("Don't has warning about wrong authentication", authMessage().contains("Неверный"));
+ 		assertFalse("Button EXIT doesn't exist", buttonExit().isDisplayed());
+ 		}
+  @Test(testName = "testAuthorizationEmptyPassword", 
+		  description = "Login with empty password")
   public void testAuthorizationEmptyPassword() throws Exception {
-	  }
-  @Test
+	  openMainPage();
+	  AccountData account = new AccountData();
+	  account.username = trueuser;
+	  account.password = "";
+		authorization(account);
+ 		clickAuthorization();
+ 		assertTrue("Don't has warning about wrong authentication", authMessage().contains("Неверный"));
+ 		assertFalse("Button EXIT doesn't exist", buttonExit().isDisplayed());  
+  }
+  @Test(testName = "testAuthorizationEmptylogin", 
+		  description = "Login with empty username")
   public void testAuthorizationEmptylogin() throws Exception {
 	  openMainPage();
 	  AccountData account = new AccountData();
 	  account.username = "";
 	  account.password = "Passw0rd";
 		authorization(account);
-		clickAuthorization();
+ 		clickAuthorization();
+ 		assertTrue("Don't has warning about wrong authentication", authMessage().contains("Неверный"));
+ 		assertFalse("Button EXIT doesn't exist", buttonExit().isDisplayed());
 	  }
 
+  
+  
+  
+  
 private void authorization(AccountData account) {
 	setUsername(account.username);
 	setPassword(account.password);
-
-	
 }
   
   
 
 private void clickAuthorization() {
-	driver.findElement(By.id("auth_btn")).click();
+	buttonAuthorization().click();
+	WaitForPageToLoad.class.equals(authMessage());
+	
+}
+
+private WebElement buttonAuthorization() {
+	return driver.findElement(By.id("auth_btn"));
 }
 
 private String authMessage() {
@@ -88,7 +128,7 @@ private String authMessage() {
 private boolean clickExit() {
 	if (buttonExitEnabled())
 		{
-		driver.findElement(By.id("exit")).click();
+		buttonExit().click();
 		return true;
 		};
 	System.out.println("It's hot out, and so am I!");
@@ -98,11 +138,15 @@ private boolean clickExit() {
 
 
 private boolean buttonExitEnabled() {
-	if (driver.findElement(By.id("exit")).isEnabled()) {
+	if (buttonExit().isEnabled()) {
 		return true;
 	}
 	else 
 		return false;
+}
+
+private WebElement buttonExit() {
+	return driver.findElement(By.id("exit"));
 }
 
 @Override
@@ -111,6 +155,9 @@ private boolean buttonExitEnabled() {
 		return super.equals(obj);
 	}
 
+private String getUsername() {
+	return driver.findElement(By.id("userName")).getText();
+}
 
 
 private void setPassword(String password) {
@@ -135,40 +182,6 @@ private void openMainPage() {
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       Assert.fail(verificationErrorString);}
-  }
-
-
-  private boolean isElementPresent(By by) {
-    try {
-      driver.findElement(by);
-      return true;
-    } catch (NoSuchElementException e) {
-      return false;
-    }
-  }
-
-  private boolean isAlertPresent() {
-    try {
-      driver.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
-  }
-
-  private String closeAlertAndGetItsText() {
-    try {
-      Alert alert = driver.switchTo().alert();
-      String alertText = alert.getText();
-      if (acceptNextAlert) {
-        alert.accept();
-      } else {
-        alert.dismiss();
-      }
-      return alertText;
-    } finally {
-      acceptNextAlert = true;
-    }
   }
 }
 

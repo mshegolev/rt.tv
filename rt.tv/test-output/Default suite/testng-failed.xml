@@ -5,8 +5,12 @@
     <classes>
       <class name="rithmtime.tv.tests.SmokeTest">
         <methods>
+          <include name="testAuthorizationWrongPassword"/>
+          <include name="testAuthorizationEmptylogin"/>
           <include name="setUp"/>
+          <include name="testAuthorizationSuccess"/>
           <include name="testAuthorizationWronglogin"/>
+          <include name="testAuthorizationEmptyPassword"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- rithmtime.tv.tests.SmokeTest -->

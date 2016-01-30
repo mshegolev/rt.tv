@@ -11,3 +11,5 @@
 1454023052832	Introduce Parameter Object
 1454023119397	Extract local variable 'account'
 1454029049851	Convert local variable 'gg' to field
+1454108242601	Extract method 'buttonExit'
+1454108344583	Extract method 'buttonAuthorization'

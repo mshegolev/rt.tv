@@ -1,425 +1,400 @@
-!SESSION 2016-01-29 01:24:08.116 -----------------------------------------------
-eclipse.buildId=debbuild
-java.version=1.7.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Command-line arguments:  -os linux -ws gtk -arch x86_64
 
-!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-01-29 02:33:43.420
-!MESSAGE Operation details
-!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:33:43.420
-!MESSAGE Cannot complete the install because one or more required items could not be found.
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:33:43.420
-!MESSAGE Software being installed: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:33:43.420
-!MESSAGE Missing requirement: TestNG M2E Integration 6.9.10.201512240000 (org.testng.eclipse.maven 6.9.10.201512240000) requires 'bundle org.eclipse.m2e.core 1.5.0' but it could not be found
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:33:43.420
-!MESSAGE Cannot satisfy dependency:
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:33:43.420
-!MESSAGE From: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:33:43.420
-!MESSAGE To: org.testng.eclipse.maven [6.9.10.201512240000]
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:14:44.859
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 39903 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-453855550/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 39903 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-453855550/testng-customsuite.xml
 
-!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-01-29 02:33:43.422
-!MESSAGE Operation details
-!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:33:43.422
-!MESSAGE Cannot complete the install because one or more required items could not be found.
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:33:43.422
-!MESSAGE Software being installed: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:33:43.422
-!MESSAGE Missing requirement: TestNG M2E Integration 6.9.10.201512240000 (org.testng.eclipse.maven 6.9.10.201512240000) requires 'bundle org.eclipse.m2e.core 1.5.0' but it could not be found
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:33:43.422
-!MESSAGE Cannot satisfy dependency:
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:33:43.422
-!MESSAGE From: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:33:43.422
-!MESSAGE To: org.testng.eclipse.maven [6.9.10.201512240000]
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:15:22.234
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57912 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1009467110/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 57912 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1009467110/testng-customsuite.xml
 
-!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-01-29 02:34:39.529
-!MESSAGE Operation details
-!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:34:39.529
-!MESSAGE Cannot complete the install because one or more required items could not be found.
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:34:39.529
-!MESSAGE Software being installed: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:34:39.529
-!MESSAGE Missing requirement: TestNG M2E Integration 6.9.10.201512240000 (org.testng.eclipse.maven 6.9.10.201512240000) requires 'bundle org.eclipse.m2e.core 1.5.0' but it could not be found
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:34:39.529
-!MESSAGE Cannot satisfy dependency:
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:34:39.529
-!MESSAGE From: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:34:39.529
-!MESSAGE To: org.testng.eclipse.maven [6.9.10.201512240000]
+!ENTRY org.eclipse.ui.browser 2 0 2016-01-30 02:16:14.907
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
 
-!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-01-29 02:34:39.530
-!MESSAGE Operation details
-!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:34:39.530
-!MESSAGE Cannot complete the install because one or more required items could not be found.
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:34:39.530
-!MESSAGE Software being installed: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:34:39.530
-!MESSAGE Missing requirement: TestNG M2E Integration 6.9.10.201512240000 (org.testng.eclipse.maven 6.9.10.201512240000) requires 'bundle org.eclipse.m2e.core 1.5.0' but it could not be found
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:34:39.530
-!MESSAGE Cannot satisfy dependency:
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:34:39.530
-!MESSAGE From: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:34:39.530
-!MESSAGE To: org.testng.eclipse.maven [6.9.10.201512240000]
-!SESSION 2016-01-29 02:36:43.703 -----------------------------------------------
-eclipse.buildId=debbuild
-java.version=1.7.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Command-line arguments:  -os linux -ws gtk -arch x86_64
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:19:27.164
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 33721 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--954110886/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 33721 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--954110886/testng-customsuite.xml
 
-!ENTRY org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help documentation could not be indexed completely.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.propertysheet/doc-html/ui_propertysheet_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_helloworld_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_fileviewer_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_javaviewer_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.compare.examples.xml/doc-html/ui_xmlcompare_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.controls/doc-html/swt_customcontrols_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.browser/doc-html/swt_browser_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.readmetool/doc-html/ui_readmetool_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.team.examples.filesystem/doc-html/team_localhistory_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.team.examples.filesystem/doc-html/team_model_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_texteditor_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/opengl/package-summary.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.640
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.compare.examples/doc-html/ui_structurecreator_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.layouts/doc-html/swt_layout_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_addressbook_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.ole.win32/doc-html/swt_ole_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.javaeditor/doc-html/ui_javaeditor_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.paint/doc-html/swt_paint_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.launcher/doc-html/swt_launcher_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_hoverhelp_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_imageanalyzer_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.multipageeditor/doc-html/ui_multipageeditor_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/ole/win32/package-summary.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_manual_setup.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/awt/package-summary.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.javaeditor/doc-html/ui_templateeditor_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.fieldassist/doc-html/ui_fieldassist_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.undo/doc-html/ui_undo_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_clipboard_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.team.examples.filesystem/doc-html/team_filesystem_ex.html cannot be opened.
-!SUBENTRY 1 org.eclipse.help.base 4 4 2016-01-29 02:38:07.641
-!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.controls/doc-html/swt_controls_ex.html cannot be opened.
-!SESSION 2016-01-29 02:39:43.329 -----------------------------------------------
-eclipse.buildId=debbuild
-java.version=1.7.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Command-line arguments:  -os linux -ws gtk -arch x86_64
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:20:59.082
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 43407 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-977815154/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 43407 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-977815154/testng-customsuite.xml
 
-!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-01-29 02:40:09.984
-!MESSAGE Operation details
-!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:40:09.984
-!MESSAGE Cannot complete the install because one or more required items could not be found.
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:40:09.985
-!MESSAGE Software being installed: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:40:09.985
-!MESSAGE Missing requirement: TestNG M2E Integration 6.9.10.201512240000 (org.testng.eclipse.maven 6.9.10.201512240000) requires 'bundle org.eclipse.m2e.core 1.5.0' but it could not be found
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:40:09.985
-!MESSAGE Cannot satisfy dependency:
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:40:09.985
-!MESSAGE From: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:40:09.985
-!MESSAGE To: org.testng.eclipse.maven [6.9.10.201512240000]
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:21:19.236
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 34368 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-474963666/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 34368 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-474963666/testng-customsuite.xml
 
-!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-01-29 02:40:09.988
-!MESSAGE Operation details
-!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:40:09.988
-!MESSAGE Cannot complete the install because one or more required items could not be found.
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:40:09.988
-!MESSAGE Software being installed: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:40:09.988
-!MESSAGE Missing requirement: TestNG M2E Integration 6.9.10.201512240000 (org.testng.eclipse.maven 6.9.10.201512240000) requires 'bundle org.eclipse.m2e.core 1.5.0' but it could not be found
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:40:09.988
-!MESSAGE Cannot satisfy dependency:
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:40:09.988
-!MESSAGE From: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:40:09.988
-!MESSAGE To: org.testng.eclipse.maven [6.9.10.201512240000]
-
-!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-01-29 02:46:03.722
-!MESSAGE Operation details
-!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:46:03.722
-!MESSAGE Cannot complete the install because one or more required items could not be found.
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:46:03.722
-!MESSAGE Software being installed: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:46:03.722
-!MESSAGE Missing requirement: TestNG M2E Integration 6.9.10.201512240000 (org.testng.eclipse.maven 6.9.10.201512240000) requires 'bundle org.eclipse.m2e.core 1.5.0' but it could not be found
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:46:03.722
-!MESSAGE Cannot satisfy dependency:
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:46:03.722
-!MESSAGE From: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:46:03.722
-!MESSAGE To: org.testng.eclipse.maven [6.9.10.201512240000]
-
-!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-01-29 02:46:03.723
-!MESSAGE Operation details
-!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:46:03.723
-!MESSAGE Cannot complete the install because one or more required items could not be found.
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:46:03.723
-!MESSAGE Software being installed: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:46:03.723
-!MESSAGE Missing requirement: TestNG M2E Integration 6.9.10.201512240000 (org.testng.eclipse.maven 6.9.10.201512240000) requires 'bundle org.eclipse.m2e.core 1.5.0' but it could not be found
-!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-01-29 02:46:03.723
-!MESSAGE Cannot satisfy dependency:
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:46:03.723
-!MESSAGE From: TestNG M2E Integration (Optional) 6.9.10.201512240000 (org.testng.eclipse.maven.feature.feature.group 6.9.10.201512240000)
-!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-01-29 02:46:03.723
-!MESSAGE To: org.testng.eclipse.maven [6.9.10.201512240000]
-!SESSION 2016-01-29 02:48:45.073 -----------------------------------------------
-eclipse.buildId=debbuild
-java.version=1.7.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Command-line arguments:  -os linux -ws gtk -arch x86_64
-
-!ENTRY org.eclipse.equinox.p2.core 4 0 2016-01-29 02:49:04.969
-!MESSAGE Provisioning exception
+!ENTRY org.eclipse.jdt.debug 4 125 2016-01-30 02:21:40.012
+!MESSAGE Internal error logged from JDI Debug: 
 !STACK 1
-org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://oss.sonatype.org/content/repositories/snapshots.
-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
-	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
-	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
-	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
-	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2016-01-29 02:49:04.970
-!MESSAGE No repository found at https://oss.sonatype.org/content/repositories/snapshots.
-!SESSION 2016-01-29 03:03:10.488 -----------------------------------------------
-eclipse.buildId=debbuild
-java.version=1.7.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Command-line arguments:  -os linux -ws gtk -arch x86_64
+org.eclipse.debug.core.DebugException: Invalid stack frame
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getUnderlyingStackFrame(JDIStackFrame.java:1093)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getUnderlyingThisObject(JDIStackFrame.java:753)
+	at org.eclipse.jdt.internal.debug.core.model.JDIStackFrame.getThis(JDIStackFrame.java:1145)
+	at org.eclipse.jdt.internal.debug.ui.JavaDebugHover.getHoverInfo2(JavaDebugHover.java:362)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.debug 4 100 2016-01-30 02:21:40.012
+!MESSAGE Invalid stack frame
 
-!ENTRY org.eclipse.equinox.p2.core 4 0 2016-01-29 03:03:49.306
-!MESSAGE Provisioning exception
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:29:45.829
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 34146 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1066035589/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 34146 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1066035589/testng-customsuite.xml
+
+!ENTRY org.eclipse.jdt.debug 4 120 2016-01-30 02:31:31.908
+!MESSAGE Exception processing async thread queue
+!SUBENTRY 1 org.eclipse.jdt.debug 4 120 2016-01-30 02:31:31.908
+!MESSAGE Exception processing async thread queue
+!STACK 0
+com.sun.jdi.VMDisconnectedException: Got IOException from Virtual Machine
+	at org.eclipse.jdi.internal.connect.PacketSendManager.sendPacket(PacketSendManager.java:89)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:186)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:226)
+	at org.eclipse.jdi.internal.VirtualMachineImpl.mirrorOf(VirtualMachineImpl.java:794)
+	at org.eclipse.jdt.internal.debug.core.model.JDIDebugTarget.newValue(JDIDebugTarget.java:1874)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.Interpreter.getResult(Interpreter.java:178)
+	at org.eclipse.jdt.internal.debug.eval.ast.engine.ASTEvaluationEngine$EvalRunnable.run(ASTEvaluationEngine.java:740)
+	at org.eclipse.jdt.internal.debug.core.model.JDIThread$ThreadJob.run(JDIThread.java:3157)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:31:44.145
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 48046 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1884965139/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 48046 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1884965139/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:44:32.745
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56426 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--683303500/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 56426 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--683303500/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:47:48.031
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 45880 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1443138249/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 45880 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1443138249/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:50:22.588
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 47186 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1193408046/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 47186 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1193408046/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:50:24.796
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 60522 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-108046723/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 60522 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-108046723/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:50:50.489
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 37895 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1188911171/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 37895 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1188911171/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:51:50.241
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea -ea -DfailedTests=testAuthorizationTrue,testAuthorizationSuccess
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 55880 -d /home/mikhail/rt.tv/rt.tv/test-output /home/mikhail/rt.tv/rt.tv/test-output/testng-failed.xml
+java -ea -ea -DfailedTests=testAuthorizationTrue,testAuthorizationSuccess -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 55880 -d /home/mikhail/rt.tv/rt.tv/test-output /home/mikhail/rt.tv/rt.tv/test-output/testng-failed.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:54:02.187
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56928 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-2123836511/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 56928 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-2123836511/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:55:06.617
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 59051 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-724797565/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 59051 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-724797565/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:55:40.103
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53347 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-551670427/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 53347 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-551670427/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:56:57.045
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 33401 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1588492092/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 33401 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1588492092/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:57:36.292
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 33370 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-873121293/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 33370 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-873121293/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 02:58:24.831
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 39567 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--708520139/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 39567 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--708520139/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:09:51.812
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57348 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1081311487/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 57348 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1081311487/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:15:15.026
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 59725 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--681559833/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 59725 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--681559833/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:16:25.247
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 43882 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--219937773/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 43882 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--219937773/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:26:49.770
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56078 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-511710139/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 56078 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-511710139/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:27:04.375
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57603 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1007498230/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 57603 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1007498230/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:34:55.503
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 36964 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1892306329/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 36964 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1892306329/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:40:22.490
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 36762 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--224721682/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 36762 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--224721682/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2016-01-30 03:41:43.754
+!MESSAGE Error
 !STACK 1
-org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://oss.sonatype.org/content/repositories/snapshots.
-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
-	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
-	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
-	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
-	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/rt.tv/test-output/Default suite/Default test.xml'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.testng.eclipse.util.SuiteFileValidator.isSuiteDefinition(SuiteFileValidator.java:47)
+	at org.testng.eclipse.launch.tester.FileExtender.test(FileExtender.java:24)
+	at org.testng.eclipse.launch.tester.TestNGPropertyTester.isTestSuite(TestNGPropertyTester.java:69)
+	at org.testng.eclipse.launch.tester.TestNGPropertyTester.test(TestNGPropertyTester.java:45)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2016-01-29 03:03:49.307
-!MESSAGE No repository found at https://oss.sonatype.org/content/repositories/snapshots.
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2016-01-30 03:41:43.755
+!MESSAGE Resource is out of sync with the file system: '/rt.tv/test-output/Default suite/Default test.xml'.
 
-!ENTRY org.eclipse.equinox.p2.core 4 0 2016-01-29 03:05:43.928
-!MESSAGE Provisioning exception
+!ENTRY org.testng.eclipse 4 4 2016-01-30 03:41:43.756
+!MESSAGE Error
 !STACK 1
-org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://oss.sonatype.org/content/repositories/snapshots.
-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:636)
-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
-	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
-	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
-	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
-	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/rt.tv/test-output/Default suite/Default test.xml'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.testng.eclipse.util.SuiteFileValidator.isSuiteDefinition(SuiteFileValidator.java:47)
+	at org.testng.eclipse.launch.tester.FileExtender.test(FileExtender.java:24)
+	at org.testng.eclipse.launch.tester.TestNGPropertyTester.isTestSuite(TestNGPropertyTester.java:69)
+	at org.testng.eclipse.launch.tester.TestNGPropertyTester.test(TestNGPropertyTester.java:45)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableConfigurationTypes(LaunchConfigurationManager.java:750)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableLaunchConfigurations(LaunchConfigurationManager.java:787)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:510)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:322)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2016-01-29 03:05:43.929
-!MESSAGE No repository found at https://oss.sonatype.org/content/repositories/snapshots.
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2016-01-30 03:41:43.756
+!MESSAGE Resource is out of sync with the file system: '/rt.tv/test-output/Default suite/Default test.xml'.
 
-!ENTRY org.eclipse.equinox.p2.core 4 0 2016-01-29 03:07:24.284
-!MESSAGE Provisioning exception
+!ENTRY org.testng.eclipse 4 4 2016-01-30 03:41:43.762
+!MESSAGE Error
 !STACK 1
-org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://oss.sonatype.org/content/repositories/snapshots.
-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
-	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:636)
-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
-	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
-	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
-	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
-	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
-	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/rt.tv/test-output/Default suite/Default test.xml'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.testng.eclipse.util.SuiteFileValidator.isSuiteDefinition(SuiteFileValidator.java:47)
+	at org.testng.eclipse.launch.tester.FileExtender.test(FileExtender.java:24)
+	at org.testng.eclipse.launch.tester.TestNGPropertyTester.isTestSuite(TestNGPropertyTester.java:69)
+	at org.testng.eclipse.launch.tester.TestNGPropertyTester.test(TestNGPropertyTester.java:45)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:456)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.pruneShortcuts(LaunchingResourceManager.java:391)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:314)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2016-01-29 03:07:24.285
-!MESSAGE No repository found at https://oss.sonatype.org/content/repositories/snapshots.
-!SESSION 2016-01-29 03:09:06.510 -----------------------------------------------
-eclipse.buildId=debbuild
-java.version=1.7.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Command-line arguments:  -os linux -ws gtk -arch x86_64
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2016-01-30 03:41:43.763
+!MESSAGE Resource is out of sync with the file system: '/rt.tv/test-output/Default suite/Default test.xml'.
 
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:18:08.704
+!ENTRY org.testng.eclipse 4 4 2016-01-30 03:41:43.765
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/rt.tv/test-output/Default suite/Default test.xml'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.testng.eclipse.util.SuiteFileValidator.isSuiteDefinition(SuiteFileValidator.java:47)
+	at org.testng.eclipse.launch.tester.FileExtender.test(FileExtender.java:24)
+	at org.testng.eclipse.launch.tester.TestNGPropertyTester.isTestSuite(TestNGPropertyTester.java:69)
+	at org.testng.eclipse.launch.tester.TestNGPropertyTester.test(TestNGPropertyTester.java:45)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:287)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableConfigurationTypes(LaunchConfigurationManager.java:750)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableLaunchConfigurations(LaunchConfigurationManager.java:787)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:510)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:322)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2016-01-30 03:41:43.766
+!MESSAGE Resource is out of sync with the file system: '/rt.tv/test-output/Default suite/Default test.xml'.
+
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:42:05.262
 !MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
   Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
   VMArgs:    -ea
   Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 48818 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1781848328/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 48818 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1781848328/testng-customsuite.xml
+  Args:      -serport 60334 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-386998421/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 60334 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-386998421/testng-customsuite.xml
 
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:22:58.016
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:45:18.046
 !MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
   Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
   VMArgs:    -ea
   Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 49775 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--4739506/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 49775 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--4739506/testng-customsuite.xml
+  Args:      -serport 41807 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1690217922/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 41807 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1690217922/testng-customsuite.xml
 
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:24:32.019
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:50:05.202
 !MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
   Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
   VMArgs:    -ea
   Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 40076 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1451656030/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 40076 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1451656030/testng-customsuite.xml
+  Args:      -serport 33455 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1310541977/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 33455 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1310541977/testng-customsuite.xml
 
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:26:24.134
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:52:25.071
 !MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
   Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
   VMArgs:    -ea
   Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 42775 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--535417153/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 42775 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--535417153/testng-customsuite.xml
+  Args:      -serport 46401 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1376551866/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 46401 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1376551866/testng-customsuite.xml
 
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:27:07.877
+!ENTRY org.testng.eclipse 1 0 2016-01-30 03:54:13.739
 !MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
   Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
   VMArgs:    -ea
   Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 34619 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--519950576/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 34619 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--519950576/testng-customsuite.xml
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:30:13.777
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 43709 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1671859779/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 43709 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1671859779/testng-customsuite.xml
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:30:47.660
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 55476 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1350989736/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 55476 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1350989736/testng-customsuite.xml
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:46:11.762
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 40142 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1931405467/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 40142 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1931405467/testng-customsuite.xml
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:46:35.651
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 56428 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1652961259/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 56428 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1652961259/testng-customsuite.xml
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:48:48.053
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 51681 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1814756656/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 51681 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1814756656/testng-customsuite.xml
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:51:15.403
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 44242 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1227670725/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 44242 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--1227670725/testng-customsuite.xml
-!SESSION 2016-01-29 03:51:48.099 -----------------------------------------------
-eclipse.buildId=debbuild
-java.version=1.7.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Command-line arguments:  -os linux -ws gtk -arch x86_64
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:54:32.818
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 48696 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-897421689/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 48696 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-897421689/testng-customsuite.xml
-!SESSION 2016-01-29 03:54:43.315 -----------------------------------------------
-eclipse.buildId=debbuild
-java.version=1.7.0_91
-java.vendor=Oracle Corporation
-BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
-Command-line arguments:  -os linux -ws gtk -arch x86_64
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:55:43.334
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 54404 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-598148865/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 54404 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-598148865/testng-customsuite.xml
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 03:58:51.326
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 49806 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1949495916/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 49806 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-1949495916/testng-customsuite.xml
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 04:02:15.414
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 55667 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-2043449624/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 55667 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-2043449624/testng-customsuite.xml
-
-!ENTRY org.testng.eclipse 1 0 2016-01-29 04:03:45.171
-!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
-  Classpath: /home/mikhail/rt.tv/rt.tv/bin /home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar
-  VMArgs:    -ea
-  Class:     org.testng.remote.RemoteTestNG
-  Args:      -serport 43203 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--401924085/testng-customsuite.xml
-java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 43203 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse--401924085/testng-customsuite.xml
+  Args:      -serport 36975 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-327855113/testng-customsuite.xml
+java -ea -classpath /home/mikhail/rt.tv/rt.tv/bin:/home/mikhail/rt.tv/third-party/selenium-server-standalone-2.50.0.jar org.testng.remote.RemoteTestNG -serport 36975 -d /home/mikhail/rt.tv/rt.tv/test-output /tmp/testng-eclipse-327855113/testng-customsuite.xml
