@@ -12,3 +12,7 @@
 hs_err_pid*
 /rt.tv/test-output/*
 .metadata/.plugins/*
+/rt.tv/test-output/*
+/rt.tv/src/main/resources/creds
+/rt.tv/.project
+/rt.tv/.classpath
