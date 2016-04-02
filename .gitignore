@@ -16,3 +16,5 @@ hs_err_pid*
 /rt.tv/src/main/resources/creds
 /rt.tv/.project
 /rt.tv/.classpath
+/rt.tv/test-output
+/rt.tv/target
