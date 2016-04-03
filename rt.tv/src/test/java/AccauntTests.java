@@ -2,7 +2,6 @@ import org.testng.annotations.Test;
 import rithmtime.tv.tests.AccountData;
 import rithmtime.tv.tests.NovigationPages;
 
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 /**
@@ -16,45 +15,125 @@ public class AccauntTests extends NovigationPages{
     @Test(testName = "testAuthorizationSuccess",
             description = "Login with correct account")
     public void testAuthorizationSuccess() throws Exception {
+        String username = "test001";
+        openMainPage();
+        authorization(username, null);
+        assertTrue(checkUsername(username), "Creds has wrong value");
+        assertTrue(checkAbonentType("У вас оплачен Расширенный абонемент на 11 месяцев"), " Wrong abonent type");
+        clickExit();
     }
 
 
-    @Test(testName = "testAuthorizationWronglogin",
+    @Test(testName = "testAuthorizationSuccess-2",
             description = "Try login with incorrect username")
-    public void testAuthorizationWronglogin() throws Exception {
+    public void testAuthorizationSuccess2() throws Exception {
         String username = "test002";
         openMainPage();
-        authorization(username,"null");
+        authorization(username, null);
         assertTrue(checkUsername(username),"Creds has wrong value");
+        clickExit();
     }
 
-    @Test(testName = "testAuthorizationWrongPassword",
-            description = "Login with incorrect password")
-    public void testAuthorizationWrongPassword() throws Exception {
+    @Test(testName = "testAuthorizationSuccess-3",
+            description = "Try login with incorrect username")
+    public void testAuthorizationSuccess3() throws Exception {
+        String username = "test003";
         openMainPage();
-        setUsername("test001");
-        setPassword("wrongpass");
-        clickAuthorization();
-        assertTrue(authMessage().contains("Неверный"),"Don't has warning about wrong authentication");
-        assertFalse(buttonExit().isDisplayed(),"Button EXIT doesn't exist");
+        authorization(username, null);
+        assertTrue(checkUsername(username), "Creds has wrong value");
+        clickExit();
     }
-    @Test(testName = "testAuthorizationEmptyPassword",
-            description = "Login with empty password")
-    public void testAuthorizationEmptyPassword() throws Exception {
+
+    @Test(testName = "testAuthorizationSuccess-4",
+            description = "Try login with incorrect username")
+    public void testAuthorizationSuccess4() throws Exception {
+        String username = "test004";
         openMainPage();
-        AccountData account = new AccountData();
-        clickAuthorization();
-        assertTrue(authMessage().contains("Неверный"),"Don't has warning about wrong authentication");
-        assertFalse(buttonExit().isDisplayed(),"Button EXIT doesn't exist");
+        authorization(username, null);
+        assertTrue(checkUsername(username), "Creds has wrong value");
+        clickExit();
     }
-    @Test(testName = "testAuthorizationEmptylogin",
-            description = "Login with empty username")
-    public void testAuthorizationEmptylogin() throws Exception {
+
+    @Test(testName = "testAuthorizationSuccess-5",
+            description = "Try login with incorrect username")
+    public void testAuthorizationSuccess5() throws Exception {
+        String username = "test005";
         openMainPage();
-        AccountData account = new AccountData();
-        clickAuthorization();
-        assertTrue(authMessage().contains("Неверный"),"Don't has warning about wrong authentication");
-        assertFalse(buttonExit().isDisplayed(),"Button EXIT doesn't exist");
+        authorization(username, null);
+        assertTrue(checkUsername(username), "Creds has wrong value");
+        clickExit();
     }
+
+    @Test(testName = "testAuthorizationSuccess-6",
+            description = "Try login with incorrect username")
+    public void testAuthorizationSuccess6() throws Exception {
+        String username = "test006";
+        openMainPage();
+        authorization(username, null);
+        assertTrue(checkUsername(username), "Creds has wrong value");
+        clickExit();
+    }
+
+    @Test(testName = "testAuthorizationSuccess-7",
+            description = "Try login with incorrect username")
+    public void testAuthorizationSuccess7() throws Exception {
+        String username = "test007";
+        openMainPage();
+        authorization(username, null);
+        assertTrue(checkUsername(username), "Creds has wrong value");
+        clickExit();
+    }
+
+    @Test(testName = "testAuthorizationSuccess-8",
+            description = "Try login with incorrect username")
+    public void testAuthorizationSuccess8() throws Exception {
+        String username = "test008";
+        openMainPage();
+        authorization(username, null);
+        assertTrue(checkUsername(username), "Creds has wrong value");
+        clickExit();
+    }
+
+    @Test(testName = "testAuthorizationSuccess-9",
+            description = "Try login with incorrect username")
+    public void testAuthorizationSuccess9() throws Exception {
+        String username = "test009";
+        openMainPage();
+        authorization(username, null);
+        assertTrue(checkUsername(username), "Creds has wrong value");
+        clickExit();
+    }
+
+//    @Test(testName = "testAuthorizationWrongPassword",
+//            description = "Login with incorrect password")
+//    public void testAuthorizationWrongPassword() throws Exception {
+//        openMainPage();
+//        setUsername("test001");
+//        setPassword("wrongpass");
+//        clickAuthorization();
+//        assertTrue(authMessage().contains("Неверный"),"Don't has warning about wrong authentication");
+//        assertFalse(buttonExit().isDisplayed(),"Button EXIT doesn't exist");
+//        clickExit();
+//    }
+//    @Test(testName = "testAuthorizationEmptyPassword",
+//            description = "Login with empty password")
+//    public void testAuthorizationEmptyPassword() throws Exception {
+//        openMainPage();
+//        AccountData account = new AccountData();
+//        clickAuthorization();
+//        assertTrue(authMessage().contains("Неверный"),"Don't has warning about wrong authentication");
+//        assertFalse(buttonExit().isDisplayed(),"Button EXIT doesn't exist");
+//        clickExit();
+//    }
+//    @Test(testName = "testAuthorizationEmptylogin",
+//            description = "Login with empty username")
+//    public void testAuthorizationEmptylogin() throws Exception {
+//        openMainPage();
+//        AccountData account = new AccountData();
+//        clickAuthorization();
+//        assertTrue(authMessage().contains("Неверный"),"Don't has warning about wrong authentication");
+//        assertFalse(buttonExit().isDisplayed(),"Button EXIT doesn't exist");
+//        clickExit();
+//    }
 
 }
