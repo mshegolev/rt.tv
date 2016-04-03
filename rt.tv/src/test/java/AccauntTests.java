@@ -1,7 +1,13 @@
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import rithmtime.tv.tests.AccountData;
 import rithmtime.tv.tests.NovigationPages;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertTrue;
 
@@ -11,12 +17,28 @@ import static org.testng.Assert.assertTrue;
 public class AccauntTests extends NovigationPages{
     AccountData ac= new AccountData();
     //NovigationPages pages = new NovigationPages();
+    @BeforeClass
+    public void setUp() throws Exception {
+        driver = new FirefoxDriver();
+        baseUrl = "http://rithm-time.tv/";
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
 
+
+    @AfterClass
+    public void tearDown() throws Exception {
+        driver.quit();
+        String verificationErrorString = verificationErrors.toString();
+        if (!"".equals(verificationErrorString)) {
+            Assert.fail(verificationErrorString);
+        }
+    }
     @AfterMethod
-    public void tearDown() {
+    public void logout() {
         clickExit();
         //System.out.println("@AfterMethod: The annotated method will be run after each test method.");
     }
+
     @Test(testName = "testAuthorizationSuccess",
             description = "Login with correct account")
     public void testAuthorizationSuccess() throws Exception {
@@ -24,7 +46,8 @@ public class AccauntTests extends NovigationPages{
         openMainPage();
         authorization(username, null);
         assertTrue(checkUsername(username), "Creds has wrong value");
-        assertTrue(checkAbonentType("У вас оплачен Расширенный абонемент на 11 месяцев"), " Wrong abonent type");
+        assertTrue(gettableSheduleFirstRow(), "Table tableShedule is empty.");
+        //assertTrue(checkAbonentType("У вас оплачен Расширенный абонемент на 11 месяцев"), " Wrong abonent type");
 
     }
 
