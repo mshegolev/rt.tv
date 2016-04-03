@@ -1,3 +1,4 @@
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import rithmtime.tv.tests.AccountData;
 import rithmtime.tv.tests.NovigationPages;
@@ -11,7 +12,11 @@ public class AccauntTests extends NovigationPages{
     AccountData ac= new AccountData();
     //NovigationPages pages = new NovigationPages();
 
-
+    @AfterMethod
+    public void tearDown() {
+        clickExit();
+        //System.out.println("@AfterMethod: The annotated method will be run after each test method.");
+    }
     @Test(testName = "testAuthorizationSuccess",
             description = "Login with correct account")
     public void testAuthorizationSuccess() throws Exception {
@@ -20,7 +25,7 @@ public class AccauntTests extends NovigationPages{
         authorization(username, null);
         assertTrue(checkUsername(username), "Creds has wrong value");
         assertTrue(checkAbonentType("У вас оплачен Расширенный абонемент на 11 месяцев"), " Wrong abonent type");
-        clickExit();
+
     }
 
 
@@ -31,7 +36,7 @@ public class AccauntTests extends NovigationPages{
         openMainPage();
         authorization(username, null);
         assertTrue(checkUsername(username),"Creds has wrong value");
-        clickExit();
+
     }
 
     @Test(testName = "testAuthorizationSuccess-3",
@@ -41,7 +46,7 @@ public class AccauntTests extends NovigationPages{
         openMainPage();
         authorization(username, null);
         assertTrue(checkUsername(username), "Creds has wrong value");
-        clickExit();
+
     }
 
     @Test(testName = "testAuthorizationSuccess-4",
@@ -51,7 +56,7 @@ public class AccauntTests extends NovigationPages{
         openMainPage();
         authorization(username, null);
         assertTrue(checkUsername(username), "Creds has wrong value");
-        clickExit();
+
     }
 
     @Test(testName = "testAuthorizationSuccess-5",
@@ -61,7 +66,7 @@ public class AccauntTests extends NovigationPages{
         openMainPage();
         authorization(username, null);
         assertTrue(checkUsername(username), "Creds has wrong value");
-        clickExit();
+
     }
 
     @Test(testName = "testAuthorizationSuccess-6",
@@ -71,7 +76,7 @@ public class AccauntTests extends NovigationPages{
         openMainPage();
         authorization(username, null);
         assertTrue(checkUsername(username), "Creds has wrong value");
-        clickExit();
+
     }
 
     @Test(testName = "testAuthorizationSuccess-7",
@@ -81,7 +86,7 @@ public class AccauntTests extends NovigationPages{
         openMainPage();
         authorization(username, null);
         assertTrue(checkUsername(username), "Creds has wrong value");
-        clickExit();
+
     }
 
     @Test(testName = "testAuthorizationSuccess-8",
@@ -91,7 +96,7 @@ public class AccauntTests extends NovigationPages{
         openMainPage();
         authorization(username, null);
         assertTrue(checkUsername(username), "Creds has wrong value");
-        clickExit();
+
     }
 
     @Test(testName = "testAuthorizationSuccess-9",
@@ -101,7 +106,7 @@ public class AccauntTests extends NovigationPages{
         openMainPage();
         authorization(username, null);
         assertTrue(checkUsername(username), "Creds has wrong value");
-        clickExit();
+
     }
 
 //    @Test(testName = "testAuthorizationWrongPassword",
