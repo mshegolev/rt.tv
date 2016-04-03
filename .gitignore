@@ -10,7 +10,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/rt.tv/test-output/*
 .metadata/.plugins/*
 /rt.tv/src/main/resources/creds
 /rt.tv/.project
