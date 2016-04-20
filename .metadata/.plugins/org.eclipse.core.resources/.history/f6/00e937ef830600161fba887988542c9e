@@ -1,0 +1,21 @@
+package qaframework.rtv.fw;
+
+import org.openqa.selenium.By;
+
+import qaframework.rtv.tests.AccountData;
+
+public class AccountHelper extends HelperBase{
+
+	public AccountHelper(ApplicationManager manager) {
+		super(manager);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void fillLoginForm(ApplicationManager applicationManager, AccountData accountData) {
+		driver.findElement(By.id("auth_login")).clear();
+	    driver.findElement(By.id("auth_login")).sendKeys(accountData.username);
+	    driver.findElement(By.id("auth_password")).clear();
+	    driver.findElement(By.id("auth_password")).sendKeys(accountData.password);
+	}
+
+}

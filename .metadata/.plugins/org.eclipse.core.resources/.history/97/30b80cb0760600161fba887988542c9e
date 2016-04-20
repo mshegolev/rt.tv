@@ -1,0 +1,5 @@
+package qaframework.rtv.tests;
+
+public class TestBase {
+
+}

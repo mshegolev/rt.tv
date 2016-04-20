@@ -1,0 +1,5 @@
+package qaframework.rtv.fw;
+
+public class NavigationHelper {
+
+}

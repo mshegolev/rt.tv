@@ -1,0 +1,16 @@
+package qaframework.rtv.fw;
+
+import org.openqa.selenium.By;
+
+import qaframework.rtv.tests.AccountData;
+
+public class AccountHelper {
+
+	public void fillLoginForm(ApplicationManager applicationManager, AccountData accountData) {
+		ApplicationManager.driver.findElement(By.id("auth_login")).clear();
+	    ApplicationManager.driver.findElement(By.id("auth_login")).sendKeys(accountData.username);
+	    ApplicationManager.driver.findElement(By.id("auth_password")).clear();
+	    ApplicationManager.driver.findElement(By.id("auth_password")).sendKeys(accountData.password);
+	}
+
+}

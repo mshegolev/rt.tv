@@ -1,0 +1,32 @@
+package qaframework.rtv.fw;
+
+import org.openqa.selenium.By;
+
+public class NavigationHelper extends HelperBase{
+
+	public NavigationHelper(ApplicationManager manager) {
+		super(manager);
+	}
+
+	public void openMainPage() {
+		driver.get(manager.baseUrl + "/");
+	}
+
+	public void clickButtonLogin() {
+		click(By.id("auth_btn"));
+	}
+
+	public void clickButtonExit() {
+		click(By.id("exit"));
+	}
+	
+	public void clickCheckBoxRemember() {
+		click(By.id("exit"));
+	}
+
+	public void warrningMessage() {
+		click(By.id("auth_message"));
+		
+	}
+
+}

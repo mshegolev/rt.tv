@@ -1,0 +1,25 @@
+package qaframework.rtv.tests;
+
+import org.openqa.selenium.By;
+
+public class AccountData {
+	public String username;
+	public String password;
+
+	public AccountData() {
+	}
+	
+	public AccountData(String username, String password) {
+		this.username = username;
+		this.password = password;
+	}
+
+	protected void fillLoginForm(TestBase testBase) {
+		TestBase.driver.findElement(By.id("auth_login")).clear();
+	    TestBase.driver.findElement(By.id("auth_login")).sendKeys(username);
+	    TestBase.driver.findElement(By.id("auth_password")).clear();
+	    TestBase.driver.findElement(By.id("auth_password")).sendKeys(password);
+	}
+	
+	
+}

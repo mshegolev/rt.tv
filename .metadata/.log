@@ -1,0 +1,644 @@
+!SESSION 2016-04-19 22:28:01.603 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_72
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /develop/rtv-tests -os linux -ws gtk -arch x86_64
+
+!ENTRY org.testng.eclipse 1 0 2016-04-19 23:35:32.216
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 44512 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1815162724/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 44512 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1815162724/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-19 23:36:24.469
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 45081 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1237126921/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 45081 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1237126921/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:11:17.713
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 37688 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-264284655/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 37688 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-264284655/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:12:21.339
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56509 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-150307036/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 56509 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-150307036/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:13:59.537
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 36525 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1816439984/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 36525 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1816439984/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:15:30.086
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 39631 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1780900412/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 39631 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1780900412/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:22:31.370
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:qaframework.rtv.tests [in src [in rtv-tests]]
+  [Working copy] AccountData.java
+    package qaframework.rtv.tests
+    class AccountData
+      String username
+      String password
+      AccountData()
+      AccountData(String, String)
+  [Working copy] AuthorizationTest.java
+    package qaframework.rtv.tests
+    import org.junit.Assert.fail
+    import java.util.concurrent.TimeUnit
+    import org.openqa.selenium.Alert
+    import org.openqa.selenium.By
+    import org.openqa.selenium.NoAlertPresentException
+    import org.openqa.selenium.NoSuchElementException
+    import org.openqa.selenium.WebDriver
+    import org.openqa.selenium.firefox.FirefoxDriver
+    import org.testng.annotations.AfterClass
+    import org.testng.annotations.BeforeClass
+    import org.testng.annotations.Test
+    class AuthorizationTest
+      WebDriver driver
+      String baseUrl
+      boolean acceptNextAlert
+      StringBuffer verificationErrors
+      void setUp()
+      void testAbonentType1()
+      void testNonAbonentType()
+      void clickButtonExit()
+      void clickButtonLogin()
+      void fillLoginForm(AccountData)
+      void openMainPage()
+      void warrningMessage()
+      void tearDown()
+      boolean isElementPresent(By)
+      boolean isAlertPresent()
+      String closeAlertAndGetItsText()
+  [Working copy] SmokeTest.java
+    package qaframework.rtv.tests
+    import java.util.regex.Pattern
+    import java.util.concurrent.TimeUnit
+    import org.junit.*
+    import org.junit.Assert.*
+    import org.hamcrest.CoreMatchers.*
+    import org.openqa.selenium.*
+    import org.openqa.selenium.firefox.FirefoxDriver
+    import org.openqa.selenium.support.ui.Select
+    import org.testng.annotations.AfterClass
+    import org.testng.annotations.BeforeClass
+    import org.testng.annotations.*
+    import org.testng.annotations.Test
+    class SmokeTest
+      WebDriver driver
+      String baseUrl
+      boolean acceptNextAlert
+      StringBuffer verificationErrors
+      void setUp()
+      void testAbonentType1()
+      void testNonAbonentType()
+      void clickButtonExit()
+      void clickButtonLogin()
+      void fillLoginForm(AccountData)
+      void openMainPage()
+      void warrningMessage()
+      void tearDown()
+      boolean isElementPresent(By)
+      boolean isAlertPresent()
+      String closeAlertAndGetItsText()
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:22:31.600
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52223 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1221829612/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 52223 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1221829612/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:38:26.223
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 47366 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--457374586/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 47366 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--457374586/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:38:51.669
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 40230 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1439684323/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 40230 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1439684323/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:40:09.368
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 34102 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--739625392/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 34102 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--739625392/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:41:52.654
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56546 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1363768018/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 56546 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1363768018/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:42:39.377
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:qaframework.rtv.tests [in src [in rtv-tests]]
+  [Working copy] TestBase.java
+    package qaframework.rtv.tests
+    import org.junit.Assert.fail
+    import java.util.concurrent.TimeUnit
+    import org.openqa.selenium.Alert
+    import org.openqa.selenium.By
+    import org.openqa.selenium.NoAlertPresentException
+    import org.openqa.selenium.NoSuchElementException
+    import org.openqa.selenium.WebDriver
+    import org.openqa.selenium.firefox.FirefoxDriver
+    import org.testng.annotations.AfterClass
+    import org.testng.annotations.BeforeClass
+    class TestBase
+      WebDriver driver
+      String baseUrl
+      boolean acceptNextAlert
+      StringBuffer verificationErrors
+      void setUp()
+      void clickButtonExit()
+      void clickButtonLogin()
+      void fillLoginForm(AccountData)
+      void openMainPage()
+      void warrningMessage()
+      void tearDown()
+      boolean isElementPresent(By)
+      boolean isAlertPresent()
+      String closeAlertAndGetItsText()
+  AccountData.java
+    package qaframework.rtv.tests
+    class AccountData
+      String username
+      String password
+      AccountData()
+      AccountData(String, String)
+  [Working copy] AuthorizationTest.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.Test
+    class AuthorizationTest
+      void testAbonentType1()
+      void testNonAbonentType()
+  [Working copy] SmokeTest.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.Test
+    class SmokeTest
+      void testAbonentType1()
+      void testAbonentType2()
+      void testAbonentType3()
+      void testAbonentType4()
+      void testAbonentType5()
+      void testAbonentType6()
+      void testAbonentType7()
+      void testAbonentType8()
+      void testAbonentType9()
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 00:42:39.412
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50268 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--847542264/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 50268 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--847542264/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:08:05.218
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54483 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1111135776/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 54483 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1111135776/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:08:38.443
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 44543 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--542999568/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 44543 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--542999568/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:10:55.929
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 39636 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1193778524/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 39636 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1193778524/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:38:48.470
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 44549 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--2052777275/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 44549 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--2052777275/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:39:37.428
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 40559 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-780974995/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 40559 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-780974995/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:43:21.928
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54490 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1625141169/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 54490 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1625141169/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:44:01.320
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 48474 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1175308408/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 48474 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1175308408/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:44:45.569
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 44899 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--791436275/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 44899 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--791436275/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:47:50.451
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 43332 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1070407980/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 43332 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1070407980/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:47:58.159
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 37051 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1907548506/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 37051 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1907548506/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:48:15.780
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 44675 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--294265720/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 44675 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--294265720/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:49:48.754
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:qaframework.rtv.tests [in src [in rtv-tests]]
+  TestBase.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.AfterClass
+    import org.testng.annotations.BeforeClass
+    import qaframework.rtv.fw.ApplicationManager
+    class TestBase
+      ApplicationManager app
+      void setUp()
+      void tearDown()
+  AccountData.java
+    package qaframework.rtv.tests
+    class AccountData
+      String username
+      String password
+      AccountData()
+      AccountData(String, String)
+  AuthorizationTest.java (not open)
+  [Working copy] SmokeTest.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.Test
+    class SmokeTest
+      void testAbonentType1()
+      void testNonAbonentType()
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:49:48.845
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 55056 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1376868964/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 55056 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1376868964/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:53:02.723
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 44075 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-60687304/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 44075 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-60687304/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:54:04.063
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:qaframework.rtv.tests [in src [in rtv-tests]]
+  TestBase.java (not open)
+  AccountData.java
+    package qaframework.rtv.tests
+    class AccountData
+      String username
+      String password
+      AccountData()
+      AccountData(String, String)
+  AuthorizationTest.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.Test
+    class AuthorizationTest
+      void testAbonentType1()
+      void testAbonentType2()
+      void testAbonentType3()
+      void testAbonentType4()
+      void testAbonentType5()
+      void testAbonentType6()
+      void testAbonentType7()
+      void testAbonentType8()
+      void testAbonentType9()
+  [Working copy] SmokeTest.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.Test
+    class SmokeTest
+      void testAbonentType1()
+      void testNonAbonentType()
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:54:04.084
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 33233 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--2127471636/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 33233 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--2127471636/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:58:18.468
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:qaframework.rtv.tests [in src [in rtv-tests]]
+  [Working copy] TestBase.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.AfterClass
+    import org.testng.annotations.BeforeClass
+    import qaframework.rtv.fw.ApplicationManager
+    class TestBase
+      ApplicationManager app
+      void setUp()
+      void tearDown()
+  AccountData.java
+    package qaframework.rtv.tests
+    class AccountData
+      String username
+      String password
+      AccountData()
+      AccountData(String, String)
+  AuthorizationTest.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.Test
+    class AuthorizationTest
+      void testAbonentType1()
+      void testAbonentType2()
+      void testAbonentType3()
+      void testAbonentType4()
+      void testAbonentType5()
+      void testAbonentType6()
+      void testAbonentType7()
+      void testAbonentType8()
+      void testAbonentType9()
+  [Working copy] SmokeTest.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.Test
+    class SmokeTest
+      void testAbonentType1()
+      void testNonAbonentType()
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 01:58:18.504
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53644 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1444304001/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 53644 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1444304001/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 02:02:12.393
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54285 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-983484256/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 54285 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-983484256/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 02:03:37.891
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 36920 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1812162548/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 36920 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1812162548/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 02:09:13.530
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53944 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--138262935/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 53944 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--138262935/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 02:33:33.521
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54803 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1754863966/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 54803 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1754863966/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 02:47:44.038
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 38400 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1419679474/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 38400 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1419679474/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 02:52:17.475
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 44294 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-294853768/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 44294 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-294853768/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 02:55:37.423
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57053 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1708794266/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 57053 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1708794266/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:00:25.672
+!MESSAGE Transitive closure for groups "[authorization]":qaframework.rtv.tests.SmokeTest 
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:00:25.672
+!MESSAGE Transitive closure for method authorization: qaframework.rtv.tests.SmokeTest.authorization 
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:00:25.672
+!MESSAGE Transitive closure for method testRememberCheckBox: qaframework.rtv.tests.SmokeTest.testRememberCheckBox 
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:00:25.672
+!MESSAGE Transitive closure for method testNonAbonentType: qaframework.rtv.tests.SmokeTest.testNonAbonentType 
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:00:25.684
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 55603 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-638572453/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 55603 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-638572453/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:00:49.241
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 48157 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1918829614/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 48157 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1918829614/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:01:17.845
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57515 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1639697639/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 57515 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1639697639/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:01:39.704
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 44381 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1455653235/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 44381 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-1455653235/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:04:16.889
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 37231 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-2074392407/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 37231 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-2074392407/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:05:33.143
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 45556 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-693387398/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 45556 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-693387398/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:06:17.092
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 42520 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--591011699/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 42520 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--591011699/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:13:12.123
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:qaframework.rtv.tests [in src [in rtv-tests]]
+  TestBase.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.AfterClass
+    import org.testng.annotations.BeforeClass
+    import qaframework.rtv.fw.ApplicationManager
+    class TestBase
+      ApplicationManager app
+      void setUp()
+      void tearDown()
+  AccountData.java
+    package qaframework.rtv.tests
+    class AccountData
+      String username
+      String password
+      AccountData()
+      AccountData(String, String)
+  AuthorizationTest.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.Test
+    class AuthorizationTest
+      void testAbonentType1()
+      void testAbonentType2()
+      void testAbonentType3()
+      void testAbonentType4()
+      void testAbonentType5()
+      void testAbonentType6()
+      void testAbonentType7()
+      void testAbonentType8()
+      void testAbonentType9()
+  [Working copy] SmokeTest.java
+    package qaframework.rtv.tests
+    import org.testng.annotations.Test
+    class SmokeTest
+      void authorization()
+      void testRememberCheckBox()
+      void testNonAbonentType()
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 03:13:12.198
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 32955 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-956555940/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 32955 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse-956555940/testng-customsuite.xml
+!SESSION 2016-04-20 14:01:47.329 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_72
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.testng.eclipse 1 0 2016-04-20 23:14:16.913
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 56194 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1749345987/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 56194 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--1749345987/testng-customsuite.xml
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2016-04-20 23:16:03.866
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://oss.sonatype.org/content/repositories/snapshots.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2016-04-20 23:16:03.866
+!MESSAGE No repository found at https://oss.sonatype.org/content/repositories/snapshots.
