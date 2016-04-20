@@ -1,0 +1,28 @@
+package qaframework.rtv.tests;
+import org.testng.annotations.Test;
+
+public class AuthorizationTest extends TestBase {
+	@Test
+	  public void testAbonentType1() throws Exception {
+	    app.openMainPage();
+	    AccountData account = new AccountData();
+	    account.username="test001";
+	    account.password="001test";
+		app.fillLoginForm(this, account);
+	    app.clickButtonLogin();
+	    //driver.findElement(By.cssSelector("button.navbar-toggle")).click(); // open list with button Exit
+	    app.clickButtonExit();
+	  }
+	  @Test
+	  public void testNonAbonentType() throws Exception {
+	    app.openMainPage();
+	    app.fillLoginForm(this, new AccountData("", ""));
+	    app.clickButtonLogin();
+	    app.warrningMessage();
+	    //driver.findElement(By.cssSelector("button.navbar-toggle")).click(); // open list with button Exit
+	    //clickButtonExit();
+	  }
+	  
+
+
+}

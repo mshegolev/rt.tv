@@ -1,0 +1,15 @@
+package qaframework.rtv.fw;
+
+import org.openqa.selenium.By;
+
+public class NavigationHelper {
+
+	public void openMainPage() {
+		ApplicationManager.driver.get(ApplicationManager.baseUrl + "/");
+	}
+
+	public void clickButtonLogin() {
+		ApplicationManager.driver.findElement(By.id("auth_btn")).click();
+	}
+
+}
