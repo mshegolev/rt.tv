@@ -1,10 +1,14 @@
 package qaframework.rtv.tests;
 
 import org.testng.annotations.Test;
+import org.testng.Assert;
+
+
 
 public class SmokeTest extends TestBase {
+	
 	@Test
-	public void authorization() throws Exception {
+	public void authorizationCorrectCredentianal() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		AccountData account = new AccountData();
 		account.username = "test001";
@@ -14,28 +18,25 @@ public class SmokeTest extends TestBase {
 		app.getNavigationHelper().clickButtonLogin();
 		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
 		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow());
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
+		Assert.assertTrue(((app.getNavigationHelper().checkAbonentType("У вас оплачен Расширенный абонемент на 11 месяцев"))),"Wrong abonent type"); 
 		app.getNavigationHelper().clickButtonExit();
 	}
-
+	@Test
+	public void authorizationNonCredentional() throws Exception {
+		app.getNavigationHelper().openMainPage();
+		app.getAccountHelper().fillLoginForm(app, new AccountData("wrong", ""));
+		app.getNavigationHelper().clickButtonLogin();
+		Assert.assertTrue(app.getNavigationHelper().checkWarrningMessage());
+	}
 	// TODO: Write test for checkBox remember
-	@Test(description = "CheckBox remember user", dependsOnMethods = "authorization")
-	public void testRememberCheckBox() throws Exception {
+	@Test(description = "CheckBox remember user", dependsOnMethods = { "authorizationCorrectCredentianal"})
+	public void authorizationWithRememberCheckBox() throws Exception {
 		// app.getNavigationHelper().openMainPage();
 		app.getNavigationHelper().clickButtonLogin();
 		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
 		// // open list with button Exit
 		app.getNavigationHelper().clickButtonExit();
 	}
-
-	@Test
-	public void testNonAbonentType() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		app.getAccountHelper().fillLoginForm(app, new AccountData("", ""));
-		app.getNavigationHelper().clickButtonLogin();
-		app.getNavigationHelper().warrningMessage();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
-		// clickButtonExit();
-	}
-
 }

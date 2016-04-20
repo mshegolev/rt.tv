@@ -6,17 +6,11 @@
       <class name="qaframework.rtv.tests.SmokeTest">
         <methods>
           <include name="setUp"/>
-          <include name="authorization"/>
-          <include name="testRememberCheckBox"/>
+          <include name="authorizationCorrectCredentianal"/>
+          <include name="authorizationWithRememberCheckBox"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- qaframework.rtv.tests.SmokeTest -->
-      <class name="qaframework.rtv.tests.AuthorizationTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- qaframework.rtv.tests.AuthorizationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
