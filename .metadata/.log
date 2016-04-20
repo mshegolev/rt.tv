@@ -744,3 +744,11 @@ Caused by: java.lang.NullPointerException
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
 	... 46 more
+
+!ENTRY org.testng.eclipse 1 0 2016-04-21 00:14:59.190
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /develop/rtv-tests/rtv-tests/bin /home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52464 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--786895827/testng-customsuite.xml
+java -ea -classpath /develop/rtv-tests/rtv-tests/bin:/home/mikhail/Downloads/selenium-server-standalone-2.53.0.jar org.testng.remote.RemoteTestNG -serport 52464 -d /develop/rtv-tests/rtv-tests/test-output /tmp/testng-eclipse--786895827/testng-customsuite.xml
