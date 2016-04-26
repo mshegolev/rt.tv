@@ -1,7 +1,6 @@
 package qaframework.rtv.fw;
 
 import org.openqa.selenium.By;
-
 import qaframework.rtv.tests.AccountData;
 
 public class AccountHelper extends HelperBase {

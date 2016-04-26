@@ -44,4 +44,10 @@ public class NavigationHelper extends HelperBase {
     public String getAbonentType() {
         return driver.findElement(By.id("abonementType")).getText();
     }
+
+	//public  void getPlayerContainer() { driver.findElement(By.id("videoPlayer")).findElement(By.tagName("iframe"));}
+	public  String getPlayerContainer() {return driver.findElement(By.id("videoPlayer")).getTagName().toString();}
+
+	public  String getGiftBlockWithoutGiftContent() {return driver.findElement(By.id("paramList")).getText();}
+	public  void clickGiftBlockFirstTable() {click(By.id("blockParams1"));}
 }

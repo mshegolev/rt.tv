@@ -1,12 +1,17 @@
 package qaframework.rtv.tests;
 
-import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 
 
 public class SmokeTest extends TestBase {
-	
+	//TODO:test jenkins with new maven agent
+	@Test
+    public void testJenkins(){
+        app.getNavigationHelper().openMainPage();
+        //TODO:test jenkins with new maven agent
+    }
 	@Test
 	public void authorizationCorrectCredentianal() throws Exception {
 		app.getNavigationHelper().openMainPage();
@@ -20,18 +25,11 @@ public class SmokeTest extends TestBase {
 		// // open list with button Exit
 		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow());
 		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
-		Assert.assertTrue(((app.getNavigationHelper().checkAbonentType("У вас оплачен Расширенный абонемент на 11 месяцев"))),"Wrong abonent type"); 
+		Assert.assertTrue(((app.getNavigationHelper().checkAbonentType("РЈ РІР°СЃ РѕРїР»Р°С‡РµРЅ Р Р°СЃС€РёСЂРµРЅРЅС‹Р№ Р°Р±РѕРЅРµРјРµРЅС‚ РЅР° 11 РјРµСЃСЏС†РµРІ"))),"Wrong abonent type"); 
 		app.getNavigationHelper().clickButtonExit();
 	}
-	@Test
-	public void authorizationNonCredentional() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		app.getAccountHelper().fillLoginForm(app, new AccountData("wrong", ""));
-		app.getNavigationHelper().clickButtonLogin();
-		Assert.assertTrue(app.getNavigationHelper().checkWarrningMessage());
-	}
-	// TODO: Write test for checkBox remember
-	@Test(description = "CheckBox remember user", dependsOnMethods = { "authorizationCorrectCredentianal"})
+	
+	@Test(testName = "", description = "CheckBox remember user", dependsOnMethods = { "authorizationCorrectCredentianal"})
 	public void authorizationWithRememberCheckBox() throws Exception {
 		// app.getNavigationHelper().openMainPage();
 		app.getNavigationHelper().clickButtonLogin();
@@ -39,4 +37,14 @@ public class SmokeTest extends TestBase {
 		// // open list with button Exit
 		app.getNavigationHelper().clickButtonExit();
 	}
+	
+	@Test
+	public void authorizationNonCredentional() throws Exception {
+		app.getNavigationHelper().openMainPage();
+		app.getAccountHelper().fillLoginForm(app, new AccountData("", ""));
+		app.getNavigationHelper().clickButtonLogin();
+		Assert.assertTrue(app.getNavigationHelper().checkWarrningMessage());
+	}
+	// TODO: Write test for checkBox remember
+
 }
