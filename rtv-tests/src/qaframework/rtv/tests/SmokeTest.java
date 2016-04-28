@@ -6,12 +6,6 @@ import org.testng.annotations.Test;
 
 
 public class SmokeTest extends TestBase {
-	//TODO:test jenkins with new maven agent
-	@Test
-    public void testJenkins(){
-        app.getNavigationHelper().openMainPage();
-        //TODO:test jenkins with new maven agent
-    }
 	@Test
 	public void authorizationCorrectCredentianal() throws Exception {
 		app.getNavigationHelper().openMainPage();
@@ -29,14 +23,14 @@ public class SmokeTest extends TestBase {
 		app.getNavigationHelper().clickButtonExit();
 	}
 	
-	@Test(testName = "", description = "CheckBox remember user", dependsOnMethods = { "authorizationCorrectCredentianal"})
-	public void authorizationWithRememberCheckBox() throws Exception {
-		// app.getNavigationHelper().openMainPage();
-		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
-		app.getNavigationHelper().clickButtonExit();
-	}
+//	@Test(testName = "", description = "CheckBox remember user", dependsOnMethods = { "authorizationCorrectCredentianal"})
+//	public void authorizationWithRememberCheckBox() throws Exception {
+//		// app.getNavigationHelper().openMainPage();
+//		app.getNavigationHelper().clickButtonLogin();
+//		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
+//		// // open list with button Exit
+//		app.getNavigationHelper().clickButtonExit();
+//	}
 	
 	@Test
 	public void authorizationNonCredentional() throws Exception {
