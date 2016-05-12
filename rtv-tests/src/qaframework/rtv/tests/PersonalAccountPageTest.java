@@ -1,7 +1,7 @@
-package qaframework.rtv.tests;
+п»їpackage qaframework.rtv.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+ 
 /**
  * Created by nikolay.g on 22.04.2016.
  */
@@ -18,7 +18,7 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
         app.getNavigationHelper().clickButtonLogin();
 
         String result=  app.getNavigationHelper().getGiftBlockWithoutGiftContent();
-        String expresult = "К сожалению, у вас нет подарков.";
+        String expresult = "Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, Сѓ РІР°СЃ РЅРµС‚ РїРѕРґР°СЂРєРѕРІ.";
         Assert.assertEquals(result,expresult,"User without gifts doesn't see the error.");
         app.getNavigationHelper().clickButtonExit();
     }
