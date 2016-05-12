@@ -46,11 +46,16 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
         account.username = "test005";
         account.password = "005test";
         app.getAccountHelper().fillLoginForm(app, account);
-
         app.getNavigationHelper().clickButtonLogin();
-
-        
     }
     
-    
+    @Test(testName = "RTV-15", description = "Check existence of block with Tsioroitc for user without access")
+    public void existenceBlockTsioroitcWithoutAccess() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        AccountData account = new AccountData();
+        account.username = "test005";
+        account.password = "005test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
+    }
 }
