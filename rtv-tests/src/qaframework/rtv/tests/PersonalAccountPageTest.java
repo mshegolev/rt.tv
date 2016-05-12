@@ -18,7 +18,7 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
         app.getNavigationHelper().clickButtonLogin();
 
         String result=  app.getNavigationHelper().getGiftBlockWithoutGiftContent();
-        String expresult = "Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, Сѓ РІР°СЃ РЅРµС‚ РІС‹РґР°РЅРЅС‹С… РїРѕРґР°СЂРєРѕРІ.";
+        String expresult = "К сожалению, у вас нет подарков.";
         Assert.assertEquals(result,expresult,"User without gifts doesn't see the error.");
         app.getNavigationHelper().clickButtonExit();
     }
@@ -39,5 +39,18 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
         app.getNavigationHelper().clickButtonExit();
     }
 
+    @Test(testName = "RTV-14", description = "Check correct work of subscription block for user without phone")
+    public void existenceSubscriptionBlockUserWithoutPhone() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        AccountData account = new AccountData();
+        account.username = "test005";
+        account.password = "005test";
+        app.getAccountHelper().fillLoginForm(app, account);
 
+        app.getNavigationHelper().clickButtonLogin();
+
+        
+    }
+    
+    
 }
