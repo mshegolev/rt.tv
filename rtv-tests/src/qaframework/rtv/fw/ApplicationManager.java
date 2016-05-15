@@ -12,6 +12,7 @@ public class ApplicationManager {
 
 	private NavigationHelper navigationHelper;
 	private AccountHelper accountHelper;
+	private VideoPlayerHelper videoHelper;
 
 	public ApplicationManager() {
 		driver = new FirefoxDriver();
@@ -38,6 +39,12 @@ public class ApplicationManager {
 			accountHelper = new AccountHelper(this);
 		}
 		return accountHelper;
+	}
+	public VideoPlayerHelper getVideoHelper() {
+		if (videoHelper == null) {
+			videoHelper = new VideoPlayerHelper(this);
+		}
+		return videoHelper;
 	}
 
 }
