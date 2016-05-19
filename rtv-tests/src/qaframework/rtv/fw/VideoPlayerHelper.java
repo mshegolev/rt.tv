@@ -1,11 +1,13 @@
 package qaframework.rtv.fw;
 
+import com.google.gson.internal.bind.TimeTypeAdapter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import java.io.File;
+import java.text.ParseException;
 
 /**
  * Created by mikhail on 5/14/16.
@@ -23,23 +25,97 @@ public class VideoPlayerHelper extends HelperBase {
 
     public void videoPlayerIframe() throws InterruptedException {
         driver.switchTo().defaultContent();
-        driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='partsTranslations']/iframe")));
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         driver.findElement(By.cssSelector(".uppod-control_play>canvas")).click();
         Thread.sleep(5000);
     }
 
     public WebElement buttonPause() {
         driver.switchTo().defaultContent();
-        driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='partsTranslations']/iframe")));
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return driver.findElement(By.cssSelector(".uppod-control_pause>canvas"));
     }
 
     public WebElement buttonPlay() {
         driver.switchTo().defaultContent();
-        driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='partsTranslations']/iframe")));
-        return driver.findElement(By.cssSelector(".uppod-control_play>canvas"));
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.cssSelector(".uppod-control_play>canvas").findElement(driver);
 
     }
+
+    public WebElement fieldDuration() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return driver.findElement(By.xpath(".//*[@class='uppod-control_time_play']"));
+    }
+
+    public WebElement scrollbarVideoLine() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.cssSelector(".uppod-control_line_btn").findElement(driver);
+    }
+
+    public WebElement scrollbarVideoButton() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.cssSelector(".uppod-control_run_line").findElement(driver);
+    }
+
+    public WebElement fieldDrationAllTime() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.cssSelector(".uppod-control_time_all").findElement(driver);
+    }
+
+    public WebElement buttonSoundON() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.cssSelector(".uppod-control_volume").findElement(driver);
+    }
+
+    public WebElement buttonSoundMute() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.cssSelector(".uppod-control_volume_mute>canvas").findElement(driver);
+    }
+
+    public WebElement scrollbarSound() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.cssSelector(".uppod-control_volume_bar>canvas").findElement(driver);
+    }
+
+    public WebElement buttonFullScreenEnter() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.cssSelector(".uppod-control_enter_fullscreen").findElement(driver);
+    }
+
+    public WebElement buttonFullScreenExit() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.cssSelector(".uppod-control_exit_fullscreen").findElement(driver);
+    }
+
+    private Integer getPossitionScrollbarVideoButton() {
+        int scrollValue = Integer.parseInt(scrollbarVideoButton().getCssValue("left").toString().replace("px", ""));
+        return scrollValue;
+    }
+
+    public String getDuration() throws ParseException {
+        return fieldDuration().getText();
+    }
+
+    private boolean setScrollBarToTime(TimeTypeAdapter time) {
+        return true;
+    }
+
+
+    //time     driver.findElement(By.cssSelector("div.uppod-control_line_btn")).click();
+    //set time  driver.findElement(By.cssSelector("div.uppod-control_time_all")).click();
+    //driver.findElement(By.cssSelector("div.uppod-control_volume > canvas")).click();
+    //driver.findElement(By.cssSelector("div.uppod-control_volume_mute > canvas")).click();
+    //driver.findElement(By.cssSelector("div.uppod-control_volume_bar")).click();
 
     public boolean clickButtonPause() throws InterruptedException {
         if (buttonPause().isDisplayed()) {
@@ -54,7 +130,7 @@ public class VideoPlayerHelper extends HelperBase {
                 return true;
             }
         }
-            return false;
+        return false;
 
     }
 

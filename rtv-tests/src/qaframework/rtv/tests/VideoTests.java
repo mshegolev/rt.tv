@@ -8,17 +8,24 @@ import org.testng.annotations.Test;
  * Created by nikolay.g on 21.04.2016.
  */
 public class VideoTests extends TestBase {
+    private char w=0;
+
     @Test(testName = "RTV-11", description = "Check player and autostart")
     public void authorizationWithRememberCheckBox() throws Exception {
         WebDriver driver = null;
         app.getNavigationHelper().openMainPage();
-        //app.getVideoHelper().videoPlayerIframe();
-        Assert.assertTrue(app.getVideoHelper().clickButtonPlay(),"Button start don't work, video isn't stated");
-        //TODO: add check video stream or url.
-        Thread.sleep(10000);
+        Assert.assertTrue(app.getVideoHelper().clickButtonPlay(), "Button start don't work, video isn't stated");
+        while ( !(app.getVideoHelper().getDuration().equals("0:10")) && w < 30){
+            Thread.sleep(1000);
+            w++;
+        }
+        //TODO: add check video stream or url or screenshot
+        Assert.assertTrue(app.getVideoHelper().clickButtonPause(), "Button start don't work, video isn't stated");
+        Assert.assertEquals(app.getVideoHelper().getDuration(), "0:10");
+
+        //*------- add some tests
         //TODO: needed mouse move to iframe for open buttons panel
-        Assert.assertTrue(app.getVideoHelper().clickButtonPause(),"Button pause don't work, video isn't paused");
-    }
+        }
 
     private void loginMainPageUserAdmin(){
         app.getNavigationHelper().openMainPage();
