@@ -1,5 +1,6 @@
 package qaframework.rtv.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AuthorizationTest extends TestBase {
@@ -12,8 +13,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "001test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Task sheduler is empty!");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -25,8 +25,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "002test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Task sheduler is empty!");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -38,8 +37,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "003test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Task sheduler is empty!");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -51,8 +49,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "004test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Task sheduler is empty!");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -64,8 +61,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "005test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Task sheduler is empty!");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -77,8 +73,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "006test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Task sheduler is empty!");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -90,8 +85,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "007test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Task sheduler is empty!");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -103,8 +97,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "008test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Task sheduler is empty!");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -116,8 +109,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "009test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Task sheduler is empty!");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
