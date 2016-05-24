@@ -17,96 +17,109 @@ public class VideoPlayerHelper extends HelperBase {
         super(manager);
     }
 
-    public WebElement videoPlayer() {
-        driver.findElement(By.id("videoPlayer"));
+    public WebElement videoArchivePlayer() {
+        driver.findElement(By.id("videoArchivePlayer"));
         return null;
     }
 
 
-    public void videoPlayerIframe() throws InterruptedException {
+    public void videoArchivePlayerPlayerIframe() throws InterruptedException {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         driver.findElement(By.cssSelector(".uppod-control_play>canvas")).click();
         Thread.sleep(5000);
     }
 
-    public WebElement buttonPause() {
+    public WebElement buttonArchivePlayerPause() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return driver.findElement(By.cssSelector(".uppod-control_pause>canvas"));
     }
 
-    public WebElement buttonPlay() {
+    public WebElement buttonArchivePlayerPlay() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return By.cssSelector(".uppod-control_play>canvas").findElement(driver);
 
     }
 
-    public WebElement fieldDuration() {
+    public WebElement fieldArchivePlayerDuration() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return driver.findElement(By.xpath(".//*[@class='uppod-control_time_play']"));
     }
 
-    public WebElement scrollbarVideoLine() {
+    public WebElement fieldArchivePlayerLayer() {
+        driver.switchTo().defaultContent();
+        driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.id("layer").findElement(driver);
+    }
+
+    public WebElement scrollbarArchiveVideoLine() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return By.cssSelector(".uppod-control_line_btn").findElement(driver);
     }
 
-    public WebElement scrollbarVideoButton() {
+    public WebElement scrollbarArchiveVideoButton() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return By.cssSelector(".uppod-control_run_line").findElement(driver);
     }
 
-    public WebElement fieldDrationAllTime() {
+    public WebElement fieldArchivePlayerDrationAllTime() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return By.cssSelector(".uppod-control_time_all").findElement(driver);
     }
 
-    public WebElement buttonSoundON() {
+    public WebElement buttonArchivePlayerSoundON() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return By.cssSelector(".uppod-control_volume").findElement(driver);
     }
 
-    public WebElement buttonSoundMute() {
+    public WebElement buttonArchivePlayerSoundMute() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return By.cssSelector(".uppod-control_volume_mute>canvas").findElement(driver);
     }
 
-    public WebElement scrollbarSound() {
+    public WebElement scrollbarArchivePlayerSound() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return By.cssSelector(".uppod-control_volume_bar>canvas").findElement(driver);
     }
 
-    public WebElement buttonFullScreenEnter() {
+    public WebElement buttonArchivePlayerFullScreenEnter() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return By.cssSelector(".uppod-control_enter_fullscreen").findElement(driver);
     }
 
-    public WebElement buttonFullScreenExit() {
+    public WebElement buttonArchivePlayerFullScreenExit() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
         return By.cssSelector(".uppod-control_exit_fullscreen").findElement(driver);
     }
 
-    private Integer getPossitionScrollbarVideoButton() {
-        int scrollValue = Integer.parseInt(scrollbarVideoButton().getCssValue("left").toString().replace("px", ""));
+    private Integer getPossitionScrollbarArchivePlayerButton() {
+        int scrollValue = Integer.parseInt(scrollbarArchiveVideoButton().getCssValue("left").toString().replace("px", ""));
         return scrollValue;
     }
 
-    public String getDuration() throws ParseException {
-        return fieldDuration().getText();
+    public String getDurationArchivePlayer() throws ParseException {
+        return fieldArchivePlayerDuration().getText();
     }
 
-    private boolean setScrollBarToTime(TimeTypeAdapter time) {
+    public WebElement etherPlayer() {
+        //driver.switchTo().defaultContent();
+        //driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.id("player_videoflash").findElement(driver);
+
+    }
+
+    private boolean setScrollBarArchivePlayerToTime(TimeTypeAdapter time) {
         return true;
     }
 
@@ -118,15 +131,15 @@ public class VideoPlayerHelper extends HelperBase {
     //driver.findElement(By.cssSelector("div.uppod-control_volume_bar")).click();
 
     public boolean clickButtonPause() throws InterruptedException {
-        if (buttonPause().isDisplayed()) {
-            buttonPause().click();
+        if (buttonArchivePlayerPause().isDisplayed()) {
+            buttonArchivePlayerPause().click();
             return true;
-        } else if (buttonPause().isDisplayed() == false) {
+        } else if (buttonArchivePlayerPause().isDisplayed() == false) {
             Actions builder = new Actions(driver);
-            builder.moveToElement(buttonPause(), buttonPause().getLocation().getX(), buttonPause().getLocation().getY());
+            builder.moveToElement(buttonArchivePlayerPause(), buttonArchivePlayerPause().getLocation().getX(), buttonArchivePlayerPause().getLocation().getY());
             Thread.sleep(5000);
-            if (buttonPause().isEnabled()) {
-                buttonPause().click();
+            if (buttonArchivePlayerPause().isEnabled()) {
+                buttonArchivePlayerPause().click();
                 return true;
             }
         }
@@ -134,7 +147,7 @@ public class VideoPlayerHelper extends HelperBase {
 
     }
 
-    public boolean clickVideoPlayer() {
+    public boolean clickArchivePlayer() {
         driver.switchTo().defaultContent();
         driver.switchTo().frame(driver.findElement(By.xpath(".//*[@id='partsTranslations']/iframe")));
         driver.findElement(By.cssSelector(".uppod-control_play>canvas")).click();
@@ -143,8 +156,8 @@ public class VideoPlayerHelper extends HelperBase {
 
     // TODO: replace waite to wait and chack video stream;
     public boolean clickButtonPlay() {
-        if (buttonPlay().isEnabled()) {
-            buttonPlay().click();
+        if (buttonArchivePlayerPlay().isEnabled()) {
+            buttonArchivePlayerPlay().click();
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
@@ -156,11 +169,11 @@ public class VideoPlayerHelper extends HelperBase {
 
 
     //TODO: depraceted this code after automation ff player
-    public void testHTML5VideoPlayer() throws Exception {
+    public void testHTML5ArchivePlayer() throws Exception {
         File scrFile = null;
 
         //Get the HTML5 Video Element
-        WebElement videoPlayer = driver.findElement(By.id("videoPlayer"));
+        WebElement videoPlayer = driver.findElement(By.id("videoArchivePlayer"));
         driver.manage().window().fullscreen();
 //        driver.get("https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/2663/5/138319692/411670000.mp4?token=57389b3f_0xed17bac20106661da22cdc156a337d9e7e7ab768");
         Thread.sleep(12000L);

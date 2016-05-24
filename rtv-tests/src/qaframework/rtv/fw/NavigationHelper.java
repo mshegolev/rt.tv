@@ -8,8 +8,11 @@ public class NavigationHelper extends HelperBase {
 		super(manager);
 	}
 
-	public void openMainPage() {
-		driver.get(manager.baseUrl + "");
+	public void openMainPage(){
+		openMainPage("");
+	};
+	public void openMainPage(String url) {
+		driver.get(String.format("%s%s", manager.baseUrl,url));
 	}
 
 	public void clickButtonLogin() {
@@ -45,8 +48,8 @@ public class NavigationHelper extends HelperBase {
         return driver.findElement(By.id("abonementType")).getText();
     }
 
-	//public  void getPlayerContainer() { driver.findElement(By.id("videoPlayer")).findElement(By.tagName("iframe"));}
-	public  String getPlayerContainer() {return driver.findElement(By.id("videoPlayer")).getTagName().toString();}
+	//public  void getPlayerContainer() { driver.findElement(By.id("videoArchivePlayer")).findElement(By.tagName("iframe"));}
+	public  String getPlayerContainer() {return driver.findElement(By.id("videoArchivePlayer")).getTagName().toString();}
 
 	public  String getGiftBlockWithoutGiftContent() {return driver.findElement(By.id("paramList")).getText();}
 	public  void clickGiftBlockFirstTable() {click(By.id("blockParams1"));}
