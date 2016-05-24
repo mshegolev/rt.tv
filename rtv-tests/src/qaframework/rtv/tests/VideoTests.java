@@ -46,8 +46,7 @@ public class VideoTests extends TestBase {
     @Test(testName = "RTV-18", description = "Check autostart ether player")
     public void checkEtherPlayerVideoStream(){
         app.getNavigationHelper().openMainPage("test.html");
-
-        //app.getVideoHelper().etherPlayer();
+        app.getVideoHelper().etherPlayer();
     }
 
 
@@ -55,7 +54,7 @@ public class VideoTests extends TestBase {
     @Test(testName = "RTV-XXX")
     public void checkVideoStream(){
         app.getNavigationHelper().openMainPage();
-        app.getVideoHelper().fieldArchivePlayerLayer();
+
     }
 
     private void loginMainPageUserAdmin() {

@@ -112,23 +112,12 @@ public class VideoPlayerHelper extends HelperBase {
         return fieldArchivePlayerDuration().getText();
     }
 
-    public WebElement etherPlayer() {
-        //driver.switchTo().defaultContent();
-        //driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
-        return By.id("player_videoflash").findElement(driver);
-
-    }
-
     private boolean setScrollBarArchivePlayerToTime(TimeTypeAdapter time) {
         return true;
     }
 
-
     //time     driver.findElement(By.cssSelector("div.uppod-control_line_btn")).click();
-    //set time  driver.findElement(By.cssSelector("div.uppod-control_time_all")).click();
-    //driver.findElement(By.cssSelector("div.uppod-control_volume > canvas")).click();
-    //driver.findElement(By.cssSelector("div.uppod-control_volume_mute > canvas")).click();
-    //driver.findElement(By.cssSelector("div.uppod-control_volume_bar")).click();
+
 
     public boolean clickButtonPause() throws InterruptedException {
         if (buttonArchivePlayerPause().isDisplayed()) {
@@ -166,7 +155,6 @@ public class VideoPlayerHelper extends HelperBase {
             return true;
         } else return false;
     }
-
 
     //TODO: depraceted this code after automation ff player
     public void testHTML5ArchivePlayer() throws Exception {
@@ -206,5 +194,20 @@ public class VideoPlayerHelper extends HelperBase {
         FileUtils.copyFile(scrFile, new File("c:\\tmp\\pause_play.png"));
     }
 
+
+    //driver.findElement(By.cssSelector("div.uppod-control_volume_bar")).click();
+    //driver.findElement(By.cssSelector("div.uppod-control_volume_mute > canvas")).click();
+    //driver.findElement(By.cssSelector("div.uppod-control_volume > canvas")).click();
+    //set time  driver.findElement(By.cssSelector("div.uppod-control_time_all")).click();
+
+    public WebElement etherPlayer() {
+        //driver.switchTo().defaultContent();
+        //driver.switchTo().frame(By.xpath(".//*[@id='partsTranslations']/iframe").findElement(driver));
+        return By.id("player_videoflash").findElement(driver);
+    }
+
+    public void clickEtherPlayer() {
+        By.id("player_videoflash").findElement(driver).click();
+    }
 
 }
