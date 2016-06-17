@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SmokeTest">
-    <test verbose="2" name="Tests for VideoTests">
+    <!-- <test verbose="2" name="Tests for VideoTests">
         <classes>
             <class name="qaframework.rtv.tests.ArchiveVideoTests" />
         </classes>
-    </test>
+    </test> -->
     <test verbose="2" name="Group of SmokeTest">
         <classes>
             <class name="qaframework.rtv.tests.SmokeTest" />
@@ -21,5 +21,4 @@
             <class name="qaframework.rtv.tests.PersonalAccountPageTest" />
         </classes>
     </test>
-
 </suite>
