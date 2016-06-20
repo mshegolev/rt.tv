@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TranslationArchiveTests extends TestBase  {
-	@Test
+	@Test 
 	public void catalogExist() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		AccountData account = new AccountData();
@@ -41,10 +41,10 @@ public class TranslationArchiveTests extends TestBase  {
 		Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsPurchasesFirstRow());
 		app.getNavigationHelper().clickArchiveEventsPurchasesFirstRow();
 		String archiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
-		String expResult = "Ты точно хочешь начать просмотр?";
+		String expResult = "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ?";
 		Assert.assertEquals(archiveEventsPurchasesName, expResult, "Wrong text in lightbox");
 
-		//сравнить заголовки
+		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 		app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
 		app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
 		

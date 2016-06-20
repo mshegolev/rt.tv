@@ -93,7 +93,7 @@ public class NavigationHelper extends HelperBase {
 	public void clicktableArchiveEventsPurchasesFirstRow(){click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));}
 	public void clickBuyLink(){click(By.xpath(".//*[@id='archiveEventsModalLink']/a"));}
 	public String getArchiveEventsModalName(){return driver.findElement(By.id("archiveEventsModalName")).getText();}
-	
+	 
 	
 	public void clickArchiveEventsPurchasesFirstRow(){click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));}
 	public String getTextArchiveEventsPurchasesName(){return driver.findElement(By.id("archiveEventsPurchasesName")).findElement(By.tagName("h4")).getText();}
