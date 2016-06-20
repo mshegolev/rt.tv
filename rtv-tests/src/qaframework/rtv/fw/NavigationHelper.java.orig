@@ -68,6 +68,7 @@ public class NavigationHelper extends HelperBase {
 	public  void clickGiftBlockFirstTable() {click(By.id("blockParams1"));}
 	public String getFirstRowContentGiftTable() {return driver.findElement(By.id("jan2016RadasTVTable")).findElement(By.className("table_param_name")).getText();}
 	
+	
 
 	
 	
@@ -80,28 +81,6 @@ public class NavigationHelper extends HelperBase {
 	public void fillPhone(String phone) {
 		type(By.id("phone"), phone);
 	}
-	
-	public void clickpersonalArchiveEventsHeaderControl(){click(By.id("personalArchiveEventsHeaderControl"));}
-	public void clickpersonalArchiveEventsCatalogControl(){click(By.id("personalArchiveEventsCatalogControl"));}
-	public void clickpersonalArchiveEventsPurchasesControl(){click(By.id("personalArchiveEventsPurchasesControl"));}
-	public boolean gettableArchiveEventsFirstRow() {
-        return driver.findElements(By.xpath(".//*[@id='archiveEvents']/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
-    }
-	public boolean gettableArchiveEventsPurchasesFirstRow() {
-        return driver.findElements(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
-    }
-	public void clicktableArchiveEventsPurchasesFirstRow(){click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));}
-	public void clickBuyLink(){click(By.xpath(".//*[@id='archiveEventsModalLink']/a"));}
-	public String getArchiveEventsModalName(){return driver.findElement(By.id("archiveEventsModalName")).getText();}
-	
-	
-	public void clickArchiveEventsPurchasesFirstRow(){click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));}
-	public String getTextArchiveEventsPurchasesName(){return driver.findElement(By.id("archiveEventsPurchasesName")).findElement(By.tagName("h4")).getText();}
-	public void clickarchiveEventsPurchasesVideo(){click(By.xpath(".//*[@id='archiveEventsPurchasesVideo']/div/div"));}
-
-	
-	
-	
 	public void clickSendConfirmCode(){click(By.id("sendConfirmCode"));}
 	public String getTextInsendCodeFailBlock(){return driver.findElement(By.id("sendCodeFail")).getText();}
 	public String getTextInAgainCodeSendedBlock(){return driver.findElement(By.id("againCodeSended")).getText();}

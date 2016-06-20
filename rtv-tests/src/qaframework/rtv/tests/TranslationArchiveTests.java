@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class TranslationArchiveTests extends TestBase  {
 	@Test
-	public void authorizationCorrectCredentianal() throws Exception {
+	public void catalogExist() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		AccountData account = new AccountData();
 		account.username = "test001";
@@ -13,11 +13,45 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickCheckBoxRemember();
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
-		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow());
-		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
+		Thread.sleep(2000);
+		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
+		app.getNavigationHelper().clickpersonalArchiveEventsCatalogControl();
+		Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsFirstRow());
+		app.getNavigationHelper().clicktableArchiveEventsPurchasesFirstRow();
+		//String getArchiveEventsModalName = app.getNavigationHelper().getArchiveEventsModalName();
+		app.getNavigationHelper().clickBuyLink();
+		
+		
+		
 		app.getNavigationHelper().clickButtonExit();
 	}
+	@Test
+	public void catalogBoughtEventsExist() throws Exception {
+		app.getNavigationHelper().openMainPage();
+		AccountData account = new AccountData();
+		account.username = "test001";
+		account.password = "001test";
+		app.getAccountHelper().fillLoginForm(app, account);
+		app.getNavigationHelper().clickCheckBoxRemember();
+		app.getNavigationHelper().clickButtonLogin();
+		
+		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
+		Thread.sleep(2000);
+		app.getNavigationHelper().clickpersonalArchiveEventsPurchasesControl();
+		Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsPurchasesFirstRow());
+		app.getNavigationHelper().clickArchiveEventsPurchasesFirstRow();
+		String archiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
+		String expResult = "Ты точно хочешь начать просмотр?";
+		Assert.assertEquals(archiveEventsPurchasesName, expResult, "Wrong text in lightbox");
+
+		//сравнить заголовки
+		app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
+		app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
+		
+		app.getNavigationHelper().clickButtonExit();
+	}
+	
+	
+	
 }
 
