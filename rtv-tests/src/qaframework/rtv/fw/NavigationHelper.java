@@ -92,7 +92,12 @@ public class NavigationHelper extends HelperBase {
 	
 	}
 	public void clickpersonalArchiveEventsCatalogControl(){click(By.id("personalArchiveEventsCatalogControl"));}
-	public void clickpersonalArchiveEventsPurchasesControl(){click(By.id("personalArchiveEventsPurchasesControl"));}
+	public void clickpersonalArchiveEventsPurchasesControl(){
+		//click(By.id("personalArchiveEventsPurchasesControl"));
+		WebElement element = driver.findElement(By.id("personalArchiveEventsPurchasesControl"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().perform();
+	}
 	public boolean gettableArchiveEventsFirstRow() {
 		
         return driver.findElements(By.xpath(".//*[@id='archiveEvents']/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
@@ -126,9 +131,16 @@ public class NavigationHelper extends HelperBase {
 	
 	
 	public void clickArchiveEventsPurchasesFirstRow(){click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));}
-	public String getTextArchiveEventsPurchasesName(){return driver.findElement(By.id("archiveEventsPurchasesName")).findElement(By.tagName("h4")).getText();}
-	public void clickarchiveEventsPurchasesVideo(){click(By.xpath(".//*[@id='archiveEventsPurchasesVideo']/div/div"));}
-
+	public String getNameArchiveEventsPurchasesFirstRow(){return driver.findElement(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]/div")).getText();}
+	public String getTextArchiveEventsPurchasesName(){
+		driver.switchTo().frame(0); 
+		return driver.findElement(By.id("archiveEventsPurchasesName")).getText();
+	}
+	public void clickarchiveEventsPurchasesVideo(){
+		driver.switchTo().frame(1);
+		click(By.xpath(".//*[@id='archiveEventsPurchasesVideo']/div/div"));
+	}
+	public String getvideoNameLightbox(){return driver.findElement(By.id("archiveEventsPurchasesName")).getText();}
 	
 	
 	

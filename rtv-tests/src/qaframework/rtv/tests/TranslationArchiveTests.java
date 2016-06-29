@@ -36,21 +36,25 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickCheckBoxRemember();
 		app.getNavigationHelper().clickButtonLogin();
-		
-		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
 		Thread.sleep(2000);
+		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
+		Thread.sleep(500);
 		app.getNavigationHelper().clickpersonalArchiveEventsPurchasesControl();
-		Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsPurchasesFirstRow());
+		//Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsPurchasesFirstRow());
 		app.getNavigationHelper().clickArchiveEventsPurchasesFirstRow();
-		String archiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
-		String expResult = "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ?";
-		Assert.assertEquals(archiveEventsPurchasesName, expResult, "Wrong text in lightbox");
+		String getTextArchiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
+			String archiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
+			String expResult = "После нажатия на кнопку у вас будет 24 часа для просмотра фильма";
+			Assert.assertEquals(archiveEventsPurchasesName, expResult, "Wrong text in lightbox");
+	//	
+			app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
+		String getvideoNameLightbox = app.getNavigationHelper().getvideoNameLightbox();
+		Assert.assertEquals(getTextArchiveEventsPurchasesName, getvideoNameLightbox, "Text in table and in lightbox is not equal");
 
-		//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
-		app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
-		//app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
 		
-		app.getNavigationHelper().clickButtonExit();
+	//	app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
+	//	
+		//app.getNavigationHelper().clickButtonExit();
 	}
 	
 	
