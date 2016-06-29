@@ -1,6 +1,8 @@
 package qaframework.rtv.fw;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import qaframework.rtv.tests.AccountData;
 
@@ -81,19 +83,47 @@ public class NavigationHelper extends HelperBase {
 		type(By.id("phone"), phone);
 	}
 	
-	public void clickpersonalArchiveEventsHeaderControl(){click(By.id("personalArchiveEventsHeaderControl"));}
+	public void clickpersonalArchiveEventsHeaderControl(){
+		
+		//click(By.id("personalArchiveEventsHeaderControl"));
+		WebElement element = driver.findElement(By.id("personalArchiveEventsHeaderControl"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().perform();
+	
+	}
 	public void clickpersonalArchiveEventsCatalogControl(){click(By.id("personalArchiveEventsCatalogControl"));}
 	public void clickpersonalArchiveEventsPurchasesControl(){click(By.id("personalArchiveEventsPurchasesControl"));}
 	public boolean gettableArchiveEventsFirstRow() {
+		
         return driver.findElements(By.xpath(".//*[@id='archiveEvents']/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
     }
 	public boolean gettableArchiveEventsPurchasesFirstRow() {
         return driver.findElements(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
     }
-	public void clicktableArchiveEventsPurchasesFirstRow(){click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));}
+	public void clicktableArchiveEventsFirstRow(){
+		//click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));
+		WebElement element = driver.findElement(By.xpath(".//*[@id='archiveEvents']/table/tbody/tr[1]/td[1]"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().perform();
+	
+	}
+	public void clicktableArchiveEventsPurchasesFirstRow(){
+		//click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));
+		WebElement element = driver.findElement(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().perform();
+	
+	}
 	public void clickBuyLink(){click(By.xpath(".//*[@id='archiveEventsModalLink']/a"));}
 	public String getArchiveEventsModalName(){return driver.findElement(By.id("archiveEventsModalName")).getText();}
-	 
+	public String getIpProductName(){
+		driver.switchTo().frame(0);
+		return driver.findElement(By.id("product_name")).getText();
+		
+	}
+	public void navigate_back(){driver.navigate().back();}
+	
+	
 	
 	public void clickArchiveEventsPurchasesFirstRow(){click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));}
 	public String getTextArchiveEventsPurchasesName(){return driver.findElement(By.id("archiveEventsPurchasesName")).findElement(By.tagName("h4")).getText();}

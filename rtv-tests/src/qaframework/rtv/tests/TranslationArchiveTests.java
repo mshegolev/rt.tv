@@ -4,7 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TranslationArchiveTests extends TestBase  {
-	@Test 
+
+	@Test(testName = "RTV-19", description = "Catalog Exist")
 	public void catalogExist() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		AccountData account = new AccountData();
@@ -15,14 +16,15 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickButtonLogin();
 		Thread.sleep(2000);
 		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
-		app.getNavigationHelper().clickpersonalArchiveEventsCatalogControl();
-		Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsFirstRow());
-		app.getNavigationHelper().clicktableArchiveEventsPurchasesFirstRow();
-		//String getArchiveEventsModalName = app.getNavigationHelper().getArchiveEventsModalName();
+		//app.getNavigationHelper().clickpersonalArchiveEventsCatalogControl();
+		//Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsFirstRow());
+		app.getNavigationHelper().clicktableArchiveEventsFirstRow();
+		String getArchiveEventsModalName = app.getNavigationHelper().getArchiveEventsModalName();
 		app.getNavigationHelper().clickBuyLink();
-		
-		
-		
+		Thread.sleep(2000);
+		String getIpProductName = app.getNavigationHelper().getIpProductName();
+		Assert.assertEquals(getIpProductName, getArchiveEventsModalName, "Product in IP is not equal produst in RTV");
+		app.getNavigationHelper().navigate_back();
 		app.getNavigationHelper().clickButtonExit();
 	}
 	@Test
@@ -46,7 +48,7 @@ public class TranslationArchiveTests extends TestBase  {
 
 		//�������� ���������
 		app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
-		app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
+		//app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
 		
 		app.getNavigationHelper().clickButtonExit();
 	}
