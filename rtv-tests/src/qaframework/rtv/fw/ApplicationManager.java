@@ -15,7 +15,7 @@ public class ApplicationManager {
 
 	public ApplicationManager() {
 		driver = new FirefoxDriver();
-		baseUrl = "http://rithm-time.tv/";
+		baseUrl = "http://rithm-time.tv/dev/broadcast/";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		accountHelper = new AccountHelper(this);
