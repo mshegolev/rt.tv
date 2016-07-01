@@ -28,7 +28,8 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().navigate_back();
 		app.getNavigationHelper().clickButtonExit();
 	}
-	@Test
+	
+	/*@Test
 	public void catalogBoughtEventsExist() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		AccountData account = new AccountData();
@@ -56,7 +57,7 @@ public class TranslationArchiveTests extends TestBase  {
 	//	app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
 	//	
 		//app.getNavigationHelper().clickButtonExit();
-	}
+	}*/
 	
 	
 	
