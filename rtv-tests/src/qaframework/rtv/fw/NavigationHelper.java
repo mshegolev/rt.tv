@@ -1,4 +1,4 @@
-﻿package qaframework.rtv.fw;
+package qaframework.rtv.fw;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
