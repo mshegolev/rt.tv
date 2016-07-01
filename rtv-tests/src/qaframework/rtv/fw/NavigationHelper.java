@@ -60,10 +60,27 @@ public class NavigationHelper extends HelperBase {
         return driver.findElements(By.xpath(".//*[@id='tableSheduleLight']/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
     }
 	public String getstatus1Content(){return driver.findElement(By.id("status1")).getText(); }
+	public String getProductId(){
+		return driver.findElement(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]")).getAttribute("data-product-id");
+	}
 	
+	public void openPageForSetPayment() {
+		driver.get(String.format("%s%s", manager.urlForSetPayment,""));
+	}
 	
+	public void fillFormForSetPayment(ApplicationManager applicationManager,
+			AccountData accountData, String productId) {
+		type(By.id("user_login"), accountData.username);
+		type(By.id("product_id"), productId);
+		driver.findElement(By.id("add_payment")).click();
+	}
+	public void fillFormForUnsetPayment(ApplicationManager applicationManager,
+			AccountData accountData, String productId) {
+		type(By.id("user_login"), accountData.username);
+		type(By.id("product_id"), productId);
+	}
 	
-	
+	public void clickButtonSetPayment(){driver.findElement(By.id("submitForm")).click();}
 	
 	
 	public  String getGiftBlockWithoutGiftContent() {return driver.findElement(By.id("paramList")).getText();}
@@ -129,19 +146,22 @@ public class NavigationHelper extends HelperBase {
 	public void navigate_back(){driver.navigate().back();}
 	
 	
-	
-	public void clickArchiveEventsPurchasesFirstRow(){click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));}
 	public String getNameArchiveEventsPurchasesFirstRow(){return driver.findElement(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]/div")).getText();}
 	public String getTextArchiveEventsPurchasesName(){
-		driver.switchTo().frame(0); 
-		return driver.findElement(By.id("archiveEventsPurchasesName")).getText();
+		//driver.switchTo().frame(0); 
+		return driver.findElement(By.xpath("archiveEventsPurchasesName")).getText();
 	}
 	public void clickarchiveEventsPurchasesVideo(){
-		driver.switchTo().frame(1);
+		//driver.switchTo().frame(0);
 		click(By.xpath(".//*[@id='archiveEventsPurchasesVideo']/div/div"));
 	}
-	public String getvideoNameLightbox(){return driver.findElement(By.id("archiveEventsPurchasesName")).getText();}
+	public void clickCloseLightbox(){
+		//driver.switchTo().frame(0);
+		click(By.xpath(".//*[@id='modal-archiveEventsPurchases']/div/div/div[1]/button"));
+	}
 	
+	public String getvideoNameLightbox(){return driver.findElement(By.id("archiveEventsPurchasesName")).getText();}
+	public void clickBodyElement(){click(By.id("personalContent"));}
 	
 	
 	public void clickSendConfirmCode(){click(By.id("sendConfirmCode"));}

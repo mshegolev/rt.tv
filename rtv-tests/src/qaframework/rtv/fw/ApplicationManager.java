@@ -8,16 +8,18 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
 	public WebDriver driver;
 	public String baseUrl;
+	public String urlForSetPayment;
 	public StringBuffer verificationErrors = new StringBuffer();
 
 	private NavigationHelper navigationHelper;
 	private AccountHelper accountHelper;
 
-	public ApplicationManager() {
+	public ApplicationManager() {  
 		driver = new FirefoxDriver();
 		baseUrl = "http://rithm-time.tv/dev/broadcast/";
+		urlForSetPayment = "http://irlem-practice.ru/admin/QA_scripts/set_payment.php";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		accountHelper = new AccountHelper(this);
 	}
 

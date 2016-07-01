@@ -2,6 +2,9 @@ package qaframework.rtv.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.containsString;
+
 
 public class TranslationArchiveTests extends TestBase  {
 
@@ -23,13 +26,12 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickBuyLink();
 		Thread.sleep(2000);
 		String getIpProductName = app.getNavigationHelper().getIpProductName();
-	//	assertThat(x, containsString("foo"));
-	//	Assert.assertEquals(getIpProductName, getArchiveEventsModalName, "Product in IP is not equal produst in RTV");
+		assertThat(getIpProductName, containsString(getArchiveEventsModalName));
 		app.getNavigationHelper().navigate_back();
 		app.getNavigationHelper().clickButtonExit();
 	}
 	
-	/*@Test
+	@Test
 	public void catalogBoughtEventsExist() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		AccountData account = new AccountData();
@@ -42,22 +44,41 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
 		Thread.sleep(500);
 		app.getNavigationHelper().clickpersonalArchiveEventsPurchasesControl();
+		
+		//оформляем покупку
+		String productId = app.getNavigationHelper().getProductId(); 
+		app.getNavigationHelper().openPageForSetPayment();
+		app.getNavigationHelper().fillFormForSetPayment(app, account, productId);
+		app.getNavigationHelper().clickButtonSetPayment();	
+		app.getNavigationHelper().openMainPage();
+		
 		//Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsPurchasesFirstRow());
-		app.getNavigationHelper().clickArchiveEventsPurchasesFirstRow();
-		String getTextArchiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
-			String archiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
-			String expResult = "После нажатия на кнопку у вас будет 24 часа для просмотра фильма";
-			Assert.assertEquals(archiveEventsPurchasesName, expResult, "Wrong text in lightbox");
-	//	
-			app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
-		String getvideoNameLightbox = app.getNavigationHelper().getvideoNameLightbox();
-		Assert.assertEquals(getTextArchiveEventsPurchasesName, getvideoNameLightbox, "Text in table and in lightbox is not equal");
+		Thread.sleep(1000);
+		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
+		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
+		Thread.sleep(500);
+		app.getNavigationHelper().clickpersonalArchiveEventsPurchasesControl();
+		app.getNavigationHelper().clicktableArchiveEventsPurchasesFirstRow();
+		String archiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
+		String expResult = "После нажатия на кнопку у вас будет 24 часа для просмотра фильма";
+		Assert.assertEquals(archiveEventsPurchasesName, expResult, "Wrong text in lightbox");
 
-		app.getNavigationHelper().clickButtonExit();
+		app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
+		String getvideoNameLightbox = app.getNavigationHelper().getvideoNameLightbox();
+		Assert.assertEquals(archiveEventsPurchasesName, getvideoNameLightbox, "Text in table and in lightbox is not equal");
+		
+		app.getNavigationHelper().openPageForSetPayment();
+		app.getNavigationHelper().fillFormForUnsetPayment(app, account, productId);
+		app.getNavigationHelper().clickButtonSetPayment();	
+		app.getNavigationHelper().openMainPage();
+		
+		
+	//	app.getNavigationHelper().clickButtonExit();
 	//	app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
-	//	
-		//app.getNavigationHelper().clickButtonExit();
-	}*/
+		
+		app.getNavigationHelper().clickCloseLightbox();
+		app.getNavigationHelper().clickButtonExit();
+	}
 	
 	
 	

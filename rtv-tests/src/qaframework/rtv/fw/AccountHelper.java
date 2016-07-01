@@ -14,5 +14,6 @@ public class AccountHelper extends HelperBase {
 		type(By.id("auth_login"), accountData.username);
 		type(By.id("auth_password"), accountData.password);
 	}
+	
 
 }
