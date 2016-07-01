@@ -23,7 +23,8 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickBuyLink();
 		Thread.sleep(2000);
 		String getIpProductName = app.getNavigationHelper().getIpProductName();
-		Assert.assertEquals(getIpProductName, getArchiveEventsModalName, "Product in IP is not equal produst in RTV");
+	//	assertThat(x, containsString("foo"));
+	//	Assert.assertEquals(getIpProductName, getArchiveEventsModalName, "Product in IP is not equal produst in RTV");
 		app.getNavigationHelper().navigate_back();
 		app.getNavigationHelper().clickButtonExit();
 	}
@@ -51,7 +52,7 @@ public class TranslationArchiveTests extends TestBase  {
 		String getvideoNameLightbox = app.getNavigationHelper().getvideoNameLightbox();
 		Assert.assertEquals(getTextArchiveEventsPurchasesName, getvideoNameLightbox, "Text in table and in lightbox is not equal");
 
-		
+		app.getNavigationHelper().clickButtonExit();
 	//	app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
 	//	
 		//app.getNavigationHelper().clickButtonExit();
