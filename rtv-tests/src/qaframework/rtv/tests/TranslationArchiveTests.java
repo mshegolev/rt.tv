@@ -1,4 +1,4 @@
-package qaframework.rtv.tests;
+п»їpackage qaframework.rtv.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -44,7 +44,7 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickArchiveEventsPurchasesFirstRow();
 		String getTextArchiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
 			String archiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
-			String expResult = "После нажатия на кнопку у вас будет 24 часа для просмотра фильма";
+			String expResult = "РџРѕСЃР»Рµ РЅР°Р¶Р°С‚РёСЏ РЅР° РєРЅРѕРїРєСѓ Сѓ РІР°СЃ Р±СѓРґРµС‚ 24 С‡Р°СЃР° РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° С„РёР»СЊРјР°";
 			Assert.assertEquals(archiveEventsPurchasesName, expResult, "Wrong text in lightbox");
 	//	
 			app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
