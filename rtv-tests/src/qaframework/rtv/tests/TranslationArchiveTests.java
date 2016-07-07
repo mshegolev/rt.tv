@@ -1,9 +1,10 @@
 package qaframework.rtv.tests;
 
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.CoreMatchers.containsString;
 
 
 public class TranslationArchiveTests extends TestBase  {
@@ -17,9 +18,9 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickCheckBoxRemember();
 		app.getNavigationHelper().clickButtonLogin();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
-		//app.getNavigationHelper().clickpersonalArchiveEventsCatalogControl();
+		app.getNavigationHelper().clickpersonalArchiveEventsCatalogControl();
 		//Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsFirstRow());
 		app.getNavigationHelper().clicktableArchiveEventsFirstRow();
 		String getArchiveEventsModalName = app.getNavigationHelper().getArchiveEventsModalName();
@@ -35,48 +36,53 @@ public class TranslationArchiveTests extends TestBase  {
 	public void catalogBoughtEventsExist() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		AccountData account = new AccountData();
-		account.username = "test001";
-		account.password = "001test";
+		account.username = "test003";
+		account.password = "003test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickCheckBoxRemember();
 		app.getNavigationHelper().clickButtonLogin();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
-		Thread.sleep(500);
+		//Thread.sleep(5000);
+		//app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
+		Thread.sleep(2000);
 		app.getNavigationHelper().clickpersonalArchiveEventsPurchasesControl();
+		Thread.sleep(1000);
 		
-		//оформляем покупку
 		String productId = app.getNavigationHelper().getProductId(); 
+		
+		//app.getNavigationHelper().openMainPage();
+		
 		app.getNavigationHelper().openPageForSetPayment();
 		app.getNavigationHelper().fillFormForSetPayment(app, account, productId);
 		app.getNavigationHelper().clickButtonSetPayment();	
 		app.getNavigationHelper().openMainPage();
-		
-		//Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsPurchasesFirstRow());
-		Thread.sleep(1000);
-		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
+	
+		Thread.sleep(4000);
 		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
 		Thread.sleep(500);
 		app.getNavigationHelper().clickpersonalArchiveEventsPurchasesControl();
+		//String videoNameInCaralog = app.getNavigationHelper().getVideoNamePersonalArchiveEventsCatalog();
 		app.getNavigationHelper().clicktableArchiveEventsPurchasesFirstRow();
+		Thread.sleep(1000);
 		String archiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
 		String expResult = "После нажатия на кнопку у вас будет 24 часа для просмотра фильма";
 		Assert.assertEquals(archiveEventsPurchasesName, expResult, "Wrong text in lightbox");
-
+		
 		app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
-		String getvideoNameLightbox = app.getNavigationHelper().getvideoNameLightbox();
-		Assert.assertEquals(archiveEventsPurchasesName, getvideoNameLightbox, "Text in table and in lightbox is not equal");
+		app.getNavigationHelper().clickCloseLightboxButton();
+		//String getvideoNameLightbox = app.getNavigationHelper().getvideoNameLightbox();
+	  //  Assert.assertEquals(videoNameInCaralog, getvideoNameLightbox, "Text in table and in lightbox is not equal");
 		
 		app.getNavigationHelper().openPageForSetPayment();
 		app.getNavigationHelper().fillFormForUnsetPayment(app, account, productId);
 		app.getNavigationHelper().clickButtonSetPayment();	
 		app.getNavigationHelper().openMainPage();
 		
-		
 	//	app.getNavigationHelper().clickButtonExit();
 	//	app.getVideoHelper().videoTranslationArchivePlayerIframe(); //ToDo
 		
-		app.getNavigationHelper().clickCloseLightbox();
+		//app.getNavigationHelper().clickCloseLightbox();
 		app.getNavigationHelper().clickButtonExit();
 	}
 	
