@@ -8,32 +8,6 @@ import org.testng.annotations.Test;
 
 
 public class TranslationArchiveTests extends TestBase  {
-
-	@Test(testName = "RTV-19", description = "Catalog Exist")
-	public void catalogExist() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
-		account.username = "test003";
-		account.password = "003test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickCheckBoxRemember();
-		app.getNavigationHelper().clickButtonLogin();
-		Thread.sleep(5000);
-		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
-		Thread.sleep(2000);
-		app.getNavigationHelper().clickpersonalArchiveEventsCatalogControl();
-		//Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsFirstRow());
-		app.getNavigationHelper().clicktableArchiveEventsFirstRow();
-		//String getArchiveEventsModalName = app.getNavigationHelper().getArchiveEventsModalName();
-		app.getNavigationHelper().clickBuyLink();
-		Thread.sleep(2000);
-		//String getIpProductName = app.getNavigationHelper().getIpProductName();
-		//assertThat(getIpProductName, containsString(getArchiveEventsModalName));
-		app.getNavigationHelper().navigate_back();
-		Thread.sleep(2000);
-		app.getNavigationHelper().clickButtonExit();
-	}
-	
 	@Test
 	public void catalogBoughtEventsExist() throws Exception {
 		app.getNavigationHelper().openMainPage();
@@ -88,6 +62,32 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickButtonExit();
 	}
 	
+	@Test(testName = "RTV-19", description = "Catalog Exist")
+	public void catalogExist() throws Exception {
+		app.getNavigationHelper().openMainPage();
+		AccountData account = new AccountData();
+		account.username = "test003";
+		account.password = "003test";
+		app.getAccountHelper().fillLoginForm(app, account);
+		app.getNavigationHelper().clickCheckBoxRemember();
+		app.getNavigationHelper().clickButtonLogin();
+		Thread.sleep(5000);
+		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
+		Thread.sleep(2000);
+		app.getNavigationHelper().clickpersonalArchiveEventsCatalogControl();
+		//Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsFirstRow());
+		app.getNavigationHelper().clicktableArchiveEventsFirstRow();
+		//String getArchiveEventsModalName = app.getNavigationHelper().getArchiveEventsModalName();
+		app.getNavigationHelper().clickBuyLink();
+		Thread.sleep(2000);
+		//String getIpProductName = app.getNavigationHelper().getIpProductName();
+		//assertThat(getIpProductName, containsString(getArchiveEventsModalName));
+		app.getNavigationHelper().navigate_back();
+		Thread.sleep(2000);
+		app.getNavigationHelper().clickButtonExit();
+	}
+	
+
 	
 	
 }
