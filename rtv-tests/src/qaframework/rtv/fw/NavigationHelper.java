@@ -1,6 +1,7 @@
 package qaframework.rtv.fw;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -84,8 +85,20 @@ public class NavigationHelper extends HelperBase {
 	
 	
 	public  String getGiftBlockWithoutGiftContent() {return driver.findElement(By.id("paramList")).getText();}
-	public  void clickGiftBlockFirstTable() {click(By.id("blockParams1"));}
-	public String getFirstRowContentGiftTable() {return driver.findElement(By.id("jan2016RadasTVTable")).findElement(By.className("table_param_name")).getText();}
+	public  void clickGiftBlockMenu() 
+	{
+		click(By.id("paramsRadastv"));
+		//WebElement element = driver.findElement(By.xpath("//*[@id='paramsRadastv']"));
+		//Actions actions = new Actions(driver);
+		//actions.moveToElement(element).click().perform();
+	}
+	public  void clickGiftBlockFirstTable() 
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='blockParams1']"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().perform();
+	}
+	public String getFirstRowContentGiftTable() {return driver.findElement(By.xpath("//*[@id='jan2016RadasTVTable']/tbody/tr[1]/td[1]")).getText();}
 	
 
 	
@@ -106,9 +119,12 @@ public class NavigationHelper extends HelperBase {
 	}
 	
 	public void clickpersonalArchiveEventsHeaderControl(){
-		WebElement element = driver.findElement(By.xpath(".//*[@id='personalArchiveEventsHeaderControl']"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().perform();
+		WebElement element = driver.findElement(By.id("personalArchiveEventsHeaderControl"));
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].scrollIntoView()", element); 
+	//	Actions actions = new Actions(driver);
+		click(By.id("personalArchiveEventsHeaderControl"));
+		//actions.moveToElement(element).click().perform();
 	}
 	public void clickPersonalArchiveEventsCatalogControl(){
 		WebElement element = driver.findElement(By.id("personalArchiveEventsCatalogControl"));

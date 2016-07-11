@@ -16,7 +16,7 @@ public class ApplicationManager {
 
 	public ApplicationManager() {  
 		driver = new FirefoxDriver();
-		baseUrl = "http://rithm-time.tv/dev/broadcast/";
+		baseUrl = "http://rithm-time.tv/";
 		urlForSetPayment = "http://irlem-practice.ru/admin/QA_scripts/set_payment.php";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
