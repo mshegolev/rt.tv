@@ -154,10 +154,10 @@ public class NavigationHelper extends HelperBase {
 	
 	}
 	public void clicktableArchiveEventsPurchasesFirstRow(){
-		//click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));
-		WebElement element = driver.findElement(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().perform();
+		click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));
+		//WebElement element = driver.findElement(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr/td[1]"));
+		//Actions actions = new Actions(driver);
+		//actions.moveToElement(element).click().perform();
 	
 	}
 	public void clickBuyLink(){click(By.xpath(".//*[@id='archiveEventsModalLink']/a"));}
@@ -201,5 +201,16 @@ public class NavigationHelper extends HelperBase {
 	
 	public String getTextButtonCioroic(){return driver.findElement(By.id("buttonCioroic")).getText();}
 	public void clickButtonCioroic(){click(By.id("buttonCioroic"));}
+	
+	
+	
+	//test for users roles 
+	public String getNextInRtv(){return driver.findElement(By.xpath(".//*[@id='status1d']/div/h4")).getText(); }
+	public String getClassAccessButton(){return driver.findElement(By.xpath(".//*[@id='tableShedule']/table/tbody/tr[1]/td[4]/span")).getClass().toString(); }
+	public String getEventId(){return driver.findElement(By.xpath(".//*[@id='tableShedule']/table/tbody/tr[1]")).getAttribute("data-id");}
+	public String getEventById(String eventId){return driver.findElement(By.id(eventId)).getText();}
+
+	
+	
 	
 }

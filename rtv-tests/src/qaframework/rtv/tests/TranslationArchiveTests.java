@@ -1,7 +1,7 @@
 package qaframework.rtv.tests;
 
-//import static org.hamcrest.CoreMatchers.containsString;
-//import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -38,7 +38,8 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
 		Thread.sleep(500);
 		app.getNavigationHelper().clickpersonalArchiveEventsPurchasesControl();
-		//String videoNameInCaralog = app.getNavigationHelper().getVideoNamePersonalArchiveEventsCatalog();
+		String videoNameInCaralog = app.getNavigationHelper().getVideoNamePersonalArchiveEventsCatalog();
+		Thread.sleep(3000);
 		app.getNavigationHelper().clicktableArchiveEventsPurchasesFirstRow();
 		Thread.sleep(1000);
 		String archiveEventsPurchasesName = app.getNavigationHelper().getTextArchiveEventsPurchasesName();
@@ -47,8 +48,8 @@ public class TranslationArchiveTests extends TestBase  {
 		
 		app.getNavigationHelper().clickarchiveEventsPurchasesVideo();
 		app.getNavigationHelper().clickCloseLightboxButton();
-		//String getvideoNameLightbox = app.getNavigationHelper().getvideoNameLightbox();
-	  //  Assert.assertEquals(videoNameInCaralog, getvideoNameLightbox, "Text in table and in lightbox is not equal");
+		String getvideoNameLightbox = app.getNavigationHelper().getvideoNameLightbox();
+	    Assert.assertEquals(videoNameInCaralog, getvideoNameLightbox, "Text in table and in lightbox is not equal");
 		
 		app.getNavigationHelper().openPageForSetPayment();
 		app.getNavigationHelper().fillFormForUnsetPayment(app, account, productId);
@@ -75,13 +76,13 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
 		Thread.sleep(2000);
 		app.getNavigationHelper().clickpersonalArchiveEventsCatalogControl();
-		//Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsFirstRow());
+		Assert.assertTrue(app.getNavigationHelper().gettableArchiveEventsFirstRow());
 		app.getNavigationHelper().clicktableArchiveEventsFirstRow();
-		//String getArchiveEventsModalName = app.getNavigationHelper().getArchiveEventsModalName();
+		String getArchiveEventsModalName = app.getNavigationHelper().getArchiveEventsModalName();
 		app.getNavigationHelper().clickBuyLink();
 		Thread.sleep(2000);
-		//String getIpProductName = app.getNavigationHelper().getIpProductName();
-		//assertThat(getIpProductName, containsString(getArchiveEventsModalName));
+		String getIpProductName = app.getNavigationHelper().getIpProductName();
+		assertThat(getIpProductName, containsString(getArchiveEventsModalName));
 		app.getNavigationHelper().navigate_back();
 		Thread.sleep(2000);
 		app.getNavigationHelper().clickButtonExit();

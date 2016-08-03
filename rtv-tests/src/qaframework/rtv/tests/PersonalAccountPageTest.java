@@ -18,7 +18,7 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
         app.getNavigationHelper().clickButtonLogin();
 
         String result=  app.getNavigationHelper().getGiftBlockWithoutGiftContent();
-        String expresult = "К сожалению, у вас нет подарков.";
+        String expresult = "У вас нет подарков.";
         Assert.assertEquals(result,expresult,"User without gifts doesn't see the error.");
         app.getNavigationHelper().clickButtonExit();
     }
@@ -32,10 +32,12 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
         app.getAccountHelper().fillLoginForm(app, account);
 
         app.getNavigationHelper().clickButtonLogin();
-
+        Thread.sleep(4000);
+        app.getNavigationHelper().clickGiftBlockMenu();
         app.getNavigationHelper().clickGiftBlockFirstTable();
-
-
+        String firstGiftName = app.getNavigationHelper().getFirstRowContentGiftTable();
+        String firstGiftNameExp = "Орган";
+        Assert.assertEquals(firstGiftName,firstGiftNameExp,"User with gifts doesn't have table with gifts");
         app.getNavigationHelper().clickButtonExit();
     }
 
