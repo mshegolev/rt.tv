@@ -115,7 +115,7 @@ public class NavigationHelper extends HelperBase {
 	
 	public String getVideoNamePersonalArchiveEventsCatalog()
 	{
-		return driver.findElement(By.xpath("//*[@id='archiveEvents']/table/tbody/tr[1]")).getAttribute("data-name");
+		return driver.findElement(By.xpath("//*[@id='archiveEventsPurchases']/table/tbody/tr/td[2]/div")).getAttribute("data-name");
 	}
 	
 	public void clickpersonalArchiveEventsHeaderControl(){
@@ -154,7 +154,7 @@ public class NavigationHelper extends HelperBase {
 	
 	}
 	public void clicktableArchiveEventsPurchasesFirstRow(){
-		click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));
+		click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr/td[1]"));
 		//WebElement element = driver.findElement(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr/td[1]"));
 		//Actions actions = new Actions(driver);
 		//actions.moveToElement(element).click().perform();
@@ -209,7 +209,7 @@ public class NavigationHelper extends HelperBase {
 	public String getClassAccessButton(){return driver.findElement(By.xpath(".//*[@id='tableShedule']/table/tbody/tr[1]/td[4]/span")).getClass().toString(); }
 	public String getEventId(){return driver.findElement(By.xpath(".//*[@id='tableShedule']/table/tbody/tr[1]")).getAttribute("data-id");}
 	public String getEventById(String eventId){return driver.findElement(By.id(eventId)).getText();}
-
+	public String getEventDateInTable(){return driver.findElement(By.xpath("//*[@id='tableShedule']/table/tbody/tr[1]/td[1]")).getText(); }
 	
 	
 	
