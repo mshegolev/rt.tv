@@ -1,7 +1,7 @@
 package qaframework.rtv.tests;
 
-//import static org.hamcrest.CoreMatchers.containsString;
-//import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -34,7 +34,7 @@ public class AuthorizationTest extends TestBase {
 		
 		String textInNextRtv = app.getNavigationHelper().getNextInRtv();
 		String ExpTextInNextRtv = "Далее в программе: ";
-		//assertThat(textInNextRtv, containsString(ExpTextInNextRtv));
+		assertThat(textInNextRtv, containsString(ExpTextInNextRtv));
 		
 		String getEventId = app.getNavigationHelper().getEventId();
 		String getEventById = app.getNavigationHelper().getEventById(getEventId+"_Allow");
@@ -76,7 +76,7 @@ public class AuthorizationTest extends TestBase {
 
 		String textInNextRtv = app.getNavigationHelper().getNextInRtv();
 		String ExpTextInNextRtv = "Далее в программе: ";
-		//assertThat(textInNextRtv, containsString(ExpTextInNextRtv));
+		assertThat(textInNextRtv, containsString(ExpTextInNextRtv));
 		
 		String getEventId = app.getNavigationHelper().getEventId();
 		String getEventById = app.getNavigationHelper().getEventById(getEventId+"_Allow");
@@ -140,8 +140,34 @@ public class AuthorizationTest extends TestBase {
 		account.password = "006test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		
+		app.getNavigationHelper().openPageForSetPayment();
+		app.getNavigationHelper().fillFormForSetPayment(app, account, "163982");
+		app.getNavigationHelper().clickButtonSetPayment();	
+		app.getNavigationHelper().openMainPage();
+		
+		String tagNameVideoPlayer = app.getNavigationHelper().getTagNameVideoPlayer();
+		String expTagNameDiv = "div";
+		Assert.assertEquals(tagNameVideoPlayer,expTagNameDiv,"No player on the page!");
+		
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow());
+		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
+
+		String statusRowText = app.getNavigationHelper().getStatusRowText();
+		String expStatusRowText = "Сейчас в эфире: ";
+		assertThat(statusRowText, containsString(expStatusRowText));
+		
+		String voteBlockTag = app.getNavigationHelper().getBlockTag("vote");
+		Assert.assertEquals(voteBlockTag,expTagNameDiv,"No vote block on the page!");
+
+		String chatBlockTag = app.getNavigationHelper().getBlockTag("chat_view");
+		Assert.assertEquals(chatBlockTag,expTagNameDiv,"No chat block on the page!");
+
+		String chatFormBlockTag = app.getNavigationHelper().getBlockTag("chat_form");
+		Assert.assertEquals(chatFormBlockTag,expTagNameDiv,"No vote form block on the page!");
+
+		
+		
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -149,12 +175,20 @@ public class AuthorizationTest extends TestBase {
 	public void testAbonentType7() throws Exception {
 		app.getNavigationHelper().openMainPage();
 		AccountData account = new AccountData();
-		account.username = "test007";
-		account.password = "007test";
+		account.username = "test008";
+		account.password = "008test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
+		
+		String tagNameVideoPlayer = app.getNavigationHelper().getTagNameVideoPlayer();
+		//Assert.assertEquals(tagNameVideoPlayer,"","Player on the page!");
+
+		String status1dText = app.getNavigationHelper().getStatus1dText();
+		String expStatusRowText = "У вас не оплачено ни одно из мероприятий Ритмовремя-ТВ";
+		assertThat(status1dText, containsString(expStatusRowText));
+
+		
+		
 		app.getNavigationHelper().clickButtonExit();
 	}
 

@@ -210,7 +210,13 @@ public class NavigationHelper extends HelperBase {
 	public String getEventId(){return driver.findElement(By.xpath(".//*[@id='tableShedule']/table/tbody/tr[1]")).getAttribute("data-id");}
 	public String getEventById(String eventId){return driver.findElement(By.id(eventId)).getText();}
 	public String getEventDateInTable(){return driver.findElement(By.xpath("//*[@id='tableShedule']/table/tbody/tr[1]/td[1]")).getText(); }
-	
-	
-	
+	public String getTagNameVideoPlayer(){return driver.findElement(By.id("player_video")).getTagName().toString();}
+	public String getStatusRowText(){return driver.findElement(By.id("status1")).getText();}
+	public String getBlockTag(String block_id){return driver.findElement(By.id(block_id)).getTagName().toString(); }
+	public String getStatus1dText(){return driver.findElement(By.xpath("//*[@id='status1d']/div/h3")).getText();}
+	//public boolean existenceOfPlayer(){return driver.findElement(By.id("player_video")).getSize().toString();}
+
+
+
+
 }
