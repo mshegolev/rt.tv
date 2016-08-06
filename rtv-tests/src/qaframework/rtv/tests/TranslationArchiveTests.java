@@ -1,7 +1,7 @@
 package qaframework.rtv.tests;
 
-//import static org.hamcrest.CoreMatchers.containsString;
-//import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -83,7 +83,7 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickBuyLink();
 		Thread.sleep(2000);
 		String getIpProductName = app.getNavigationHelper().getIpProductName();
-		//assertThat(getIpProductName, containsString(getArchiveEventsModalName));
+		assertThat(getIpProductName, containsString(getArchiveEventsModalName));
 		app.getNavigationHelper().navigate_back();
 		Thread.sleep(2000);
 		app.getNavigationHelper().clickButtonExit();
