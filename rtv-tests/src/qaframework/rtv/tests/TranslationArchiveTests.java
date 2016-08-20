@@ -1,15 +1,16 @@
 package qaframework.rtv.tests;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
-
+import org.hamcrest.MatcherAssert;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static org.hamcrest.CoreMatchers.containsString;
 
 
 public class TranslationArchiveTests extends TestBase  {
 	@Test(testName = "RTV-19", description = "Catalog Exist")
 	public void catalogExist() throws Exception {
+		org.hamcrest.MatcherAssert matcher = new MatcherAssert();
 		app.getNavigationHelper().openMainPage();
 		AccountData account = new AccountData();
 		account.username = "test004";
@@ -27,7 +28,7 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getNavigationHelper().clickBuyLink();
 		Thread.sleep(2000);
 		String getIpProductName = app.getNavigationHelper().getIpProductName();
-		assertThat(getIpProductName, containsString(getArchiveEventsModalName));
+		matcher.assertThat(getIpProductName, containsString(getArchiveEventsModalName));
 		app.getNavigationHelper().navigate_back();
 		Thread.sleep(2000);
 		app.getNavigationHelper().clickButtonExit();
