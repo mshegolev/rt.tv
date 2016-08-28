@@ -1,6 +1,7 @@
 package qaframework.rtv.fw;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -14,7 +15,9 @@ public class ApplicationManager {
 	private NavigationHelper navigationHelper;
 	private AccountHelper accountHelper;
 
-	public ApplicationManager() {  
+	public ApplicationManager() {
+		//System.setProperty("webdriver.chrome.driver", "C:/develop/FunctionalTests/rtv-tests/tools/driver/chromedriver.exe");
+		//driver = new ChromeDriver();
 		driver = new FirefoxDriver();
 		baseUrl = "http://rithm-time.tv/";
 		urlForSetPayment = "http://irlem-practice.ru/admin/QA_scripts/set_payment.php";
