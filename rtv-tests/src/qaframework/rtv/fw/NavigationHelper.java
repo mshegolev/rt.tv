@@ -87,17 +87,12 @@ public class NavigationHelper extends HelperBase {
 	public  String getGiftBlockWithoutGiftContent() {return driver.findElement(By.id("paramList")).getText();}
 	public  void clickGiftBlockMenu() 
 	{
-		click(By.id("paramsRadastv"));
-		//WebElement element = driver.findElement(By.xpath("//*[@id='paramsRadastv']"));
-		//Actions actions = new Actions(driver);
-		//actions.moveToElement(element).click().perform();
-	}
-	public  void clickGiftBlockFirstTable() 
-	{
-		WebElement element = driver.findElement(By.xpath("//*[@id='blockParams1']"));
+		//click(By.id("paramsRadastv"));
+		WebElement element = driver.findElement(By.xpath(".//*[@id='paramsRadastv']"));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).click().perform();
 	}
+	
 	public String getFirstRowContentGiftTable() {return driver.findElement(By.xpath("//*[@id='jan2016RadasTVTable']/tbody/tr[1]/td[1]")).getText();}
 	
 
@@ -122,7 +117,7 @@ public class NavigationHelper extends HelperBase {
 		WebElement element = driver.findElement(By.id("personalArchiveEventsHeaderControl"));
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].scrollIntoView()", element); 
-	//	Actions actions = new Actions(driver);
+		//Actions actions = new Actions(driver);
 		click(By.id("personalArchiveEventsHeaderControl"));
 		//actions.moveToElement(element).click().perform();
 	}
@@ -216,7 +211,25 @@ public class NavigationHelper extends HelperBase {
 	public String getStatus1dText(){return driver.findElement(By.xpath("//*[@id='status1d']/div/h3")).getText();}
 	//public boolean existenceOfPlayer(){return driver.findElement(By.id("player_video")).getSize().toString();}
 
+	public String getFirstGiftBlockContent(){return driver.findElement(By.xpath("//*[@id='blockParams1']/div/h4")).getText();}
 
-
-
+	public  void clickGiftBlockFirstTable() 
+	{
+		WebElement element = driver.findElement(By.id("newParam"));
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].scrollIntoView()", element); 
+		click(By.id("newParam"));
+	}
+	
+	public void clickPersonalSubscribeBlock(){
+		WebElement element = driver.findElement(By.id("personalSubscribeControl"));
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].scrollIntoView()", element); 
+		click(By.xpath("//*[@id='personalSubscribeControl']/a"));
+	}
+	public String getNamePersonalSubscribeBlock(){
+		WebElement element = driver.findElement(By.id("subscribeEmailBlock"));
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].scrollIntoView()", element); 
+		return driver.findElement(By.xpath("//*[@id='subscribeEmailBlock']/h3[1]")).getText();}
 }

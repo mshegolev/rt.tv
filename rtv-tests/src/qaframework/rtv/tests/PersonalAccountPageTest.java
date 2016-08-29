@@ -33,11 +33,17 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
 
         app.getNavigationHelper().clickButtonLogin();
         Thread.sleep(4000);
-        app.getNavigationHelper().clickGiftBlockMenu();
+       // app.getNavigationHelper().clickGiftBlockMenu();
+       // Thread.sleep(4000);
+        
+        String firstGiftBlockContent = app.getNavigationHelper().getFirstGiftBlockContent();
+        String firstGiftBlockContentExp = "РадасТВ 4-7 января 2016";
+        Assert.assertEquals(firstGiftBlockContent,firstGiftBlockContentExp,"User with gifts doesn't have table with gifts");
+        
         app.getNavigationHelper().clickGiftBlockFirstTable();
         String firstGiftName = app.getNavigationHelper().getFirstRowContentGiftTable();
-        String firstGiftNameExp = "Орган";
-        Assert.assertEquals(firstGiftName,firstGiftNameExp,"User with gifts doesn't have table with gifts");
+       String firstGiftNameExp = "Орган";
+        Assert.assertEquals(firstGiftName,firstGiftNameExp,"User with gifts doesn't have rows in table with gifts");
         app.getNavigationHelper().clickButtonExit();
     }
 
@@ -45,8 +51,18 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
     public void existenceSubscriptionBlockUserWithoutPhone() throws Exception {
         app.getNavigationHelper().openMainPage();
         AccountData account = new AccountData();
-        account.username = "test005";
-        account.password = "005test";
+        account.username = "test003";
+        account.password = "003test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
+        
+        app.getNavigationHelper().clickPersonalSubscribeBlock();
+       // String namePersonalSubscribeBlock = app.getNavigationHelper().getNamePersonalSubscribeBlock();
+       // String namePersonalSubscribeBlockExp = "Подписка на внезапные мероприятия";
+       // Assert.assertEquals(namePersonalSubscribeBlock,namePersonalSubscribeBlockExp,"Wrong name in personal subscribe");
+        
+        
+        
         app.getAccountHelper().fillLoginForm(app, account);
         app.getNavigationHelper().clickButtonLogin();
     }
