@@ -114,11 +114,18 @@ public class NavigationHelper extends HelperBase {
 	}
 	
 	public void clickpersonalArchiveEventsHeaderControl(){
-		WebElement element = driver.findElement(By.id("personalArchiveEventsHeaderControl"));
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("arguments[0].scrollIntoView()", element); 
+		
+		WebElement elementToClick = driver.findElement(By.id("personalArchiveEventsHeaderControl"));
+		
+		WebElement rateElement = driver.findElement(By.id("personalArchiveEventsHeaderControl"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		
+		
+		//WebElement element = driver.findElement(By.id("personalArchiveEventsHeaderControl"));
+		//JavascriptExecutor jse = (JavascriptExecutor)driver;
+		//jse.executeScript("arguments[0].scrollIntoView()", element); 
 		//Actions actions = new Actions(driver);
-		click(By.id("personalArchiveEventsHeaderControl"));
+		//click(By.id("personalArchiveEventsHeaderControl"));
 		//actions.moveToElement(element).click().perform();
 	}
 	public void clickPersonalArchiveEventsCatalogControl(){
