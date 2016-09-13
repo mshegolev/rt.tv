@@ -1,12 +1,11 @@
 package qaframework.rtv.tests;
 
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
-
 import org.hamcrest.MatcherAssert;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static org.hamcrest.CoreMatchers.containsString;
 
 
 public class TranslationArchiveTests extends TestBase  {

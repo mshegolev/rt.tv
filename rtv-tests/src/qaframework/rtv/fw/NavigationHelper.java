@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 
 import qaframework.rtv.tests.AccountData;
 
+import static java.lang.Thread.*;
+
 public class NavigationHelper extends HelperBase {
 
 	public NavigationHelper(ApplicationManager manager) {
@@ -15,18 +17,24 @@ public class NavigationHelper extends HelperBase {
 
 	public void openMainPage(){
 		openMainPage("");
-	};
+	}
 	public void openMainPage(String url) {
 		driver.get(String.format("%s%s", manager.baseUrl,url));
 	}
 
 	public void clickButtonLogin() {
-		click(By.id("auth_btn"));
+		click(By.id("id__2_5"));
 	}
 
-	public void clickButtonExit() {
-		click(By.id("exit"));
+	public void clickButtonExit() throws InterruptedException {
+		if (driver.findElements(By.id("navExit")).isEmpty()) {
+        click(By.cssSelector("button.navbar-toggle"));}
+		else{
+        click(By.cssSelector("button.navbar-toggle"));
+        sleep(5000);
+        click(By.id("navExit"));}
 	}
+
 
 	public void clickButtonNavbarToggle() {
 		click(By.cssSelector("button.navbar-toggle"));
@@ -41,16 +49,16 @@ public class NavigationHelper extends HelperBase {
 	}
 	
 	public boolean gettableSheduleFirstRow() {
-        return driver.findElements(By.xpath(".//*[@id='tableShedule']/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
+        return driver.findElements(By.xpath(".//*[@id='id__3_12']/div/div[1]/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
     }
 	
 	public boolean checkAbonentType(String foundText) {
-        if (getAbonentType().contains(foundText)) return true;
-        else return false;
+        return getAbonentType().contains(foundText);
 	}
 	
     public String getAbonentType() {
-        return driver.findElement(By.id("abonementType")).getText();
+        return "refactoring!";
+        //return driver.findElement(By.id("abonementType")).getText();
     }
 
 	//public  void getPlayerContainer() { driver.findElement(By.id("videoArchivePlayer")).findElement(By.tagName("iframe"));}
