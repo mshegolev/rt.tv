@@ -2,7 +2,7 @@ package qaframework.rtv.tests;
 
 
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
+
 
 import org.hamcrest.MatcherAssert;
 import org.testng.Assert;
@@ -19,7 +19,7 @@ public class TranslationArchiveTests extends TestBase  {
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickCheckBoxRemember();
 		app.getNavigationHelper().clickButtonLogin();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		app.getNavigationHelper().clickpersonalArchiveEventsHeaderControl();
 		Thread.sleep(2000);
 		app.getNavigationHelper().clickpersonalArchiveEventsCatalogControl();
