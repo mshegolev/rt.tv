@@ -1,22 +1,45 @@
 package qaframework.rtv.tests;
 
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import qaframework.rtv.fw.ApplicationManager;
 
+import java.io.FileReader;
+import java.util.Properties;
+import java.util.logging.Logger;
+
 public class TestBase {
+	protected Logger log = Logger.getLogger("TEST");
+
 	protected ApplicationManager app;
 
 	@BeforeClass
-	public void setUp() throws Exception {
-		app = new ApplicationManager();
-
+	@Parameters({"configFile"})
+	public void setUp(@Optional String configFile) throws Exception {
+		if (configFile == null) {
+			configFile = System.getProperty("configFile");
+		}
+		if (configFile == null) {
+			configFile = System.getenv("configFile");
+		}
+		if (configFile == null) {
+			configFile = "application.properties";
+		}
+		Properties props = new Properties();
+		props.load(new FileReader(configFile));
+		log.info("setUp start");
+		app = ApplicationManager.getInstance();
+		app.setProperties(props);
+		log.info("setUp end");
 	}
 
-	@AfterClass
-	public void tearDown() throws Exception {
-		app.stop();
-
-	}
+    @AfterTest
+    public void tearDown() throws Exception {
+        log.info("tearDown start");
+        ApplicationManager.getInstance().stop();
+        log.info("tearDown end");
+    }
 
 }

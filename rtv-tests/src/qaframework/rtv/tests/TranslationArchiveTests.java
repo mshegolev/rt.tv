@@ -1,15 +1,8 @@
 package qaframework.rtv.tests;
 
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
-
-import org.hamcrest.MatcherAssert;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-
 public class TranslationArchiveTests extends TestBase  {
+/*
 	@Test(testName = "RTV-19", description = "Catalog Exist")
 	public void catalogExist() throws Exception {
 		app.getNavigationHelper().openMainPage();
@@ -36,8 +29,8 @@ public class TranslationArchiveTests extends TestBase  {
 		Thread.sleep(2000);
 		app.getNavigationHelper().clickButtonExit();
 	}
-	
-	
+	*/
+	/*
 	@Test
 	public void catalogBoughtEventsExist() throws Exception {
 		app.getNavigationHelper().openMainPage();
@@ -93,7 +86,7 @@ public class TranslationArchiveTests extends TestBase  {
 		//app.getNavigationHelper().clickCloseLightbox();
 		app.getNavigationHelper().clickButtonExit();
 	}
-	
+	*/
 	
 	
 

@@ -1,34 +1,37 @@
 package qaframework.rtv.fw;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.util.concurrent.TimeUnit;
+import java.util.Properties;
 
 public class ApplicationManager {
-	public WebDriver driver;
-	public String baseUrl;
-	public String urlForSetPayment;
-	public StringBuffer verificationErrors = new StringBuffer();
+    private static ApplicationManager singleton;
 
-	private NavigationHelper navigationHelper;
+    private NavigationHelper navigationHelper;
+    private WebDriverHelper webDriverHelper;
 	private AccountHelper accountHelper;
 
-	public ApplicationManager() {  
-		driver = new FirefoxDriver();
-		baseUrl = "http://rithm-time.tv/";
-		urlForSetPayment = "http://irlem-practice.ru/admin/QA_scripts/set_payment.php";
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		accountHelper = new AccountHelper(this);
-	}
 
-	public void stop() {
-		driver.quit();
+    private Properties props;
 
-	}
+    public static ApplicationManager getInstance() {
+        if (singleton == null) {
+            singleton = new ApplicationManager();
+        }
+        return singleton;
+    }
+    public void stop() {
+        if (webDriverHelper != null) {
+            webDriverHelper.stop();
+        }
+    }
 
-	public NavigationHelper getNavigationHelper() {
+    public WebDriverHelper getWebDriverHelper() {
+        if (webDriverHelper == null) {
+            webDriverHelper = new WebDriverHelper(this);
+        }
+        return webDriverHelper;
+    }
+
+    public NavigationHelper getNavigationHelper() {
 		if (navigationHelper == null) {
 			navigationHelper = new NavigationHelper(this);
 		}
@@ -41,5 +44,16 @@ public class ApplicationManager {
 		}
 		return accountHelper;
 	}
+    public void setProperties(Properties props) {
+        this.props = props;
+    }
+    public String getProperty(String key) {
+        return props.getProperty(key);
+    }
+
+    public String getProperty(String key, String defaultValue) {
+        return props.getProperty(key, defaultValue);
+    }
+
 
 }

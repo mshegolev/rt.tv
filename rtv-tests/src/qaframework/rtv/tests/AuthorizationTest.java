@@ -1,12 +1,15 @@
 package qaframework.rtv.tests;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.logging.Logger;
+
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
+
 public class AuthorizationTest extends TestBase {
+	private Logger log = Logger.getLogger("AuthorizationTest");
 
 	@Test
 	public void testAbonentType1() throws Exception {
