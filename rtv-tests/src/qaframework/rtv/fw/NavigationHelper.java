@@ -185,7 +185,7 @@ public class NavigationHelper extends HelperBase {
 	
 	}
 	public void clickBuyLink(){click(By.xpath("//*[@name='linkToBuy']"));}
-	public String getArchiveEventsModalName(){return driver.findElement(By.xpath("//*[@name='modalEventName']")).getText();}
+	public String getArchiveEventsModalName(){return driver.findElement(By.xpath("//*[@name='modalArchiveEventsName']")).getText();}
 	public String getNameFirstVideoInCatalog(){
 		return driver.findElement(By.xpath("//*[@name='tableArchiveEvents']/tbody/tr[1]/td[3]/div[1]")).getText();	
 	}

@@ -1,9 +1,6 @@
 package qaframework.rtv.tests;
 
 
-import static org.hamcrest.CoreMatchers.containsString;
-
-
 import org.hamcrest.MatcherAssert;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -31,7 +28,7 @@ public class TranslationArchiveTests extends TestBase  {
 		Thread.sleep(2000);
 		String getIpProductName = app.getNavigationHelper().getIpProductName();
 		//org.hamcrest.MatcherAssert matcher = new MatcherAssert();
-		MatcherAssert.assertThat(getIpProductName, containsString(getArchiveEventsModalName));
+		MatcherAssert.assertThat(getIpProductName, getIpProductName.contains(getArchiveEventsModalName));
 		app.getNavigationHelper().navigate_back();
 		Thread.sleep(2000);
 		app.getNavigationHelper().clickButtonExit();
@@ -55,7 +52,7 @@ public class TranslationArchiveTests extends TestBase  {
 		
 		String emptyBoughtCatalogText = app.getNavigationHelper().getEmptyBoughtCatalogText();
 		String expTextInBoughtPage = "У вас не куплено ни одной записи трансляции,";
-		MatcherAssert.assertThat(emptyBoughtCatalogText, containsString(expTextInBoughtPage));
+		MatcherAssert.assertThat(emptyBoughtCatalogText, emptyBoughtCatalogText.contains(expTextInBoughtPage));
 		
 		app.getNavigationHelper().clickPersonalArchiveEventsCatalogControlFromPurchases();
 		Thread.sleep(3000);
@@ -81,8 +78,8 @@ public class TranslationArchiveTests extends TestBase  {
 		String expResult = "После нажатия на кнопку у вас будет 24 часа для просмотра фильма";
 		Assert.assertEquals(archiveEventsPurchasesName, expResult, "Wrong text in lightbox");
 	
-		//String getvideoNameLightbox = app.getNavigationHelper().getvideoNameLightbox();
-	    //Assert.assertEquals(videoNameInCatalog, getvideoNameLightbox, "Text in table and in lightbox is not equal");
+		String getvideoNameLightbox = app.getNavigationHelper().getArchiveEventsModalName();
+	    Assert.assertEquals(videoNameInCatalog, getvideoNameLightbox, "Text in table and in lightbox is not equal");
 	   
 	    app.getNavigationHelper().clickAgreeWatchingButton();
 	    Thread.sleep(500);
