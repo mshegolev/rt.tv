@@ -25,7 +25,7 @@ public class NavigationHelper extends HelperBase {
 	}
 
 	public void clickButtonExit() {
-		click(By.id("exit"));
+		click(By.id("navExit"));
 	}
 
 	public void clickButtonNavbarToggle() {
@@ -62,7 +62,7 @@ public class NavigationHelper extends HelperBase {
     }
 	public String getstatus1Content(){return driver.findElement(By.id("status1")).getText(); }
 	public String getProductId(){
-		return driver.findElement(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]")).getAttribute("data-product-id");
+		return driver.findElement(By.xpath(".//*[@name='tableArchiveEvents']/tbody/tr[1]")).getAttribute("data-product-id");
 	}
 	
 	public void openPageForSetPayment() {
@@ -122,17 +122,45 @@ public class NavigationHelper extends HelperBase {
 		//actions.moveToElement(element).click().perform();
 	}
 	public void clickPersonalArchiveEventsCatalogControl(){
+		WebElement rateElement = driver.findElement(By.id("personalArchiveEventsCatalogControl"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		
+		//WebElement element = driver.findElement(By.id("personalArchiveEventsCatalogControl"));
+		//Actions actions = new Actions(driver);
+		//actions.moveToElement(element).click().perform();
+	}
+	
+	public String getArchiveCatalogName(){
+		return driver.findElement(By.xpath("//*[@id='contentPersonal']/div/h3/span")).getText();		
+	}
+	
+	public String getEmptyBoughtCatalogText(){
+		return driver.findElement(By.xpath("//*[@id='contentPersonal']/div/div[3]")).getText();
+	}
+	
+	
+	
+	
+	public void clickpersonalArchiveEventsCatalogControl(){
 		WebElement element = driver.findElement(By.id("personalArchiveEventsCatalogControl"));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).click().perform();
 	}
-	
-	public void clickpersonalArchiveEventsCatalogControl(){click(By.id("personalArchiveEventsCatalogControl"));}
 	public void clickpersonalArchiveEventsPurchasesControl(){
+		WebElement rateElement = driver.findElement(By.id("personalArchiveEventsPurchasesControl"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
 		//click(By.id("personalArchiveEventsPurchasesControl"));
-		WebElement element = driver.findElement(By.id("personalArchiveEventsPurchasesControl"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().perform();
+		//WebElement element = driver.findElement(By.id("personalArchiveEventsPurchasesControl"));
+		//Actions actions = new Actions(driver);
+		//actions.moveToElement(element).click().perform();
+	}
+	public void clickPersonalArchiveEventsCatalogControlFromPurchases(){
+		WebElement rateElement = driver.findElement(By.xpath("//*[@id='contentPersonal']/div/div[3]/span"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		
+		//WebElement element = driver.findElement(By.xpath("//*[@id='contentPersonal']/div/div[3]/span"));
+		//Actions actions = new Actions(driver);
+		//actions.moveToElement(element).click().perform();
 	}
 	public boolean gettableArchiveEventsFirstRow() {
 		
@@ -142,11 +170,12 @@ public class NavigationHelper extends HelperBase {
         return driver.findElements(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
     }
 	public void clicktableArchiveEventsFirstRow(){
-		//click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr[1]/td[1]"));
-		WebElement element = driver.findElement(By.xpath(".//*[@id='archiveEvents']/table/tbody/tr[1]/td[1]"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().perform();
-	
+		WebElement rateElement = driver.findElement(By.xpath("//*[@name='tableArchiveEvents']/tbody/tr[1]/td[1]"));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();",rateElement);
+		
+		//WebElement element = driver.findElement(By.xpath(".//*[@name='tableArchiveEvents']/tbody/tr[1]/td[1]"));
+		//Actions actions = new Actions(driver);
+		//actions.moveToElement(element).click().perform();
 	}
 	public void clicktableArchiveEventsPurchasesFirstRow(){
 		click(By.xpath(".//*[@id='archiveEventsPurchases']/table/tbody/tr/td[1]"));
@@ -155,8 +184,11 @@ public class NavigationHelper extends HelperBase {
 		//actions.moveToElement(element).click().perform();
 	
 	}
-	public void clickBuyLink(){click(By.xpath(".//*[@id='archiveEventsModalLink']/a"));}
-	public String getArchiveEventsModalName(){return driver.findElement(By.id("archiveEventsModalName")).getText();}
+	public void clickBuyLink(){click(By.xpath("//*[@name='linkToBuy']"));}
+	public String getArchiveEventsModalName(){return driver.findElement(By.xpath("//*[@name='modalEventName']")).getText();}
+	public String getNameFirstVideoInCatalog(){
+		return driver.findElement(By.xpath("//*[@name='tableArchiveEvents']/tbody/tr[1]/td[3]/div[1]")).getText();	
+	}
 	public String getIpProductName(){
 		driver.switchTo().frame(0);
 		return driver.findElement(By.id("product_name")).getText();
@@ -169,7 +201,7 @@ public class NavigationHelper extends HelperBase {
 	public String getTextArchiveEventsPurchasesName(){
 		//driver.switchTo().frame(0);  
 //String a = driver.findElement(By.id("archiveEventsBlockPurchases")).findElement(By.tagName("h4")).getText();
-		return  driver.findElement(By.xpath(".//*[@id='archiveEventsPurchasesName']")).getText();
+		return  driver.findElement(By.xpath("//*[@id='modalArchiveEventsWarning']/div/div/div[2]/div/p")).getText();
 	}
 	public void clickarchiveEventsPurchasesVideo(){
 		//driver.switchTo().frame(0);
@@ -180,9 +212,10 @@ public class NavigationHelper extends HelperBase {
 		click(By.xpath(".//*[@id='modal-archiveEventsPurchases']/div/div/div[1]/button"));
 	}
 	
-	public String getvideoNameLightbox(){return driver.findElement(By.xpath("//*[@id='modal-archiveEventsPurchases/div/div/div/h4']")).getText();}
+	public String getvideoNameLightbox(){return driver.findElement(By.xpath("//*[@id='modalArchiveEventsCatalog']/div/div/div[1]/h4")).getText();}
 	public void clickCloseLightboxButton(){click(By.xpath("//*[@id='modal-archiveEventsPurchases']/div/div/div[1]/button"));}
-
+	public void clickAgreeWatchingButton(){click(By.xpath("//*[@id='modalArchiveEventsWarning']/div/div/div[3]/div/button"));}
+	public String getRestTimeText(){return driver.findElement(By.xpath("//*[@id='modalArchiveEventsPurchases']/div/div/div[3]/div[1]/div[2]/h4/span")).getText();}
 	
 	public void clickBodyElement(){click(By.id("personalContent"));}
 	
