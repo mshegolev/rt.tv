@@ -1,52 +1,52 @@
 package qaframework.rtv.fw;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
-    private static ApplicationManager singleton;
-
+    public WebDriver driver;
+    public String baseUrl;
+    public String urlForSetPayment;
+    public StringBuffer verificationErrors = new StringBuffer();
     private NavigationHelper navigationHelper;
-    private WebDriverHelper webDriverHelper;
-	private AccountHelper accountHelper;
-
+    private AccountHelper accountHelper;
 
     private Properties props;
 
-    public static ApplicationManager getInstance() {
-        if (singleton == null) {
-            singleton = new ApplicationManager();
-        }
-        return singleton;
-    }
-    public void stop() {
-        if (webDriverHelper != null) {
-            webDriverHelper.stop();
-        }
+    public ApplicationManager() {
+        driver = new FirefoxDriver();
+        baseUrl = "http://rithm-time.tv/";
+        urlForSetPayment = "http://irlem-practice.ru/admin/QA_scripts/set_payment.php";
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        accountHelper = new AccountHelper(this);
     }
 
-    public WebDriverHelper getWebDriverHelper() {
-        if (webDriverHelper == null) {
-            webDriverHelper = new WebDriverHelper(this);
-        }
-        return webDriverHelper;
+    public void stop() {
+        driver.quit();
     }
+
 
     public NavigationHelper getNavigationHelper() {
-		if (navigationHelper == null) {
-			navigationHelper = new NavigationHelper(this);
-		}
-		return navigationHelper;
-	}
+        if (navigationHelper == null) {
+            navigationHelper = new NavigationHelper(this);
+        }
+        return navigationHelper;
+    }
 
-	public AccountHelper getAccountHelper() {
-		if (accountHelper == null) {
-			accountHelper = new AccountHelper(this);
-		}
-		return accountHelper;
-	}
+    public AccountHelper getAccountHelper() {
+        if (accountHelper == null) {
+            accountHelper = new AccountHelper(this);
+        }
+        return accountHelper;
+    }
+
     public void setProperties(Properties props) {
         this.props = props;
     }
+
     public String getProperty(String key) {
         return props.getProperty(key);
     }

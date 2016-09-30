@@ -3,6 +3,7 @@ package qaframework.rtv.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import static org.hamcrest.CoreMatchers.containsString;
@@ -19,6 +20,7 @@ public class AuthorizationTest extends TestBase {
 		account.password = "001test";
 		app.getAccountHelper().fillLoginForm(app, account);
 		app.getNavigationHelper().clickButtonLogin();
+		TimeUnit.SECONDS.sleep(2);
 		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
 		// // open list with button Exit
 		app.getNavigationHelper().clickButtonExit();
