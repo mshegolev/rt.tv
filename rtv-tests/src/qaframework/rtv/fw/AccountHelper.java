@@ -11,8 +11,8 @@ public class AccountHelper extends HelperBase {
 
 	public void fillLoginForm(ApplicationManager applicationManager,
 			AccountData accountData) {
-		type(By.name("id__2_3"), accountData.username);
-		type(By.name("id__2_4"), accountData.password);
+		type(By.id("id__2_3"), accountData.username);
+		type(By.id("id__2_4"), accountData.password);
 	}
 	
 

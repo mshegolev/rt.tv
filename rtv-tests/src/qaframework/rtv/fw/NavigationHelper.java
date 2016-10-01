@@ -21,7 +21,7 @@ public class NavigationHelper extends HelperBase {
 	}
 
 	public void clickButtonLogin() {
-		click(By.name("id__2_5"));
+		click(By.id("id__2_5"));
 	}
 
 	public void clickButtonExit() {
