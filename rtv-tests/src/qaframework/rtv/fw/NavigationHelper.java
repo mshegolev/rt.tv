@@ -41,7 +41,9 @@ public class NavigationHelper extends HelperBase {
 	}
 	
 	public boolean gettableSheduleFirstRow() {
-        return driver.findElements(By.xpath(".//*[@id='tableShedule']/table/tbody/tr[1]/td[1]")).get(0).getText() != null;
+        return (driver.findElement(By.xpath(".//*[@id='id__3_12']/div/div[1]/table/tbody/tr[1]/td[1]/div")).getText() != null);
+
+
     }
 	
 	public boolean checkAbonentType(String foundText) {
