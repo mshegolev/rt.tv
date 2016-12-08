@@ -62,7 +62,7 @@ public class AuthorizationTest extends TestBase {
 		// // open list with button Exit
 		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow());
 		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
-		Assert.assertTrue(((app.getNavigationHelper().checkAbonentType("У вас оплачен Расширенный абонемент на 11 месяцев"))),"Wrong abonent type"); 
+		//Assert.assertTrue(((app.getNavigationHelper().checkAbonentType("У вас оплачен Расширенный абонемент на 11 месяцев"))),"Wrong abonent type");
 		app.getNavigationHelper().clickButtonExit();
 	}
 
@@ -77,7 +77,7 @@ public class AuthorizationTest extends TestBase {
 		
 		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow());
 		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
-		Assert.assertTrue(((app.getNavigationHelper().checkAbonentType("У вас оплачен Расширенный абонемент на август"))),"Wrong abonent type"); 
+		//Assert.assertTrue(((app.getNavigationHelper().checkAbonentType("У вас оплачен Расширенный абонемент на август"))),"Wrong abonent type");
 
 		String textInNextRtv = app.getNavigationHelper().getNextInRtv();
 		String ExpTextInNextRtv = "Далее в программе: ";
