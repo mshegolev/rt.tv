@@ -1,4 +1,4 @@
-package time.tv.Authorization;
+package time.tv.authorization;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -22,6 +22,6 @@ public class Authorization extends TestNgTestBase{
     public void testHomePageHasAHeader() {
         driver.get(baseUrl);
         Assert.assertTrue(homepage.getTitle().toString().equals("Ритмовремя-ТВ"));
-        //Assert.assertFalse("".equals(homepage.header.getText()));
+
     }
 }

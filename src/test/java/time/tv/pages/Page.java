@@ -11,12 +11,17 @@ public abstract class Page {
 
   /*
    * Constructor injecting the WebDriver interface
-   * 
+   *
    * @param webDriver
    */
   public Page(WebDriver driver) {
     this.driver = driver;
   }
+
+    protected Page() {
+    }
+
+    public void getLoginPage() {new LoginPage();}
 
   public String getTitle() {
     return driver.getTitle();
