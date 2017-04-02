@@ -5,9 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import time.tv.util.PropertyLoader;
-
-import java.io.IOException;
 
 /**
  * Sample page
@@ -19,15 +16,12 @@ public class LoginPage extends Page {
     @CacheLookup
     public WebElement header;
 
-    public LoginPage(WebDriver webDriver) throws IOException {
+    @FindBy(id = "id__2_5")
+    public WebElement buttonLogin;
+
+    public LoginPage(WebDriver webDriver) {
         super(webDriver);
     }
 
-    PropertyLoader propertyLoader = new PropertyLoader();
-    public String getIdfromResources(){
-        String id = null;
-        return id;
-    }
-    private String buttonLogin = propertyLoader.loadProperty("buttonLogin","loginPage.properties");
 
 }

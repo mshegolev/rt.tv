@@ -17,16 +17,18 @@ public class SampleTestNgTest extends TestNgTestBase {
     @BeforeMethod
     public void initPageObjects() {
         homepage = PageFactory.initElements(driver, HomePage.class);
+        loginPage = PageFactory.initElements(driver, LoginPage.class);
 
     }
 
     @Test
-    public void testHomePageHasAHeader() throws IOException {
+    public void testHomePageHasAHeader() throws IOException, InterruptedException {
         driver.get(baseUrl);
 
         Assert.assertTrue(homepage.getTitle().toString().equals("Ритмовремя-ТВ"));
-        loginPage.getTitle();
-        loginPage.getIdfromResources();
+        Assert.assertTrue(loginPage.getTitle().toString().equals("Ритмовремя-ТВ"));
+        Thread.sleep(5000);
+        Assert.assertTrue(loginPage.buttonLogin.isDisplayed());
         //homepage
 
 
