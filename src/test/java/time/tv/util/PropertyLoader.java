@@ -18,6 +18,7 @@ public class PropertyLoader {
     return loadCapabilities(System.getProperty("application.properties", DEBUG_PROPERTIES));
   }
 
+
   public static Capabilities loadCapabilities(String fromResource) throws IOException {
     Properties props = new Properties();
     props.load(PropertyLoader.class.getResourceAsStream(fromResource));
