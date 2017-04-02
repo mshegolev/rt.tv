@@ -28,6 +28,11 @@ public class SampleTestNgTest extends TestNgTestBase {
         Assert.assertTrue(homepage.getTitle().toString().equals("Ритмовремя-ТВ"));
         Assert.assertTrue(loginPage.getTitle().toString().equals("Ритмовремя-ТВ"));
         Thread.sleep(5000);
+        loginPage.setUsername("mshegolev");
+        loginPage.setPassword("passw0rd");
+        Assert.assertFalse(loginPage.isRememberMe());
+        loginPage.enablerememberMe();
+        Assert.assertTrue(loginPage.isRememberMe());
         Assert.assertTrue(loginPage.buttonLogin.isDisplayed());
         //homepage
 
