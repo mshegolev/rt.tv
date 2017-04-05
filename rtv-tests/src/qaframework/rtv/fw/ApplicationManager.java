@@ -11,7 +11,7 @@ public class ApplicationManager {
     public String baseUrl;
     public String urlForSetPayment;
     public StringBuffer verificationErrors = new StringBuffer();
-    private NavigationHelper navigationHelper;
+    private qaframework.rtv.fw.NavigationHelper navigationHelper;
     private AccountHelper accountHelper;
 
     private Properties props;

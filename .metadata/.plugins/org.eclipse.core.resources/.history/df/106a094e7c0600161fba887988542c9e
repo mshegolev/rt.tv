@@ -1,9 +1,0 @@
-package qaframework.rtv.fw;
-
-public class NavigationHelper {
-
-	public void openMainPage() {
-		ApplicationManager.driver.get(ApplicationManager.baseUrl + "/");
-	}
-
-}

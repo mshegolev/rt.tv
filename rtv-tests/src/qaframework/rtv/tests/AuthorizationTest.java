@@ -15,7 +15,7 @@ public class AuthorizationTest extends TestBase {
 	@Test
 	public void testAbonentType1() throws Exception {
 		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
+		qaframework.rtv.tests.AccountData account = new qaframework.rtv.tests.AccountData();
 		account.username = "test001";
 		account.password = "001test";
 		app.getAccountHelper().fillLoginForm(app, account);
@@ -29,7 +29,7 @@ public class AuthorizationTest extends TestBase {
 	@Test
 	public void testAbonentType2() throws Exception {
 		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
+		qaframework.rtv.tests.AccountData account = new qaframework.rtv.tests.AccountData();
 		account.username = "test002";
 		account.password = "002test";
 		app.getAccountHelper().fillLoginForm(app, account);
