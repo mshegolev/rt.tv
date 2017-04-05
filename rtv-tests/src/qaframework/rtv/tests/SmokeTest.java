@@ -20,7 +20,7 @@ public class SmokeTest extends TestBase {
 		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow());
 		//Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
 		//Assert.assertTrue(((app.getNavigationHelper().checkAbonentType("У вас оплачен Расширенный абонемент на 11 месяцев"))),"Wrong abonent type");
-		app.getNavigationHelper().clickButtonExit();
+		app.getNavigationHelper().exit();
 	}
 	
 //	@Test(testName = "", description = "CheckBox remember user", dependsOnMethods = { "authorizationCorrectCredentianal"})
