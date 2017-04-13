@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import time.tv.pages.HomePage;
 import time.tv.pages.LoginPage;
+import time.tv.util.MyClass;
 
 import java.io.IOException;
 
@@ -24,7 +25,8 @@ public class SampleTestNgTest extends TestNgTestBase {
     @Test
     public void testHomePageHasAHeader() throws IOException, InterruptedException {
         driver.get(baseUrl);
-
+        MyClass myClass = new MyClass();
+        myClass.logSimpleMessage();
         Assert.assertTrue(homepage.getTitle().toString().equals("Ритмовремя-ТВ"));
         Assert.assertTrue(loginPage.getTitle().toString().equals("Ритмовремя-ТВ"));
         Thread.sleep(5000);
