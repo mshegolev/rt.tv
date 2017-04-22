@@ -36,6 +36,7 @@ public class NavigationHelper extends HelperBase {
 
     public void clickButtonExit() {
         click(By.id("navExit"));
+        isElementPresent(By.id("id__2_5"));
     }
 
     public void exit() {
@@ -56,9 +57,15 @@ public class NavigationHelper extends HelperBase {
     }
 
     public boolean gettableSheduleFirstRow() {
-        return (driver.findElement(By.xpath(".//*[@id='id__3_15']/div/div[2]/table/tbody/tr[1]/td[1]/div")).getText() != null);
-
-
+        if (driver.findElement(By.xpath(".//*[@id='id__3_15']/div/div[3]/table/tbody/tr[1]/td[1]/div/div[1]")).getText() == null){
+            try {
+                throw new NullPointerException("нет таблицы");
+            } catch (NullPointerException e) {
+                System.out.println(e.getMessage());
+                return false;
+            }
+        }
+        return true;
     }
 
     public boolean checkAbonentType(String foundText) {
@@ -333,7 +340,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public String getEventId() {
-        return driver.findElement(By.xpath(".//*[@id='tableShedule']/table/tbody/tr[1]")).getAttribute("data-id");
+        return driver.findElement(By.xpath(".//*[@id='id__3_15']/div/div[3]/table/tbody/tr[1]/td[4]/div[1]/a[contains(@class, 'icon-pay glyphicon glyphicon-shopping-cart')]")).getAttribute("id");
     }
 
     public String getEventById(String eventId) {
