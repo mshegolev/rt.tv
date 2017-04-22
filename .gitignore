@@ -97,3 +97,5 @@ z_build
 .DS_Store
 rtv-tests/target
 rtv-tests/.idea
+/src/test/resources/roles.json
+src/main/

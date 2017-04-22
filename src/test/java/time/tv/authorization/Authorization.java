@@ -1,27 +1,30 @@
 package time.tv.authorization;
 
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import time.tv.TestNgTestBase;
-import time.tv.pages.HomePage;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 
 /**
  * Created by myname on 04.02.17.
  */
-public class Authorization extends TestNgTestBase{
-    private HomePage homepage;
+public class Authorization {
+    private final String pathToConfig = "/Users/myname/IdeaProjects/FunctionalTests/src/test/resources/roles.json";
 
-    @BeforeMethod
-    public void initPageObjects() {
-        homepage = PageFactory.initElements(driver, HomePage.class);
-    }
+
+    //   @BeforeMethod
+//    public void initPageObjects() {
+//        homepage = PageFactory.initElements(driver, Home.class);
+//    }
+
 
     @Test
-    public void testHomePageHasAHeader() {
-        driver.get(baseUrl);
-        Assert.assertTrue(homepage.getTitle().toString().equals("Ритмовремя-ТВ"));
+    public void testHomePageHasAHeader() throws FileNotFoundException {
+
+        BufferedReader br = new BufferedReader(
+                new FileReader(pathToConfig));
+        System.out.println(br.toString());
 
     }
 }

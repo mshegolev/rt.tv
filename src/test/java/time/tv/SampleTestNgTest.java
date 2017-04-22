@@ -4,7 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import time.tv.pages.HomePage;
+import time.tv.pages.Home;
 import time.tv.pages.LoginPage;
 import time.tv.util.MyClass;
 
@@ -12,12 +12,12 @@ import java.io.IOException;
 
 public class SampleTestNgTest extends TestNgTestBase {
 
-    private HomePage homepage;
+    private Home homepage;
     private LoginPage loginPage;
 
     @BeforeMethod
     public void initPageObjects() {
-        homepage = PageFactory.initElements(driver, HomePage.class);
+        homepage = PageFactory.initElements(driver, Home.class);
         loginPage = PageFactory.initElements(driver, LoginPage.class);
 
     }
@@ -25,10 +25,12 @@ public class SampleTestNgTest extends TestNgTestBase {
     @Test
     public void testHomePageHasAHeader() throws IOException, InterruptedException {
         driver.get(baseUrl);
+
         MyClass myClass = new MyClass();
         myClass.logSimpleMessage();
         Assert.assertTrue(homepage.getTitle().toString().equals("Ритмовремя-ТВ"));
         Assert.assertTrue(loginPage.getTitle().toString().equals("Ритмовремя-ТВ"));
+
         Thread.sleep(5000);
         loginPage.setUsername("");
         loginPage.setPassword("");
@@ -36,6 +38,7 @@ public class SampleTestNgTest extends TestNgTestBase {
         loginPage.enablerememberMe();
         Assert.assertTrue(loginPage.isRememberMe());
         Assert.assertTrue(loginPage.buttonLogin.isDisplayed());
+
         //homepage
 
 

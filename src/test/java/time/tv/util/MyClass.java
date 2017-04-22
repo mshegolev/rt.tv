@@ -3,6 +3,7 @@ package time.tv.util;
 /**
  * Created by mikhail.shchegolev on 07.04.2017.
  */
+
 import com.getsentry.raven.Raven;
 import com.getsentry.raven.RavenFactory;
 import com.getsentry.raven.event.BreadcrumbBuilder;
@@ -18,7 +19,7 @@ public class MyClass {
         raven = RavenFactory.ravenInstance(dsn);
 
         // Or, if you don't provide a DSN,
-      //  raven = RavenFactory.ravenInstance();
+        //  raven = RavenFactory.ravenInstance();
 
         // It is also possible to use the DSN detection system, which
         // will check the environment variable "SENTRY_DSN" and the Java
