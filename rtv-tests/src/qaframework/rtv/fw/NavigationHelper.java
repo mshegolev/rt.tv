@@ -14,7 +14,8 @@ public class NavigationHelper extends HelperBase {
 //
 //	@FindBy (xpath = ".//*[@id='app']/div[2]/div/div/form/div[3]/a[1]")
 //	private WebElement forgetPassword;
-
+    String btnLoginId ="id__4_5";
+    String btnExitId = "navExit";
 
     public NavigationHelper(ApplicationManager manager) {
         super(manager);
@@ -24,19 +25,19 @@ public class NavigationHelper extends HelperBase {
         openMainPage("");
     }
 
-    ;
+
 
     public void openMainPage(String url) {
         driver.get(String.format("%s%s", manager.baseUrl, url));
     }
 
     public void clickButtonLogin() {
-        click(By.id("id__2_5"));
+        click(By.id(btnLoginId));
     }
 
     public void clickButtonExit() {
-        click(By.id("navExit"));
-        isElementPresent(By.id("id__2_5"));
+        click(By.id(btnExitId));
+        isElementPresent(By.id(btnLoginId));
     }
 
     public void exit() {
