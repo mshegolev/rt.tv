@@ -56,7 +56,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public boolean checkWarrningMessage() {
-        return driver.findElements(By.id("auth_message")).get(0).getText() != null;
+        return driver.findElements(By.id("id__4_2")).get(0).getText() != null;
     }
     public boolean getScheduleValue(String row,String column) {
         if (driver.findElement(By.xpath("//*[@id='id__5_15']/div/div[3]/table/tbody/tr["+row+"]/td["+column+"]/div/div[1]")).getText() == null){
