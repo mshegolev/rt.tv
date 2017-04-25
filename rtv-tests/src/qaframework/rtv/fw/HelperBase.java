@@ -22,6 +22,30 @@ public abstract class HelperBase {
             return false;
         }
     }
+    public boolean isElementDisplayed(By by) {
+        try {
+            driver.findElement(by).isDisplayed();
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+    public boolean isElementEnabled(By by) {
+        try {
+            driver.findElement(by).isEnabled();
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+    public boolean isElementSelected(By by) {
+        try {
+            driver.findElement(by).isSelected();
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
 
     public boolean isAlertPresent() {
         try {

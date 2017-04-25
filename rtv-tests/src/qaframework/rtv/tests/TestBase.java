@@ -5,13 +5,13 @@ import org.testng.annotations.BeforeClass;
 import qaframework.rtv.fw.ApplicationManager;
 
 public class TestBase {
-	//protected Logger log = Logger.getLogger("TEST");
-	protected ApplicationManager app;
+    //protected Logger log = Logger.getLogger("TEST");
+    protected ApplicationManager app;
 
-	@BeforeClass
-	public void setUp() throws Exception {
-		app = new ApplicationManager();
-	}
+    @BeforeClass
+    public void setUp() throws Exception {
+        app = new ApplicationManager();
+    }
 
     @AfterTest
     public void tearDown() throws Exception {

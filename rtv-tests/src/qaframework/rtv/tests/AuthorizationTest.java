@@ -9,80 +9,80 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
 
 public class AuthorizationTest extends TestBase {
-	private Logger log = Logger.getLogger("AuthorizationTest");
+    private Logger log = Logger.getLogger("AuthorizationTest");
 
-	@Test
-	public void testAbonentType1() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		qaframework.rtv.tests.AccountData account = new qaframework.rtv.tests.AccountData();
-		account.username = "test001";
-		account.password = "001test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickButtonLogin();
-		app.getNavigationHelper().clickButtonExit();
-	}
+    @Test
+    public void testAbonentType1() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        qaframework.rtv.tests.AccountData account = new qaframework.rtv.tests.AccountData();
+        account.username = "test001";
+        account.password = "001test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
+        app.getNavigationHelper().clickButtonExit();
+    }
 
-	@Test
-	public void testAbonentType2() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		qaframework.rtv.tests.AccountData account = new qaframework.rtv.tests.AccountData();
-		account.username = "test002";
-		account.password = "002test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickButtonLogin();
-		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
-		app.getNavigationHelper().getScheduleEvents();
-		checkFirstDate();
-//		String textInNextRtv = app.getNavigationHelper().getNextInRtv();
-//		String ExpTextInNextRtv = "Далее в программе: ";
-//		assertThat(textInNextRtv, containsString(ExpTextInNextRtv));
-//TODO: What is check?
-		
-		String getEventId = app.getNavigationHelper().getEventId();
-		//String getEventById = app.getNavigationHelper().getEventById(getEventId+"_Allow");
-		//Assert.assertEquals(getEventById,"","User hasn't access to event");
-
-		app.getNavigationHelper().clickButtonExit();
-	}
-	
-	
-	@Test
-	public void testAbonentType1FullAbonement() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
-		account.username = "test001";
-		account.password = "001test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickCheckBoxRemember();
-		app.getNavigationHelper().clickButtonLogin();
-		checkFirstDate();
+    @Test
+    public void testAbonentType2() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        qaframework.rtv.tests.AccountData account = new qaframework.rtv.tests.AccountData();
+        account.username = "test002";
+        account.password = "002test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
+        Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(), "Table tableShedule is empty.");
+        app.getNavigationHelper().getScheduleEvents();
+        checkFirstDate();
 //		String textInNextRtv = app.getNavigationHelper().getNextInRtv();
 //		String ExpTextInNextRtv = "Далее в программе: ";
 //		assertThat(textInNextRtv, containsString(ExpTextInNextRtv));
 //TODO: What is check?
 
-		String getEventId = app.getNavigationHelper().getEventId();
-		//String getEventById = app.getNavigationHelper().getEventById(getEventId+"_Allow");
-		//Assert.assertEquals(getEventById,"","User hasn't access to event");
+        String getEventId = app.getNavigationHelper().getEventId();
+        //String getEventById = app.getNavigationHelper().getEventById(getEventId+"_Allow");
+        //Assert.assertEquals(getEventById,"","User hasn't access to event");
 
-		app.getNavigationHelper().clickButtonExit();
-	}
+        app.getNavigationHelper().clickButtonExit();
+    }
 
-	private void checkFirstDate() {
-		String todayFromTable = app.getNavigationHelper().getScheduleEventValue(1,1);
-		String today = app.getAccountHelper().getDayMonth();
-		assertThat(today,containsString(todayFromTable));
-	}
 
-	@Test
-	public void testAbonentType3() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
-		account.username = "test003";
-		account.password = "003test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickButtonLogin();
-		checkFirstDate();
+    @Test
+    public void testAbonentType1FullAbonement() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        AccountData account = new AccountData();
+        account.username = "test001";
+        account.password = "001test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickCheckBoxRemember();
+        app.getNavigationHelper().clickButtonLogin();
+        checkFirstDate();
+//		String textInNextRtv = app.getNavigationHelper().getNextInRtv();
+//		String ExpTextInNextRtv = "Далее в программе: ";
+//		assertThat(textInNextRtv, containsString(ExpTextInNextRtv));
+//TODO: What is check?
+
+        String getEventId = app.getNavigationHelper().getEventId();
+        //String getEventById = app.getNavigationHelper().getEventById(getEventId+"_Allow");
+        //Assert.assertEquals(getEventById,"","User hasn't access to event");
+
+        app.getNavigationHelper().clickButtonExit();
+    }
+
+    private void checkFirstDate() {
+        String todayFromTable = app.getNavigationHelper().getScheduleEventValue(1, 1);
+        String today = app.getAccountHelper().getDayMonth();
+        assertThat(today, containsString(todayFromTable));
+    }
+
+    @Test
+    public void testAbonentType3() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        AccountData account = new AccountData();
+        account.username = "test003";
+        account.password = "003test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
+        checkFirstDate();
 
 //		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
 //
@@ -94,18 +94,18 @@ public class AuthorizationTest extends TestBase {
 //		String getEventById = app.getNavigationHelper().getEventById(getEventId+"_Allow");
 //		Assert.assertEquals(getEventById,"","User hasn't access to event");
 //
-		
-		app.getNavigationHelper().clickButtonExit();
-	}
 
-	@Test
-	public void testAbonentType4() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
-		account.username = "test004";
-		account.password = "004test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickButtonLogin();
+        app.getNavigationHelper().clickButtonExit();
+    }
+
+    @Test
+    public void testAbonentType4() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        AccountData account = new AccountData();
+        account.username = "test004";
+        account.password = "004test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
 //
 //		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow());
 //		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(),"Table tableShedule is empty.");
@@ -125,28 +125,28 @@ public class AuthorizationTest extends TestBase {
 //			Assert.assertEquals(getEventById,"","User has! access to event!");
 //		}
 //
-		checkFirstDate();
-		app.getNavigationHelper().clickButtonExit();
-	}
+        checkFirstDate();
+        app.getNavigationHelper().clickButtonExit();
+    }
 
-	@Test
-	public void testAbonentType5() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
-		account.username = "test005";
-		account.password = "005test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickButtonLogin();
-		
+    @Test
+    public void testAbonentType5() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        AccountData account = new AccountData();
+        account.username = "test005";
+        account.password = "005test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
+
 //		String getEventId = app.getNavigationHelper().getEventId();
 //		String getEventById = app.getNavigationHelper().getEventById(getEventId+"_Denied");
 //		Assert.assertEquals(getEventById,"","User has! access to event!");
-		checkFirstDate();
-		app.getNavigationHelper().clickButtonExit();
-	}
+        checkFirstDate();
+        app.getNavigationHelper().clickButtonExit();
+    }
 
-	@Test
-	public void testAbonentType6() throws Exception {
+    @Test
+    public void testAbonentType6() throws Exception {
 //		app.getNavigationHelper().openMainPage();
 //		AccountData account = new AccountData();
 //		account.username = "test006";
@@ -180,57 +180,56 @@ public class AuthorizationTest extends TestBase {
 //		Assert.assertEquals(chatFormBlockTag,expTagNameDiv,"No vote form block on the page!");
 //
 //
-		checkFirstDate();
-		app.getNavigationHelper().clickButtonExit();
-	}
+        checkFirstDate();
+        app.getNavigationHelper().clickButtonExit();
+    }
 
-	@Test
-	public void testAbonentType7() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
-		account.username = "test008";
-		account.password = "008test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickButtonLogin();
-		checkFirstDate();
-		//String tagNameVideoPlayer = app.getNavigationHelper().getTagNameVideoPlayer();
-		//Assert.assertEquals(tagNameVideoPlayer,"","Player on the page!");
+    @Test
+    public void testAbonentType7() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        AccountData account = new AccountData();
+        account.username = "test008";
+        account.password = "008test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
+        checkFirstDate();
+        //String tagNameVideoPlayer = app.getNavigationHelper().getTagNameVideoPlayer();
+        //Assert.assertEquals(tagNameVideoPlayer,"","Player on the page!");
 
-		//String status1dText = app.getNavigationHelper().getStatus1dText();
-		//String expStatusRowText = "У вас не оплачено ни одно из мероприятий Ритмовремя-ТВ";
-		//assertThat(status1dText, containsString(expStatusRowText));
+        //String status1dText = app.getNavigationHelper().getStatus1dText();
+        //String expStatusRowText = "У вас не оплачено ни одно из мероприятий Ритмовремя-ТВ";
+        //assertThat(status1dText, containsString(expStatusRowText));
 
-		
-		
-		app.getNavigationHelper().clickButtonExit();
-	}
 
-	@Test
-	public void testAbonentType8() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
-		account.username = "test008";
-		account.password = "008test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickButtonLogin();
-		checkFirstDate();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
-		app.getNavigationHelper().clickButtonExit();
-	}
+        app.getNavigationHelper().clickButtonExit();
+    }
 
-	@Test
-	public void testAbonentType9() throws Exception {
-		app.getNavigationHelper().openMainPage();
-		AccountData account = new AccountData();
-		account.username = "test009";
-		account.password = "009test";
-		app.getAccountHelper().fillLoginForm(app, account);
-		app.getNavigationHelper().clickButtonLogin();
-		checkFirstDate();
-		// driver.findElement(By.cssSelector("button.navbar-toggle")).click();
-		// // open list with button Exit
-		app.getNavigationHelper().clickButtonExit();
-	}
+    @Test
+    public void testAbonentType8() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        AccountData account = new AccountData();
+        account.username = "test008";
+        account.password = "008test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
+        checkFirstDate();
+        // driver.findElement(By.cssSelector("button.navbar-toggle")).click();
+        // // open list with button Exit
+        app.getNavigationHelper().clickButtonExit();
+    }
+
+    @Test
+    public void testAbonentType9() throws Exception {
+        app.getNavigationHelper().openMainPage();
+        AccountData account = new AccountData();
+        account.username = "test009";
+        account.password = "009test";
+        app.getAccountHelper().fillLoginForm(app, account);
+        app.getNavigationHelper().clickButtonLogin();
+        checkFirstDate();
+        // driver.findElement(By.cssSelector("button.navbar-toggle")).click();
+        // // open list with button Exit
+        app.getNavigationHelper().clickButtonExit();
+    }
 
 }

@@ -1,11 +1,12 @@
 package qaframework.rtv.tests;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
- 
+
 /**
  * Created by nikolay.g on 22.04.2016.
  */
-public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
+public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase {
 
     @Test(testName = "RTV-13", description = "Check existence of block with gifts for user without gifts")
     public void existenceGiftsBlockUserWithoutGifts() throws Exception {
@@ -17,9 +18,9 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
 
         app.getNavigationHelper().clickButtonLogin();
 
-        String result=  app.getNavigationHelper().getGiftBlockWithoutGiftContent();
+        String result = app.getNavigationHelper().getGiftBlockWithoutGiftContent();
         String expresult = "У вас нет подарков.";
-        Assert.assertEquals(result,expresult,"User without gifts doesn't see the error.");
+        Assert.assertEquals(result, expresult, "User without gifts doesn't see the error.");
         app.getNavigationHelper().clickButtonExit();
     }
 
@@ -33,17 +34,17 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
 
         app.getNavigationHelper().clickButtonLogin();
         Thread.sleep(4000);
-       // app.getNavigationHelper().clickGiftBlockMenu();
-       // Thread.sleep(4000);
-        
+        // app.getNavigationHelper().clickGiftBlockMenu();
+        // Thread.sleep(4000);
+
         String firstGiftBlockContent = app.getNavigationHelper().getFirstGiftBlockContent();
         String firstGiftBlockContentExp = "РадасТВ 4-7 января 2016";
-        Assert.assertEquals(firstGiftBlockContent,firstGiftBlockContentExp,"User with gifts doesn't have table with gifts");
-        
+        Assert.assertEquals(firstGiftBlockContent, firstGiftBlockContentExp, "User with gifts doesn't have table with gifts");
+
         app.getNavigationHelper().clickGiftBlockFirstTable();
         String firstGiftName = app.getNavigationHelper().getFirstRowContentGiftTable();
-       String firstGiftNameExp = "Орган";
-        Assert.assertEquals(firstGiftName,firstGiftNameExp,"User with gifts doesn't have rows in table with gifts");
+        String firstGiftNameExp = "Орган";
+        Assert.assertEquals(firstGiftName, firstGiftNameExp, "User with gifts doesn't have rows in table with gifts");
         app.getNavigationHelper().clickButtonExit();
     }
 
@@ -55,18 +56,17 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase{
         account.password = "003test";
         app.getAccountHelper().fillLoginForm(app, account);
         app.getNavigationHelper().clickButtonLogin();
-        
+
         app.getNavigationHelper().clickPersonalSubscribeBlock();
-       // String namePersonalSubscribeBlock = app.getNavigationHelper().getNamePersonalSubscribeBlock();
-       // String namePersonalSubscribeBlockExp = "Подписка на внезапные мероприятия";
-       // Assert.assertEquals(namePersonalSubscribeBlock,namePersonalSubscribeBlockExp,"Wrong name in personal subscribe");
-        
-        
-        
+        // String namePersonalSubscribeBlock = app.getNavigationHelper().getNamePersonalSubscribeBlock();
+        // String namePersonalSubscribeBlockExp = "Подписка на внезапные мероприятия";
+        // Assert.assertEquals(namePersonalSubscribeBlock,namePersonalSubscribeBlockExp,"Wrong name in personal subscribe");
+
+
         app.getAccountHelper().fillLoginForm(app, account);
         app.getNavigationHelper().clickButtonLogin();
     }
-    
+
     @Test(testName = "RTV-15", description = "Check existence of block with Tsioroitc for user without access")
     public void existenceBlockTsioroitcWithoutAccess() throws Exception {
         app.getNavigationHelper().openMainPage();

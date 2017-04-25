@@ -10,13 +10,13 @@ import java.util.List;
 
 public class NavigationHelper extends HelperBase {
 
-//
+    //
 //	@FindBy(id = "id__2_4")
 //	private WebElement passwordField;
 //
 //	@FindBy (xpath = ".//*[@id='app']/div[2]/div/div/form/div[3]/a[1]")
 //	private WebElement forgetPassword;
-    String btnLoginId ="id__4_5";
+    String btnLoginId = "id__4_5";
     String btnExitId = "navExit";
 
     public NavigationHelper(ApplicationManager manager) {
@@ -26,7 +26,6 @@ public class NavigationHelper extends HelperBase {
     public void openMainPage() {
         openMainPage("");
     }
-
 
 
     public void openMainPage(String url) {
@@ -43,8 +42,14 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void exit() {
-        clickButtonNavbarToggle();
-            clickButtonExit();
+        if (isElementDisplayed(By.cssSelector("button.navbar-toggle")) && isElementEnabled(By.cssSelector("button.navbar-toggle")) ) {
+            try {
+                clickButtonNavbarToggle();
+            }catch (Exception E){
+                System.out.println("navbar-toggle disabled");
+            }
+        }
+        clickButtonExit();
     }
 
     public void clickButtonNavbarToggle() {
@@ -58,8 +63,9 @@ public class NavigationHelper extends HelperBase {
     public boolean checkWarrningMessage() {
         return driver.findElements(By.id("id__4_2")).get(0).getText() != null;
     }
-    public boolean getScheduleValue(String row,String column) {
-        if (driver.findElement(By.xpath("//*[@id='id__5_15']/div/div[3]/table/tbody/tr["+row+"]/td["+column+"]/div/div[1]")).getText() == null){
+
+    public boolean getScheduleValue(String row, String column) {
+        if (driver.findElement(By.xpath("//*[@id='id__5_15']/div/div[3]/table/tbody/tr[" + row + "]/td[" + column + "]/div/div[1]")).getText() == null) {
             try {
                 throw new NullPointerException("нет таблицы");
             } catch (NullPointerException e) {
@@ -71,36 +77,32 @@ public class NavigationHelper extends HelperBase {
     }
 
     public WebElement getScheduleEvents() {
-        WebElement Webtable=driver.findElement(By.xpath("//*[@id='id__5_15']"));
-        List<WebElement> TotalRowCount=Webtable.findElements(By.xpath("id('id__5_15')/div/div[3]/table/tbody/tr"));
+        WebElement Webtable = driver.findElement(By.xpath("//*[@id='id__5_15']"));
+        List<WebElement> TotalRowCount = Webtable.findElements(By.xpath("id('id__5_15')/div/div[3]/table/tbody/tr"));
         //System.out.println("No. of Rows in the WebTable: "+TotalRowCount.size());
-        int RowIndex=1;
-        for(WebElement rowElement:TotalRowCount)
-        {
-            List<WebElement> TotalColumnCount=rowElement.findElements(By.xpath("td"));
-            int ColumnIndex=1;
+        int RowIndex = 1;
+        for (WebElement rowElement : TotalRowCount) {
+            List<WebElement> TotalColumnCount = rowElement.findElements(By.xpath("td"));
+            int ColumnIndex = 1;
 
-            for(WebElement colElement:TotalColumnCount)
-            {
+            for (WebElement colElement : TotalColumnCount) {
                 //System.out.println("Row "+RowIndex+" Column "+ColumnIndex+" Data "+colElement.getText());
-                ColumnIndex=ColumnIndex+1;
+                ColumnIndex = ColumnIndex + 1;
             }
-            RowIndex=RowIndex+1;
+            RowIndex = RowIndex + 1;
         }
         return Webtable;
     }
 
 
-    public String getScheduleEventValue(int row, int column){
+    public String getScheduleEventValue(int row, int column) {
         String value = driver.findElement(By.xpath("//*[@id='id__5_15']/div/div[3]/table/tbody/tr[" + row + "]/td[" + column + "]/div/div[1]")).getText();
         return value;
     }
 
 
-
-
     public boolean gettableSheduleFirstRow() {
-        if (driver.findElement(By.xpath("//*[@id='id__5_15']/div/div[3]/table/tbody/tr[1]/td[1]/div/div[1]")).getText() == null){
+        if (driver.findElement(By.xpath("//*[@id='id__5_15']/div/div[3]/table/tbody/tr[1]/td[1]/div/div[1]")).getText() == null) {
             try {
                 throw new NullPointerException("нет таблицы");
             } catch (NullPointerException e) {

@@ -3,10 +3,6 @@ package qaframework.rtv.fw;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.util.Locale;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -58,8 +54,6 @@ public class ApplicationManager {
     public String getProperty(String key, String defaultValue) {
         return props.getProperty(key, defaultValue);
     }
-
-
 
 
 }

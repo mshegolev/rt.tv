@@ -10,15 +10,15 @@ public class VideoTests extends TestBase {
     @Test(testName = "RTV-11", description = "Check player and autostart")
     public void authorizationWithRememberCheckBox() throws Exception {
         app.getNavigationHelper().openMainPage();
-       // AccountData account = new AccountData();
-      //  account.username = "test002";
-      //  account.password = "002test";
-     //   app.getAccountHelper().fillLoginForm(app, account);
+        // AccountData account = new AccountData();
+        //  account.username = "test002";
+        //  account.password = "002test";
+        //   app.getAccountHelper().fillLoginForm(app, account);
 
-      //  app.getNavigationHelper().clickButtonLogin();
-        String result=  app.getNavigationHelper().getPlayerContainer();
-    String expresult = "div1";
-        Assert.assertEquals(result,expresult,"Main page doesn't have player");
+        //  app.getNavigationHelper().clickButtonLogin();
+        String result = app.getNavigationHelper().getPlayerContainer();
+        String expresult = "div1";
+        Assert.assertEquals(result, expresult, "Main page doesn't have player");
         app.getNavigationHelper().clickButtonExit();
     }
 }
