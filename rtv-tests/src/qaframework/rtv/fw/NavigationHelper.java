@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import qaframework.rtv.tests.AccountData;
 
+import java.util.List;
+
 public class NavigationHelper extends HelperBase {
 
 //
@@ -56,9 +58,49 @@ public class NavigationHelper extends HelperBase {
     public boolean checkWarrningMessage() {
         return driver.findElements(By.id("auth_message")).get(0).getText() != null;
     }
+    public boolean getScheduleValue(String row,String column) {
+        if (driver.findElement(By.xpath("//*[@id='id__5_15']/div/div[3]/table/tbody/tr["+row+"]/td["+column+"]/div/div[1]")).getText() == null){
+            try {
+                throw new NullPointerException("нет таблицы");
+            } catch (NullPointerException e) {
+                System.out.println(e.getMessage());
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public WebElement getScheduleEvents() {
+        WebElement Webtable=driver.findElement(By.xpath("//*[@id='id__5_15']"));
+        List<WebElement> TotalRowCount=Webtable.findElements(By.xpath("id('id__5_15')/div/div[3]/table/tbody/tr"));
+        //System.out.println("No. of Rows in the WebTable: "+TotalRowCount.size());
+        int RowIndex=1;
+        for(WebElement rowElement:TotalRowCount)
+        {
+            List<WebElement> TotalColumnCount=rowElement.findElements(By.xpath("td"));
+            int ColumnIndex=1;
+
+            for(WebElement colElement:TotalColumnCount)
+            {
+                //System.out.println("Row "+RowIndex+" Column "+ColumnIndex+" Data "+colElement.getText());
+                ColumnIndex=ColumnIndex+1;
+            }
+            RowIndex=RowIndex+1;
+        }
+        return Webtable;
+    }
+
+
+    public String getScheduleEventValue(int row, int column){
+        String value = driver.findElement(By.xpath("//*[@id='id__5_15']/div/div[3]/table/tbody/tr[" + row + "]/td[" + column + "]/div/div[1]")).getText();
+        return value;
+    }
+
+
+
 
     public boolean gettableSheduleFirstRow() {
-        if (driver.findElement(By.xpath(".//*[@id='id__3_15']/div/div[3]/table/tbody/tr[1]/td[1]/div/div[1]")).getText() == null){
+        if (driver.findElement(By.xpath("//*[@id='id__5_15']/div/div[3]/table/tbody/tr[1]/td[1]/div/div[1]")).getText() == null){
             try {
                 throw new NullPointerException("нет таблицы");
             } catch (NullPointerException e) {
@@ -341,7 +383,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public String getEventId() {
-        return driver.findElement(By.xpath(".//*[@id='id__3_15']/div/div[3]/table/tbody/tr[1]/td[4]/div[1]/a[contains(@class, 'icon-pay glyphicon glyphicon-shopping-cart')]")).getAttribute("id");
+        return driver.findElement(By.xpath(".//*[@id='id__5_15']/div/div[3]/table/tbody/tr[1]/td[4]/div[1]/a[contains(@class, 'icon-pay glyphicon glyphicon-shopping-cart')]")).getAttribute("id");
     }
 
     public String getEventById(String eventId) {
