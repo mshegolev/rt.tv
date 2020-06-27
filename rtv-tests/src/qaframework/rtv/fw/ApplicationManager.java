@@ -32,7 +32,11 @@ public class ApplicationManager {
 //        driver = new FirefoxDriver();
         baseUrl = "http://rithm-time.tv/";
         urlForSetPayment = "http://irlem-practice.ru/admin/QA_scripts/set_payment.php";
+<<<<<<< HEAD
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+=======
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+>>>>>>> master
         accountHelper = new AccountHelper(this);
     }
 

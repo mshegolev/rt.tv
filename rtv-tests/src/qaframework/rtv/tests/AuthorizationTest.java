@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import java.util.logging.Logger;
 
 import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class AuthorizationTest extends TestBase {
@@ -20,7 +21,12 @@ public class AuthorizationTest extends TestBase {
 
         app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
+<<<<<<< HEAD
         app.getNavigationHelper().exit();
+=======
+        boolean result = app.getNavigationHelper().exit();
+        assertThat(result, equalTo(true));
+>>>>>>> master
     }
 
     @Test

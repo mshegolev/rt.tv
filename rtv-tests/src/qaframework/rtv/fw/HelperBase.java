@@ -22,6 +22,7 @@ public abstract class HelperBase {
             return false;
         }
     }
+
     public boolean isElementDisplayed(By by) {
         try {
             driver.findElement(by).isDisplayed();
@@ -30,6 +31,7 @@ public abstract class HelperBase {
             return false;
         }
     }
+
     public boolean isElementEnabled(By by) {
         try {
             driver.findElement(by).isEnabled();
@@ -38,6 +40,7 @@ public abstract class HelperBase {
             return false;
         }
     }
+
     public boolean isElementSelected(By by) {
         try {
             driver.findElement(by).isSelected();
@@ -74,8 +77,13 @@ public abstract class HelperBase {
     /**
      * @param locator
      */
-    protected void click(By locator) {
-        driver.findElement(locator).click();
+    protected boolean click(By locator) {
+        try {
+            driver.findElement(locator).click();
+            return true;
+        } catch (NoSuchElementException | ElementNotVisibleException e){
+            return false;
+        }
     }
 
     /**
