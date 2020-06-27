@@ -11,7 +11,7 @@ public class SmokeTest extends TestBase {
         AccountData account = new AccountData();
         account.username = "test001";
         account.password = "001test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickCheckBoxRemember();
         app.getNavigationHelper().clickButtonLogin();
         // driver.findElement(By.cssSelector("button.navbar-toggle")).click();
@@ -34,7 +34,7 @@ public class SmokeTest extends TestBase {
     @Test
     public void authorizationNonCredentional() throws Exception {
         app.getNavigationHelper().openMainPage();
-        app.getAccountHelper().fillLoginForm(app, new AccountData("", ""));
+        app.getAccountHelper().fillLoginForm(new AccountData("", ""));
         app.getNavigationHelper().clickButtonLogin();
         Assert.assertTrue(app.getNavigationHelper().checkWarrningMessage());
     }

@@ -16,8 +16,8 @@ public class NavigationHelper extends HelperBase {
 //
 //	@FindBy (xpath = ".//*[@id='app']/div[2]/div/div/form/div[3]/a[1]")
 //	private WebElement forgetPassword;
-    String btnLoginId = "id__4_5";
-    String btnExitId = "navExit";
+    String btnLoginName = "authButton";
+    String btnExitXpath = "//span[text()='Выйти']";
 
     public NavigationHelper(ApplicationManager manager) {
         super(manager);
@@ -33,12 +33,12 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void clickButtonLogin() {
-        click(By.id(btnLoginId));
+        click(By.name(btnLoginName));
     }
 
     public void clickButtonExit() {
-        click(By.id(btnExitId));
-        isElementPresent(By.id(btnLoginId));
+        click(By.xpath(btnExitXpath));
+        isElementPresent(By.id(btnLoginName));
     }
 
     public void exit() {

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 /**
  * Created by nikolay.g on 22.04.2016.
  */
-public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase {
+public class PersonalAccountPageTest extends TestBase {
 
     @Test(testName = "RTV-13", description = "Check existence of block with gifts for user without gifts")
     public void existenceGiftsBlockUserWithoutGifts() throws Exception {
@@ -14,7 +14,7 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase {
         AccountData account = new AccountData();
         account.username = "test009";
         account.password = "009test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
 
         app.getNavigationHelper().clickButtonLogin();
 
@@ -30,7 +30,7 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase {
         AccountData account = new AccountData();
         account.username = "test005";
         account.password = "005test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
 
         app.getNavigationHelper().clickButtonLogin();
         Thread.sleep(4000);
@@ -54,7 +54,7 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase {
         AccountData account = new AccountData();
         account.username = "test003";
         account.password = "003test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
 
         app.getNavigationHelper().clickPersonalSubscribeBlock();
@@ -63,7 +63,7 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase {
         // Assert.assertEquals(namePersonalSubscribeBlock,namePersonalSubscribeBlockExp,"Wrong name in personal subscribe");
 
 
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
     }
 
@@ -73,7 +73,7 @@ public class PersonalAccountPageTest extends qaframework.rtv.tests.TestBase {
         AccountData account = new AccountData();
         account.username = "test005";
         account.password = "005test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
     }
 }
