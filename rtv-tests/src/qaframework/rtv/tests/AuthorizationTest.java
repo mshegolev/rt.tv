@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import java.util.logging.Logger;
 
 import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class AuthorizationTest extends TestBase {
@@ -17,9 +18,11 @@ public class AuthorizationTest extends TestBase {
         qaframework.rtv.tests.AccountData account = new qaframework.rtv.tests.AccountData();
         account.username = "test001";
         account.password = "001test";
-        app.getAccountHelper().fillLoginForm(app, account);
+
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
-        app.getNavigationHelper().clickButtonExit();
+        boolean result = app.getNavigationHelper().exit();
+        assertThat(result, equalTo(true));
     }
 
     @Test
@@ -28,7 +31,7 @@ public class AuthorizationTest extends TestBase {
         qaframework.rtv.tests.AccountData account = new qaframework.rtv.tests.AccountData();
         account.username = "test002";
         account.password = "002test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
         Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow(), "Table tableShedule is empty.");
         app.getNavigationHelper().getScheduleEvents();
@@ -52,7 +55,7 @@ public class AuthorizationTest extends TestBase {
         AccountData account = new AccountData();
         account.username = "test001";
         account.password = "001test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickCheckBoxRemember();
         app.getNavigationHelper().clickButtonLogin();
         checkFirstDate();
@@ -80,7 +83,7 @@ public class AuthorizationTest extends TestBase {
         AccountData account = new AccountData();
         account.username = "test003";
         account.password = "003test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
         checkFirstDate();
 
@@ -104,7 +107,7 @@ public class AuthorizationTest extends TestBase {
         AccountData account = new AccountData();
         account.username = "test004";
         account.password = "004test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
 //
 //		Assert.assertTrue(app.getNavigationHelper().gettableSheduleFirstRow());
@@ -135,7 +138,7 @@ public class AuthorizationTest extends TestBase {
         AccountData account = new AccountData();
         account.username = "test005";
         account.password = "005test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
 
 //		String getEventId = app.getNavigationHelper().getEventId();
@@ -190,7 +193,7 @@ public class AuthorizationTest extends TestBase {
         AccountData account = new AccountData();
         account.username = "test008";
         account.password = "008test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
         checkFirstDate();
         //String tagNameVideoPlayer = app.getNavigationHelper().getTagNameVideoPlayer();
@@ -210,7 +213,7 @@ public class AuthorizationTest extends TestBase {
         AccountData account = new AccountData();
         account.username = "test008";
         account.password = "008test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
         checkFirstDate();
         // driver.findElement(By.cssSelector("button.navbar-toggle")).click();
@@ -224,7 +227,7 @@ public class AuthorizationTest extends TestBase {
         AccountData account = new AccountData();
         account.username = "test009";
         account.password = "009test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickButtonLogin();
         checkFirstDate();
         // driver.findElement(By.cssSelector("button.navbar-toggle")).click();

@@ -22,10 +22,9 @@ public class AccountHelper extends HelperBase {
         super(manager);
     }
 
-    public void fillLoginForm(ApplicationManager applicationManager,
-                              AccountData accountData) {
-        type(By.id("id__4_3"), accountData.username);
-        type(By.id("id__4_4"), accountData.password);
+    public void fillLoginForm(AccountData accountData) {
+        type(By.name("login"), accountData.username);
+        type(By.name("password"), accountData.password);
     }
 
     public String getDayMonth() {

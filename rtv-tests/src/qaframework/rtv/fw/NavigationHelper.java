@@ -16,8 +16,8 @@ public class NavigationHelper extends HelperBase {
 //
 //	@FindBy (xpath = ".//*[@id='app']/div[2]/div/div/form/div[3]/a[1]")
 //	private WebElement forgetPassword;
-    String btnLoginId = "id__4_5";
-    String btnExitId = "navExit";
+    String btnLoginName = "authButton";
+    String btnExitXpath = "//div[@aria-expanded='true']//span[text()='Выйти']";
 
     public NavigationHelper(ApplicationManager manager) {
         super(manager);
@@ -33,23 +33,29 @@ public class NavigationHelper extends HelperBase {
     }
 
     public void clickButtonLogin() {
-        click(By.id(btnLoginId));
+        click(By.name(btnLoginName));
     }
 
-    public void clickButtonExit() {
-        click(By.id(btnExitId));
-        isElementPresent(By.id(btnLoginId));
-    }
-
-    public void exit() {
-        if (isElementDisplayed(By.cssSelector("button.navbar-toggle")) && isElementEnabled(By.cssSelector("button.navbar-toggle")) ) {
-            try {
-                clickButtonNavbarToggle();
-            }catch (Exception E){
-                System.out.println("navbar-toggle disabled");
-            }
+    public boolean clickButtonExit() {
+        long startTime = System.currentTimeMillis();
+        while (!isElementPresent(By.xpath(btnExitXpath)) && (System.currentTimeMillis() - startTime) < 10000) {
         }
-        clickButtonExit();
+        if (!click(By.xpath(btnExitXpath))) {
+            return false;
+        }
+        startTime = System.currentTimeMillis();
+        while (!isElementPresent(By.name(btnLoginName)) && (System.currentTimeMillis() - startTime) < 10000) {
+        }
+        return isElementPresent(By.name(btnLoginName));
+    }
+
+    public boolean exit() {
+        if (!clickButtonExit()) {
+            clickButtonNavbarToggle();
+            return clickButtonExit();
+        }
+        return false;
+
     }
 
     public void clickButtonNavbarToggle() {

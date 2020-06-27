@@ -1,13 +1,15 @@
 package qaframework.rtv.fw;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URI;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
-    public WebDriver driver;
+    public RemoteWebDriver driver;
     public String baseUrl;
     public String urlForSetPayment;
     public StringBuffer verificationErrors = new StringBuffer();
@@ -16,11 +18,21 @@ public class ApplicationManager {
 
     private Properties props;
 
-    public ApplicationManager() {
-        driver = new FirefoxDriver();
+    public ApplicationManager() throws MalformedURLException {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName("chrome");
+        capabilities.setVersion("83.0");
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", false);
+
+        driver = new RemoteWebDriver(
+                URI.create("http://localhost:4444/wd/hub").toURL(),
+                capabilities
+        );
+//        driver = new FirefoxDriver();
         baseUrl = "http://rithm-time.tv/";
         urlForSetPayment = "http://irlem-practice.ru/admin/QA_scripts/set_payment.php";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         accountHelper = new AccountHelper(this);
     }
 

@@ -13,7 +13,7 @@ public class TranslationArchiveTests extends TestBase {
         AccountData account = new AccountData();
         account.username = "test004";
         account.password = "004test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickCheckBoxRemember();
         app.getNavigationHelper().clickButtonLogin();
         Thread.sleep(3000);
@@ -41,7 +41,7 @@ public class TranslationArchiveTests extends TestBase {
         AccountData account = new AccountData();
         account.username = "test003";
         account.password = "003test";
-        app.getAccountHelper().fillLoginForm(app, account);
+        app.getAccountHelper().fillLoginForm(account);
         app.getNavigationHelper().clickCheckBoxRemember();
         app.getNavigationHelper().clickButtonLogin();
         Thread.sleep(5000);
