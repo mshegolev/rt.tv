@@ -10,18 +10,9 @@ import java.util.List;
 
 public class NavigationHelper extends HelperBase {
 
-    //
-//	@FindBy(id = "id__2_4")
-//	private WebElement passwordField;
-//
-//	@FindBy (xpath = ".//*[@id='app']/div[2]/div/div/form/div[3]/a[1]")
-//	private WebElement forgetPassword;
     String btnLoginName = "authButton";
-<<<<<<< HEAD
-    String btnExitXpath = "//span[text()='Выйти']";
-=======
     String btnExitXpath = "//div[@aria-expanded='true']//span[text()='Выйти']";
->>>>>>> master
+
 
     public NavigationHelper(ApplicationManager manager) {
         super(manager);
@@ -40,11 +31,6 @@ public class NavigationHelper extends HelperBase {
         click(By.name(btnLoginName));
     }
 
-<<<<<<< HEAD
-    public void clickButtonExit() {
-        click(By.xpath(btnExitXpath));
-        isElementPresent(By.id(btnLoginName));
-=======
     public boolean clickButtonExit() {
         long startTime = System.currentTimeMillis();
         while (!isElementPresent(By.xpath(btnExitXpath)) && (System.currentTimeMillis() - startTime) < 10000) {
@@ -56,7 +42,7 @@ public class NavigationHelper extends HelperBase {
         while (!isElementPresent(By.name(btnLoginName)) && (System.currentTimeMillis() - startTime) < 10000) {
         }
         return isElementPresent(By.name(btnLoginName));
->>>>>>> master
+
     }
 
     public boolean exit() {
@@ -130,8 +116,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public boolean checkAbonentType(String foundText) {
-        if (getAbonentType().contains(foundText)) return true;
-        else return false;
+        return getAbonentType().contains(foundText);
     }
 
     public String getAbonentType() {
@@ -140,7 +125,7 @@ public class NavigationHelper extends HelperBase {
 
     //public  void getPlayerContainer() { driver.findElement(By.id("videoArchivePlayer")).findElement(By.tagName("iframe"));}
     public String getPlayerContainer() {
-        return driver.findElement(By.id("videoArchivePlayer")).getTagName().toString();
+        return driver.findElement(By.id("videoArchivePlayer")).getTagName();
     }
 
     public String getabonementTypeContent() {
@@ -148,7 +133,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public String getPlayerVideoContainer() {
-        return driver.findElement(By.id("playerVideo")).getTagName().toString();
+        return driver.findElement(By.id("playerVideo")).getTagName();
     }
 
     public boolean gettableSheduleLightFirstRow() {
@@ -413,7 +398,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public String getTagNameVideoPlayer() {
-        return driver.findElement(By.id("player_video")).getTagName().toString();
+        return driver.findElement(By.id("player_video")).getTagName();
     }
 
     public String getStatusRowText() {
@@ -421,7 +406,7 @@ public class NavigationHelper extends HelperBase {
     }
 
     public String getBlockTag(String block_id) {
-        return driver.findElement(By.id(block_id)).getTagName().toString();
+        return driver.findElement(By.id(block_id)).getTagName();
     }
 
     public String getStatus1dText() {
